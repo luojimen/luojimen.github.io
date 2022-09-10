@@ -195,16 +195,16 @@
 		<priority>0.4</priority>
 	</url>
 	<url>
-		<loc>https://luojimen.github.io/tag/wordpress/</loc>
-		<lastmod>2022-09-10T13:25:17+00:00</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>0.4</priority>
-	</url>
-	<url>
 		<loc>https://luojimen.github.io/category/wp/</loc>
 		<lastmod>2022-09-10T13:25:17+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://luojimen.github.io/tag/wordpress/</loc>
+		<lastmod>2022-09-10T13:25:17+00:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.4</priority>
 	</url>
 	<url>
 		<loc>https://luojimen.github.io/tag/wp%e6%8f%92%e4%bb%b6/</loc>
