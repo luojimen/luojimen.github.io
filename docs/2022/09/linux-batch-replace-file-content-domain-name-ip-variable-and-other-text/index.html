@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telphone=no, email=no">
     <meta name="keywords" content="">
-    <meta name="description" itemprop="description" content="参考资料 Linux 批量查找与替换 | 菜鸟教程 (runoob.com) linux下批量替换文件内容-阿里云开发者社区 (aliyun.com) shell批量替换文件内容的四种方法 - 简书  [&hellip;]">
+    <meta name="description" itemprop="description" content="语法格式 sed -i &quot;s/原字符串/新字符串/g&quot; `grep 原字符串 -rl 所在目录` 实例 &nbsp; &nbsp; 以下我们实现把 “/root/github/docs/”目录下 包含 [&hellip;]">
     <meta name="theme-color" content="#282a2c">
     <meta itemprop="image" content="https://luoji.men/wp-content/themes/kratos-4.1.2/assets/img/default.jpg" />
-        <meta name='description' content='参考资料 Linux 批量查找与替换 | 菜鸟教程 (runoob.com) linux下批量替换文件内容-阿里云开发者社区 (aliyun.com) shell批量替换文件内容的四种方法 - 简书 [&hellip;]' />
+        <meta name='description' content='语法格式 sed -i s/原字符串/新字符串/g `grep 原字符串 -rl 所在目录` 实例 &nbsp; &nbsp; 以下我们实现把 “/root/github/docs/”目录下 包含 [&hellip;]' />
 <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.seatonjiang.com' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
@@ -128,40 +128,35 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">Linux批量替换文件内容（域名、IP、变量等文本）</h1>
                             <div class="meta">
                                 <span>2022年9月10日</span>
-                                                                    <span>11点热度</span>
+                                                                    <span>15点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
                             <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><div>
-<div style=""><b style="font-size:1.333rem"><span data-wiz-span="data-wiz-span">参考资料</span></b></div>
-<div style="">
-<ul>
-<li><span><a href="https://www.runoob.com/w3cnote/linux-findtoreplace.html" style="text-decoration-skip-ink:none;" target="_blank"  rel="nofollow" >Linux 批量查找与替换 | 菜鸟教程 (runoob.com)</a></span></li>
-<li><a href="https://developer.aliyun.com/article/528707" style="text-decoration-skip-ink:none;" target="_blank"  rel="nofollow" >linux下批量替换文件内容-阿里云开发者社区 (aliyun.com)</a></li>
-<li><a href="https://www.jianshu.com/p/e0bafe92977e" style="text-decoration-skip-ink:none;" target="_blank"  rel="nofollow" >shell批量替换文件内容的四种方法 - 简书 (jianshu.com)</a></li>
-<li><a href="https://www.runoob.com/linux/linux-comm-sed.html" style="text-decoration-skip-ink:none;" target="_blank"  rel="nofollow" >Linux sed 命令 | 菜鸟教程 (runoob.com)</a></li>
-<li><a href="https://www.cnblogs.com/qq78292959/archive/2012/03/08/2385080.html" target="_blank"  rel="nofollow" >linux批量替换文件内容3种方法(perl,sed,shell) - 一个人的天空@ - 博客园 (cnblogs.com)</a></li>
-</ul>
+<div style=""><b style=""><span data-wiz-span="data-wiz-span" style="font-size: 1.333rem;">语法格式</span></b></div>
 </div>
-<div style=""><b style="font-size:1.333rem"><span data-wiz-span="data-wiz-span">注意要点</span></b></div>
-<div style="">
-<ul>
-<li><span style="color:rgb(255, 0, 0)" data-wiz-span="data-wiz-span">若有特殊字符，需用 “\” 来转义。</span></li>
-</ul>
-</div>
-</div>
-<div></div>
-<div><b><span data-wiz-span="data-wiz-span" style="font-size: 1.333rem;">语法格式</span></b></div>
 <div data-mode="JavaScript" data-theme="default">
 <pre><code>sed -i "s/原字符串/新字符串/g" `grep 原字符串 -rl 所在目录`</code></pre>
 </div>
+<div><b style="font-size:1.333rem"><br /></b></div>
 <div><b style="font-size:1.333rem">实例</b></div>
 <div>&nbsp; &nbsp; 以下我们实现把 “/root/github/docs/”目录下 包含 “old.com”文本 的文件查找出来，并将这些文件中的 “old.com”文本 替换为 “new.com”文本：</div>
 <div data-mode="JavaScript" data-theme="default">
 <pre><code>sed -i "s/old.com/new.com/g" `grep old.com -rl /root/github/docs/`
 #实测处理3.5k个文件只需要最多8秒（包含子目录）</code></pre>
 </div>
-<div></div>
+<div>
+<div style="">
+<div><b style="font-size:1.333rem;"><span data-wiz-span="data-wiz-span"><br /></span></b></div>
+<div><b style="font-size:1.333rem;"><span data-wiz-span="data-wiz-span">注意要点</span></b></div>
+</div>
+<div style="">
+<ul>
+<li><span data-wiz-span="data-wiz-span" style="color:rgb(255, 0, 0);">若有特殊字符，需用 “\” 来转义。</span></li>
+</ul>
+</div>
+</div>
+<div><b style="font-size:1.333rem"><span data-wiz-span="data-wiz-span"><br /></span></b></div>
 <div><b style="font-size:1.333rem"><span data-wiz-span="data-wiz-span">命令解释</span></b></div>
 <div data-mode="JavaScript" data-theme="default">
 <pre><code>sed -i "s/原字符串/新字符串/g" `grep 原字符串 -rl 所在目录`
@@ -178,7 +173,18 @@ grep命令参数解释：
 	-l 表示输出匹配的文件名。	-l, --files-with-matches  print only names of FILEs with selected lines</code></pre>
 </div>
 <div></div>
-<div></div>
+<div>
+<div style=""><b style="font-size:1.333rem;"><span data-wiz-span="data-wiz-span">参考资料</span></b></div>
+<div style="">
+<ul>
+<li><span><a href="https://www.runoob.com/w3cnote/linux-findtoreplace.html" style="text-decoration-skip-ink:none;" target="_blank"  rel="nofollow" >Linux 批量查找与替换 | 菜鸟教程 (runoob.com)</a></span></li>
+<li><a href="https://developer.aliyun.com/article/528707" style="text-decoration-skip-ink:none;" target="_blank"  rel="nofollow" >linux下批量替换文件内容-阿里云开发者社区 (aliyun.com)</a></li>
+<li><a href="https://www.jianshu.com/p/e0bafe92977e" style="text-decoration-skip-ink:none;" target="_blank"  rel="nofollow" >shell批量替换文件内容的四种方法 - 简书 (jianshu.com)</a></li>
+<li><a href="https://www.runoob.com/linux/linux-comm-sed.html" style="text-decoration-skip-ink:none;" target="_blank"  rel="nofollow" >Linux sed 命令 | 菜鸟教程 (runoob.com)</a></li>
+<li><a href="https://www.cnblogs.com/qq78292959/archive/2012/03/08/2385080.html" style="text-decoration-skip-ink:none;" target="_blank"  rel="nofollow" >linux批量替换文件内容3种方法(perl,sed,shell) - 一个人的天空@ - 博客园 (cnblogs.com)</a></li>
+</ul>
+</div>
+</div>
                         </div>
                                                 <div class="footer clearfix">
                             <div class="tags float-left">
