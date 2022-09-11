@@ -14,215 +14,7 @@
         <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.seatonjiang.com' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
-		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.8.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
-							<script
-				src="//www.googletagmanager.com/gtag/js?id=G-9Z877QYTCT"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
-			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
-				var mi_version = '8.8.2';
-				var mi_track_user = true;
-				var mi_no_track_reason = '';
-				
-								var disableStrs = [
-										'ga-disable-G-9Z877QYTCT',
-														];
-
-				/* Function to detect opted out users */
-				function __gtagTrackerIsOptedOut() {
-					for (var index = 0; index < disableStrs.length; index++) {
-						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
-							return true;
-						}
-					}
-
-					return false;
-				}
-
-				/* Disable tracking if the opt-out cookie exists. */
-				if (__gtagTrackerIsOptedOut()) {
-					for (var index = 0; index < disableStrs.length; index++) {
-						window[disableStrs[index]] = true;
-					}
-				}
-
-				/* Opt-out function */
-				function __gtagTrackerOptout() {
-					for (var index = 0; index < disableStrs.length; index++) {
-						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-						window[disableStrs[index]] = true;
-					}
-				}
-
-				if ('undefined' === typeof gaOptout) {
-					function gaOptout() {
-						__gtagTrackerOptout();
-					}
-				}
-								window.dataLayer = window.dataLayer || [];
-
-				window.MonsterInsightsDualTracker = {
-					helpers: {},
-					trackers: {},
-				};
-				if (mi_track_user) {
-					function __gtagDataLayer() {
-						dataLayer.push(arguments);
-					}
-
-					function __gtagTracker(type, name, parameters) {
-						if (!parameters) {
-							parameters = {};
-						}
-
-						if (parameters.send_to) {
-							__gtagDataLayer.apply(null, arguments);
-							return;
-						}
-
-						if (type === 'event') {
-														parameters.send_to = monsterinsights_frontend.v4_id;
-							var hookName = name;
-							if (typeof parameters['event_category'] !== 'undefined') {
-								hookName = parameters['event_category'] + ':' + name;
-							}
-
-							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
-								MonsterInsightsDualTracker.trackers[hookName](parameters);
-							} else {
-								__gtagDataLayer('event', name, parameters);
-							}
-							
-													} else {
-							__gtagDataLayer.apply(null, arguments);
-						}
-					}
-
-					__gtagTracker('js', new Date());
-					__gtagTracker('set', {
-						'developer_id.dZGIzZG': true,
-											});
-										__gtagTracker('config', 'G-9Z877QYTCT', {"forceSSL":"true","link_attribution":"true"} );
-															window.gtag = __gtagTracker;										(function () {
-						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
-						/* ga and __gaTracker compatibility shim. */
-						var noopfn = function () {
-							return null;
-						};
-						var newtracker = function () {
-							return new Tracker();
-						};
-						var Tracker = function () {
-							return null;
-						};
-						var p = Tracker.prototype;
-						p.get = noopfn;
-						p.set = noopfn;
-						p.send = function () {
-							var args = Array.prototype.slice.call(arguments);
-							args.unshift('send');
-							__gaTracker.apply(null, args);
-						};
-						var __gaTracker = function () {
-							var len = arguments.length;
-							if (len === 0) {
-								return;
-							}
-							var f = arguments[len - 1];
-							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
-								if ('send' === arguments[0]) {
-									var hitConverted, hitObject = false, action;
-									if ('event' === arguments[1]) {
-										if ('undefined' !== typeof arguments[3]) {
-											hitObject = {
-												'eventAction': arguments[3],
-												'eventCategory': arguments[2],
-												'eventLabel': arguments[4],
-												'value': arguments[5] ? arguments[5] : 1,
-											}
-										}
-									}
-									if ('pageview' === arguments[1]) {
-										if ('undefined' !== typeof arguments[2]) {
-											hitObject = {
-												'eventAction': 'page_view',
-												'page_path': arguments[2],
-											}
-										}
-									}
-									if (typeof arguments[2] === 'object') {
-										hitObject = arguments[2];
-									}
-									if (typeof arguments[5] === 'object') {
-										Object.assign(hitObject, arguments[5]);
-									}
-									if ('undefined' !== typeof arguments[1].hitType) {
-										hitObject = arguments[1];
-										if ('pageview' === hitObject.hitType) {
-											hitObject.eventAction = 'page_view';
-										}
-									}
-									if (hitObject) {
-										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
-										hitConverted = mapArgs(hitObject);
-										__gtagTracker('event', action, hitConverted);
-									}
-								}
-								return;
-							}
-
-							function mapArgs(args) {
-								var arg, hit = {};
-								var gaMap = {
-									'eventCategory': 'event_category',
-									'eventAction': 'event_action',
-									'eventLabel': 'event_label',
-									'eventValue': 'event_value',
-									'nonInteraction': 'non_interaction',
-									'timingCategory': 'event_category',
-									'timingVar': 'name',
-									'timingValue': 'value',
-									'timingLabel': 'event_label',
-									'page': 'page_path',
-									'location': 'page_location',
-									'title': 'page_title',
-								};
-								for (arg in args) {
-																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
-										hit[gaMap[arg]] = args[arg];
-									} else {
-										hit[arg] = args[arg];
-									}
-								}
-								return hit;
-							}
-
-							try {
-								f.hitCallback();
-							} catch (ex) {
-							}
-						};
-						__gaTracker.create = newtracker;
-						__gaTracker.getByName = newtracker;
-						__gaTracker.getAll = function () {
-							return [];
-						};
-						__gaTracker.remove = noopfn;
-						__gaTracker.loaded = true;
-						window['__gaTracker'] = __gaTracker;
-					})();
-									} else {
-										console.log("");
-					(function () {
-						function __gtagTracker() {
-							return null;
-						}
-
-						window['__gtagTracker'] = __gtagTracker;
-						window['gtag'] = __gtagTracker;
-					})();
-									}
-			</script>
-				<!-- / Google Analytics by MonsterInsights -->
-		<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
+<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-theme-classic-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-font-monaco-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.27' type='text/css' media='all' />
 <style id='global-styles-inline-css' type='text/css'>
@@ -338,7 +130,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">debian9安装docker+compose(最新版)</h1>
                             <div class="meta">
                                 <span>2020年4月14日</span>
-                                                                    <span>474点热度</span>
+                                                                    <span>475点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -347,7 +139,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <p>Docker的社区版（Docker Community Edition）叫做docker-ce。老版本的Docker包叫做docker或者docker-engine，如果安装了老版本的docker得先卸载然后再安装新版本的docker。docker的发展非常迅速，apt源的更新往往比较滞后。所以docker官网推荐的安装方式都是下载docker安装脚本安装。</p>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e26bc05890972158849" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c7f60ac2649627279" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 卸载老旧的版本（若未安装过可省略此步）：
@@ -356,21 +148,21 @@ sudo apt-get remove docker docker-engine docker.io</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05890972158849-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e26bc05890972158849-2">2</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac2649627279-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac2649627279-2">2</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05890972158849-1">卸载老旧的版本（若未安装过可省略此步）：</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e26bc05890972158849-2"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">remove </span><span class="crayon-e">docker </span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-e">engine </span><span class="crayon-v">docker</span><span class="crayon-sy">.</span><span class="crayon-v">io</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60ac2649627279-1">卸载老旧的版本（若未安装过可省略此步）：</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c7f60ac2649627279-2"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">remove </span><span class="crayon-e">docker </span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-e">engine </span><span class="crayon-v">docker</span><span class="crayon-sy">.</span><span class="crayon-v">io</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0001 seconds] -->
+<!-- [Format Time: 0.0002 seconds] -->
 </div>
 <ul>
 <li>使用脚本自动安装安装最新的docker：</li>
 </ul>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e26bc05896515002848" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c7f60ac8271457699" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 在测试或开发环境中 Docker 官方为了简化安装流程，提供了一套便捷的安装脚本，Debian 系统上可以使用这套脚本安装，另外可以通过 --mirror 选项使用国内源进行安装：
@@ -391,9 +183,9 @@ docker run hello-world</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-11">11</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-12">12</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-13">13</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e26bc05896515002848-14">14</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-11">11</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-12">12</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-13">13</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c7f60ac8271457699-14">14</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-1">在测试或开发环境中<span class="crayon-h"> </span><span class="crayon-i">Docker</span><span class="crayon-h"> </span>官方为了简化安装流程，提供了一套便捷的安装脚本，<span class="crayon-i">Debian</span><span class="crayon-h"> </span>系统上可以使用这套脚本安装，另外可以通过<span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-i">mirror</span><span class="crayon-h"> </span>选项使用国内源进行安装：</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-2">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-3"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-v">curl</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-e">fsSL </span><span class="crayon-v">get</span><span class="crayon-sy">.</span><span class="crayon-v">docker</span><span class="crayon-sy">.</span><span class="crayon-v">com</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">o</span><span class="crayon-h"> </span><span class="crayon-v">get</span><span class="crayon-o">-</span><span class="crayon-v">docker</span><span class="crayon-sy">.</span><span class="crayon-i">sh</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-4"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">sudo </span><span class="crayon-e">sh </span><span class="crayon-v">get</span><span class="crayon-o">-</span><span class="crayon-v">docker</span><span class="crayon-sy">.</span><span class="crayon-v">sh</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-e">mirror </span><span class="crayon-i">Aliyun</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-5"><span class="crayon-p"># $ sudo sh get-docker.sh --mirror AzureChinaCloud</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-6"><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">-</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-7">以上也可以使用一条命令实现<span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-8"><span class="crayon-v">curl</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-e">sSL </span><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//get.docker.com/ | sh </span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-9"><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">-</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-10"><span class="crayon-v">docker</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">v</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-11"><span class="crayon-e">Docker </span><span class="crayon-i">version</span><span class="crayon-h"> </span><span class="crayon-cn">19.03.8</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-e">build </span><span class="crayon-i">afacb8b7f0</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-12">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-13">测试运行<span class="crayon-i">hello</span>容器</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e26bc05896515002848-14"><span class="crayon-e">docker </span><span class="crayon-e">run </span><span class="crayon-v">hello</span><span class="crayon-o">-</span><span class="crayon-v">world</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-1">在测试或开发环境中<span class="crayon-h"> </span><span class="crayon-i">Docker</span><span class="crayon-h"> </span>官方为了简化安装流程，提供了一套便捷的安装脚本，<span class="crayon-i">Debian</span><span class="crayon-h"> </span>系统上可以使用这套脚本安装，另外可以通过<span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-i">mirror</span><span class="crayon-h"> </span>选项使用国内源进行安装：</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-2">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-3"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-v">curl</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-e">fsSL </span><span class="crayon-v">get</span><span class="crayon-sy">.</span><span class="crayon-v">docker</span><span class="crayon-sy">.</span><span class="crayon-v">com</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">o</span><span class="crayon-h"> </span><span class="crayon-v">get</span><span class="crayon-o">-</span><span class="crayon-v">docker</span><span class="crayon-sy">.</span><span class="crayon-i">sh</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-4"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">sudo </span><span class="crayon-e">sh </span><span class="crayon-v">get</span><span class="crayon-o">-</span><span class="crayon-v">docker</span><span class="crayon-sy">.</span><span class="crayon-v">sh</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-e">mirror </span><span class="crayon-i">Aliyun</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-5"><span class="crayon-p"># $ sudo sh get-docker.sh --mirror AzureChinaCloud</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-6"><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">-</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-7">以上也可以使用一条命令实现<span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-8"><span class="crayon-v">curl</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-e">sSL </span><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//get.docker.com/ | sh </span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-9"><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">-</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-10"><span class="crayon-v">docker</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">v</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-11"><span class="crayon-e">Docker </span><span class="crayon-i">version</span><span class="crayon-h"> </span><span class="crayon-cn">19.03.8</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-e">build </span><span class="crayon-i">afacb8b7f0</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-12">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-13">测试运行<span class="crayon-i">hello</span>容器</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c7f60ac8271457699-14"><span class="crayon-e">docker </span><span class="crayon-e">run </span><span class="crayon-v">hello</span><span class="crayon-o">-</span><span class="crayon-v">world</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -407,7 +199,7 @@ docker run hello-world</textarea></div>
 </ul>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e26bc05898490224960" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c7f60aca233928764" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 以下命令与你在“版本”页面上找到的命令略有不同。通过使用-o标志首先指定输出文件而不是重定向输出，此语法可避免遇到使用sudo时导致的权限被拒绝错误。
@@ -421,14 +213,14 @@ docker-compose version 1.25.5, build 8a1c60f6</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05898490224960-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e26bc05898490224960-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05898490224960-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e26bc05898490224960-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05898490224960-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e26bc05898490224960-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e26bc05898490224960-7">7</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60aca233928764-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c7f60aca233928764-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60aca233928764-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c7f60aca233928764-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60aca233928764-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c7f60aca233928764-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c7f60aca233928764-7">7</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05898490224960-1">以下命令与你在“版本”页面上找到的命令略有不同。通过使用<span class="crayon-o">-</span><span class="crayon-i">o</span>标志首先指定输出文件而不是重定向输出，此语法可避免遇到使用<span class="crayon-i">sudo</span>时导致的权限被拒绝错误。</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e26bc05898490224960-2"><span class="crayon-e">sudo </span><span class="crayon-v">curl</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">L</span><span class="crayon-h"> </span><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//github.com/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05898490224960-3">接下来我们将设置权限：</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e26bc05898490224960-4"><span class="crayon-e">sudo </span><span class="crayon-v">chmod</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-v">x</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">usr</span><span class="crayon-o">/</span><span class="crayon-v">local</span><span class="crayon-o">/</span><span class="crayon-v">bin</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05898490224960-5"><span class="crayon-o">===</span><span class="crayon-o">===</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e26bc05898490224960-6"><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">v</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e26bc05898490224960-7"><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-e">compose </span><span class="crayon-i">version</span><span class="crayon-h"> </span><span class="crayon-cn">1.25.5</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">build</span><span class="crayon-h"> </span><span class="crayon-cn">8a1c60f6</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60aca233928764-1">以下命令与你在“版本”页面上找到的命令略有不同。通过使用<span class="crayon-o">-</span><span class="crayon-i">o</span>标志首先指定输出文件而不是重定向输出，此语法可避免遇到使用<span class="crayon-i">sudo</span>时导致的权限被拒绝错误。</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c7f60aca233928764-2"><span class="crayon-e">sudo </span><span class="crayon-v">curl</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">L</span><span class="crayon-h"> </span><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//github.com/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60aca233928764-3">接下来我们将设置权限：</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c7f60aca233928764-4"><span class="crayon-e">sudo </span><span class="crayon-v">chmod</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-v">x</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">usr</span><span class="crayon-o">/</span><span class="crayon-v">local</span><span class="crayon-o">/</span><span class="crayon-v">bin</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60aca233928764-5"><span class="crayon-o">===</span><span class="crayon-o">===</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c7f60aca233928764-6"><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">v</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c7f60aca233928764-7"><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-e">compose </span><span class="crayon-i">version</span><span class="crayon-h"> </span><span class="crayon-cn">1.25.5</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">build</span><span class="crayon-h"> </span><span class="crayon-cn">8a1c60f6</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0003 seconds] -->
+<!-- [Format Time: 0.0002 seconds] -->
 </div>
 <p><wiz_tmp_tag id="wiz-table-range-border" contenteditable="false" style="display: none;"></p>
 <div id="wiz-table-col-line" style="display: none;"></div>
@@ -504,10 +296,6 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.27' id='urvanov_syntax_highlighter_js-js'></script>
-<script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.8.2' id='monsterinsights-frontend-script-js'></script>
-<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
-var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/luojimen.github.io","hash_tracking":"false","ua":"","v4_id":"G-9Z877QYTCT"};/* ]]> */
-</script>
 <script type='text/javascript' id='image-sizes-js-extra'>
 /* <![CDATA[ */
 var IMAGE_SIZES = {"version":"3.5","disables":["thumbnail","medium","medium_large","large","1536x1536","2048x2048","kratos-thumbnail"]};

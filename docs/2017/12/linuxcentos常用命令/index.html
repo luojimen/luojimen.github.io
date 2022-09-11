@@ -8,221 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telphone=no, email=no">
     <meta name="keywords" content="linux,ubuntu">
-    <meta name="description" itemprop="description" content="通用 当前文件夹下生成指定体积的文件 [crayon-631e269c043e6191939440/] Ubuntu ssh配置 [crayon-631e269c043ed912375506/] 修改 [&hellip;]">
+    <meta name="description" itemprop="description" content="通用 当前文件夹下生成指定体积的文件 [crayon-631e2c64daff2571740518/] Ubuntu ssh配置 [crayon-631e2c64daffb683350403/] 修改 [&hellip;]">
     <meta name="theme-color" content="#282a2c">
     <meta itemprop="image" content="https://luoji.men/wp-content/themes/kratos-4.1.2/assets/img/default.jpg" />
         <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.seatonjiang.com' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
-		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.8.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
-							<script
-				src="//www.googletagmanager.com/gtag/js?id=G-9Z877QYTCT"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
-			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
-				var mi_version = '8.8.2';
-				var mi_track_user = true;
-				var mi_no_track_reason = '';
-				
-								var disableStrs = [
-										'ga-disable-G-9Z877QYTCT',
-														];
-
-				/* Function to detect opted out users */
-				function __gtagTrackerIsOptedOut() {
-					for (var index = 0; index < disableStrs.length; index++) {
-						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
-							return true;
-						}
-					}
-
-					return false;
-				}
-
-				/* Disable tracking if the opt-out cookie exists. */
-				if (__gtagTrackerIsOptedOut()) {
-					for (var index = 0; index < disableStrs.length; index++) {
-						window[disableStrs[index]] = true;
-					}
-				}
-
-				/* Opt-out function */
-				function __gtagTrackerOptout() {
-					for (var index = 0; index < disableStrs.length; index++) {
-						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-						window[disableStrs[index]] = true;
-					}
-				}
-
-				if ('undefined' === typeof gaOptout) {
-					function gaOptout() {
-						__gtagTrackerOptout();
-					}
-				}
-								window.dataLayer = window.dataLayer || [];
-
-				window.MonsterInsightsDualTracker = {
-					helpers: {},
-					trackers: {},
-				};
-				if (mi_track_user) {
-					function __gtagDataLayer() {
-						dataLayer.push(arguments);
-					}
-
-					function __gtagTracker(type, name, parameters) {
-						if (!parameters) {
-							parameters = {};
-						}
-
-						if (parameters.send_to) {
-							__gtagDataLayer.apply(null, arguments);
-							return;
-						}
-
-						if (type === 'event') {
-														parameters.send_to = monsterinsights_frontend.v4_id;
-							var hookName = name;
-							if (typeof parameters['event_category'] !== 'undefined') {
-								hookName = parameters['event_category'] + ':' + name;
-							}
-
-							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
-								MonsterInsightsDualTracker.trackers[hookName](parameters);
-							} else {
-								__gtagDataLayer('event', name, parameters);
-							}
-							
-													} else {
-							__gtagDataLayer.apply(null, arguments);
-						}
-					}
-
-					__gtagTracker('js', new Date());
-					__gtagTracker('set', {
-						'developer_id.dZGIzZG': true,
-											});
-										__gtagTracker('config', 'G-9Z877QYTCT', {"forceSSL":"true","link_attribution":"true"} );
-															window.gtag = __gtagTracker;										(function () {
-						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
-						/* ga and __gaTracker compatibility shim. */
-						var noopfn = function () {
-							return null;
-						};
-						var newtracker = function () {
-							return new Tracker();
-						};
-						var Tracker = function () {
-							return null;
-						};
-						var p = Tracker.prototype;
-						p.get = noopfn;
-						p.set = noopfn;
-						p.send = function () {
-							var args = Array.prototype.slice.call(arguments);
-							args.unshift('send');
-							__gaTracker.apply(null, args);
-						};
-						var __gaTracker = function () {
-							var len = arguments.length;
-							if (len === 0) {
-								return;
-							}
-							var f = arguments[len - 1];
-							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
-								if ('send' === arguments[0]) {
-									var hitConverted, hitObject = false, action;
-									if ('event' === arguments[1]) {
-										if ('undefined' !== typeof arguments[3]) {
-											hitObject = {
-												'eventAction': arguments[3],
-												'eventCategory': arguments[2],
-												'eventLabel': arguments[4],
-												'value': arguments[5] ? arguments[5] : 1,
-											}
-										}
-									}
-									if ('pageview' === arguments[1]) {
-										if ('undefined' !== typeof arguments[2]) {
-											hitObject = {
-												'eventAction': 'page_view',
-												'page_path': arguments[2],
-											}
-										}
-									}
-									if (typeof arguments[2] === 'object') {
-										hitObject = arguments[2];
-									}
-									if (typeof arguments[5] === 'object') {
-										Object.assign(hitObject, arguments[5]);
-									}
-									if ('undefined' !== typeof arguments[1].hitType) {
-										hitObject = arguments[1];
-										if ('pageview' === hitObject.hitType) {
-											hitObject.eventAction = 'page_view';
-										}
-									}
-									if (hitObject) {
-										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
-										hitConverted = mapArgs(hitObject);
-										__gtagTracker('event', action, hitConverted);
-									}
-								}
-								return;
-							}
-
-							function mapArgs(args) {
-								var arg, hit = {};
-								var gaMap = {
-									'eventCategory': 'event_category',
-									'eventAction': 'event_action',
-									'eventLabel': 'event_label',
-									'eventValue': 'event_value',
-									'nonInteraction': 'non_interaction',
-									'timingCategory': 'event_category',
-									'timingVar': 'name',
-									'timingValue': 'value',
-									'timingLabel': 'event_label',
-									'page': 'page_path',
-									'location': 'page_location',
-									'title': 'page_title',
-								};
-								for (arg in args) {
-																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
-										hit[gaMap[arg]] = args[arg];
-									} else {
-										hit[arg] = args[arg];
-									}
-								}
-								return hit;
-							}
-
-							try {
-								f.hitCallback();
-							} catch (ex) {
-							}
-						};
-						__gaTracker.create = newtracker;
-						__gaTracker.getByName = newtracker;
-						__gaTracker.getAll = function () {
-							return [];
-						};
-						__gaTracker.remove = noopfn;
-						__gaTracker.loaded = true;
-						window['__gaTracker'] = __gaTracker;
-					})();
-									} else {
-										console.log("");
-					(function () {
-						function __gtagTracker() {
-							return null;
-						}
-
-						window['__gtagTracker'] = __gtagTracker;
-						window['gtag'] = __gtagTracker;
-					})();
-									}
-			</script>
-				<!-- / Google Analytics by MonsterInsights -->
-		<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
+<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-theme-classic-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-font-monaco-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.27' type='text/css' media='all' />
 <style id='global-styles-inline-css' type='text/css'>
@@ -338,7 +130,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">Linux(CentOS/Ubuntu)常用命令和路径</h1>
                             <div class="meta">
                                 <span>2017年12月5日</span>
-                                                                    <span>1660点热度</span>
+                                                                    <span>1661点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -346,7 +138,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <div>当前文件夹下生成指定体积的文件</div>
 <div class="wiz-code-container" id="wiz_cm_1512630683617_1149" data-mode="Shell" data-theme="default"><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269c043e6191939440" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c64daff2571740518" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 dd if=/dev/zero of=test.bin bs=1M count=10</textarea></div>
@@ -354,9 +146,9 @@ dd if=/dev/zero of=test.bin bs=1M count=10</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269c043e6191939440-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c64daff2571740518-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269c043e6191939440-1"><span class="crayon-e">dd </span><span class="crayon-st">if</span><span class="crayon-o">=</span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-e">zero </span><span class="crayon-v">of</span><span class="crayon-o">=</span><span class="crayon-v">test</span><span class="crayon-sy">.</span><span class="crayon-e">bin </span><span class="crayon-v">bs</span><span class="crayon-o">=</span><span class="crayon-cn">1M</span><span class="crayon-h"> </span><span class="crayon-v">count</span><span class="crayon-o">=</span><span class="crayon-cn">10</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c64daff2571740518-1"><span class="crayon-e">dd </span><span class="crayon-st">if</span><span class="crayon-o">=</span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-e">zero </span><span class="crayon-v">of</span><span class="crayon-o">=</span><span class="crayon-v">test</span><span class="crayon-sy">.</span><span class="crayon-e">bin </span><span class="crayon-v">bs</span><span class="crayon-o">=</span><span class="crayon-cn">1M</span><span class="crayon-h"> </span><span class="crayon-v">count</span><span class="crayon-o">=</span><span class="crayon-cn">10</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -369,7 +161,7 @@ dd if=/dev/zero of=test.bin bs=1M count=10</textarea></div>
 <div>ssh配置</div>
 <div class="wiz-code-container" id="wiz_cm_1512666661709_2694" data-mode="Shell" data-theme="default"><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269c043ed912375506" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c64daffb683350403" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 # /etc/ssh/sshd_config
@@ -378,9 +170,9 @@ dd if=/dev/zero of=test.bin bs=1M count=10</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269c043ed912375506-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269c043ed912375506-2">2</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c64daffb683350403-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c64daffb683350403-2">2</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269c043ed912375506-1"><span class="crayon-p"># /etc/ssh/sshd_config</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269c043ed912375506-2"><span class="crayon-p"># service ssh restart</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c64daffb683350403-1"><span class="crayon-p"># /etc/ssh/sshd_config</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c64daffb683350403-2"><span class="crayon-p"># service ssh restart</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -392,7 +184,7 @@ dd if=/dev/zero of=test.bin bs=1M count=10</textarea></div>
 <div>修改主机名称</div>
 <div class="wiz-code-container" id="wiz_cm_1513357697465_6547" data-mode="Shell" data-theme="default"><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269c043ef044178308" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c64daffd776895981" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 # hostname 新主机名 //临时修改,重登生效,重启失效.</textarea></div>
@@ -400,9 +192,9 @@ dd if=/dev/zero of=test.bin bs=1M count=10</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269c043ef044178308-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c64daffd776895981-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269c043ef044178308-1"><span class="crayon-p"># hostname 新主机名 //临时修改,重登生效,重启失效.</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c64daffd776895981-1"><span class="crayon-p"># hostname 新主机名 //临时修改,重登生效,重启失效.</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -416,7 +208,7 @@ dd if=/dev/zero of=test.bin bs=1M count=10</textarea></div>
 <div><span style="color: inherit; font-size: 1rem; line-height: 1.6;">查看CentOS版本:rpm -q centos-release</span></div>
 <div class="wiz-code-container" id="wiz_cm_1512402177036_5343" data-mode="HTML" data-theme="default"><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269c043f1931184803" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c64dafff745740349" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 # rpm -q centos-release
@@ -425,9 +217,9 @@ centos-release-6-8.el6.centos.12.3.x86_64</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269c043f1931184803-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269c043f1931184803-2">2</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c64dafff745740349-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c64dafff745740349-2">2</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269c043f1931184803-1"><span class="crayon-p"># rpm -q centos-release</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269c043f1931184803-2"><span class="crayon-v">centos</span><span class="crayon-o">-</span><span class="crayon-v">release</span><span class="crayon-o">-</span><span class="crayon-cn">6</span><span class="crayon-o">-</span><span class="crayon-cn">8.el6.centos.12.3.x86_64</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c64dafff745740349-1"><span class="crayon-p"># rpm -q centos-release</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c64dafff745740349-2"><span class="crayon-v">centos</span><span class="crayon-o">-</span><span class="crayon-v">release</span><span class="crayon-o">-</span><span class="crayon-cn">6</span><span class="crayon-o">-</span><span class="crayon-cn">8.el6.centos.12.3.x86_64</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -441,7 +233,7 @@ centos-release-6-8.el6.centos.12.3.x86_64</textarea></div>
 <div><span style="color: inherit; font-size: 1rem; line-height: 1.6;">查看发行版本:cat /etc/redhat-release</span></div>
 <div class="wiz-code-container" data-mode="HTML" data-theme="default" id="wiz_cm_1512491706642_8538"><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269c043f3314771184" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c64db001359109025" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 [root@centos6 ~]# cat /etc/redhat-release
@@ -450,9 +242,9 @@ CentOS release 6.8 (Final)</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269c043f3314771184-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269c043f3314771184-2">2</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c64db001359109025-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c64db001359109025-2">2</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269c043f3314771184-1"><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">centos6</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># cat /etc/redhat-release</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269c043f3314771184-2"><span class="crayon-e">CentOS </span><span class="crayon-i">release</span><span class="crayon-h"> </span><span class="crayon-cn">6.8</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-m">Final</span><span class="crayon-sy">)</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c64db001359109025-1"><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">centos6</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># cat /etc/redhat-release</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c64db001359109025-2"><span class="crayon-e">CentOS </span><span class="crayon-i">release</span><span class="crayon-h"> </span><span class="crayon-cn">6.8</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-m">Final</span><span class="crayon-sy">)</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -466,7 +258,7 @@ CentOS release 6.8 (Final)</textarea></div>
 <div>
 <div class="wiz-code-container" data-mode="HTML" data-theme="default" id="wiz_cm_1512491706629_9566"><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269c043f4084231556" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c64db002139416592" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 [root@centos6 ~]# uname -r
@@ -475,9 +267,9 @@ CentOS release 6.8 (Final)</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269c043f4084231556-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269c043f4084231556-2">2</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c64db002139416592-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c64db002139416592-2">2</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269c043f4084231556-1"><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">centos6</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># uname -r</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269c043f4084231556-2"><span class="crayon-cn">2.6.32</span><span class="crayon-o">-</span><span class="crayon-cn">642.6.1.el6.x86_64</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c64db002139416592-1"><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">centos6</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># uname -r</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c64db002139416592-2"><span class="crayon-cn">2.6.32</span><span class="crayon-o">-</span><span class="crayon-cn">642.6.1.el6.x86_64</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -491,7 +283,7 @@ CentOS release 6.8 (Final)</textarea></div>
 <div>
 <div class="wiz-code-container" data-mode="HTML" data-theme="default" id="wiz_cm_1512491706619_9035"><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269c043f5017465249" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c64db004224330096" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 [root@centos6 ~]# uname -a
@@ -500,14 +292,14 @@ Linux centos6 2.6.32-642.6.1.el6.x86_64 #1 SMP Wed Oct 5 00:36:12 UTC 2016 x86_6
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269c043f5017465249-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269c043f5017465249-2">2</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c64db004224330096-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c64db004224330096-2">2</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269c043f5017465249-1"><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">centos6</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># uname -a</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269c043f5017465249-2"><span class="crayon-e">Linux </span><span class="crayon-i">centos6</span><span class="crayon-h"> </span><span class="crayon-cn">2.6.32</span><span class="crayon-o">-</span><span class="crayon-cn">642.6.1.el6.x86_64</span><span class="crayon-h"> </span><span class="crayon-p">#1 SMP Wed Oct 5 00:36:12 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c64db004224330096-1"><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">centos6</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># uname -a</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c64db004224330096-2"><span class="crayon-e">Linux </span><span class="crayon-i">centos6</span><span class="crayon-h"> </span><span class="crayon-cn">2.6.32</span><span class="crayon-o">-</span><span class="crayon-cn">642.6.1.el6.x86_64</span><span class="crayon-h"> </span><span class="crayon-p">#1 SMP Wed Oct 5 00:36:12 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0001 seconds] -->
+<!-- [Format Time: 0.0002 seconds] -->
 </p>
 <div></div>
 </div>
@@ -518,7 +310,7 @@ Linux centos6 2.6.32-642.6.1.el6.x86_64 #1 SMP Wed Oct 5 00:36:12 UTC 2016 x86_6
 <div>CentOS6.8 防火墙命令:</div>
 <div class="wiz-code-container" data-mode="HTML" data-theme="default" id="wiz_cm_1512491292012_9237"><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269c043f7564190300" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c64db005813612528" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 查询防火墙:[root@localhost ~]# service  iptables status
@@ -531,9 +323,9 @@ Linux centos6 2.6.32-642.6.1.el6.x86_64 #1 SMP Wed Oct 5 00:36:12 UTC 2016 x86_6
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269c043f7564190300-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269c043f7564190300-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269c043f7564190300-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269c043f7564190300-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269c043f7564190300-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269c043f7564190300-6">6</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c64db005813612528-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c64db005813612528-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c64db005813612528-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c64db005813612528-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c64db005813612528-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c64db005813612528-6">6</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269c043f7564190300-1">查询防火墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># service&nbsp;&nbsp;iptables status</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269c043f7564190300-2">停止防火墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># service&nbsp;&nbsp;iptables stop </span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269c043f7564190300-3">启动防火墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># service&nbsp;&nbsp;iptables start</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269c043f7564190300-4">重启防火墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># service&nbsp;&nbsp;iptables restart</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269c043f7564190300-5">永久关闭墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># chkconfig&nbsp;&nbsp;iptables off</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269c043f7564190300-6">永久启用墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># chkconfig&nbsp;&nbsp;iptables on (永久关闭后启用)</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c64db005813612528-1">查询防火墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># service&nbsp;&nbsp;iptables status</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c64db005813612528-2">停止防火墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># service&nbsp;&nbsp;iptables stop </span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c64db005813612528-3">启动防火墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># service&nbsp;&nbsp;iptables start</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c64db005813612528-4">重启防火墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># service&nbsp;&nbsp;iptables restart</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c64db005813612528-5">永久关闭墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># chkconfig&nbsp;&nbsp;iptables off</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c64db005813612528-6">永久启用墙<span class="crayon-o">:</span><span class="crayon-sy">[</span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-h"> </span><span class="crayon-o">~</span><span class="crayon-sy">]</span><span class="crayon-p"># chkconfig&nbsp;&nbsp;iptables on (永久关闭后启用)</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -621,10 +413,6 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.27' id='urvanov_syntax_highlighter_js-js'></script>
-<script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.8.2' id='monsterinsights-frontend-script-js'></script>
-<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
-var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/luojimen.github.io","hash_tracking":"false","ua":"","v4_id":"G-9Z877QYTCT"};/* ]]> */
-</script>
 <script type='text/javascript' id='image-sizes-js-extra'>
 /* <![CDATA[ */
 var IMAGE_SIZES = {"version":"3.5","disables":["thumbnail","medium","medium_large","large","1536x1536","2048x2048","kratos-thumbnail"]};

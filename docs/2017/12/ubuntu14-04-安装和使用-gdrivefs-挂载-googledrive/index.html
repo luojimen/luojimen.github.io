@@ -8,221 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telphone=no, email=no">
     <meta name="keywords" content="">
-    <meta name="description" itemprop="description" content="前言 项目页面:https://github.com/dsoprea/GDriveFS   安装 GDriveFS [crayon-631e269d3779a934052390/]     安装成功显 [&hellip;]">
+    <meta name="description" itemprop="description" content="前言 项目页面:https://github.com/dsoprea/GDriveFS   安装 GDriveFS [crayon-631e2c66ad591864580192/]     安装成功显 [&hellip;]">
     <meta name="theme-color" content="#282a2c">
     <meta itemprop="image" content="https://luojimen.github.io/wp-content/uploads/2017/12/197e69747c79af3f77e3df4d61653b26_223afa59-e07f-47be-85d7-dd8a97474335.jpg" />
         <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.seatonjiang.com' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
-		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.8.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
-							<script
-				src="//www.googletagmanager.com/gtag/js?id=G-9Z877QYTCT"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
-			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
-				var mi_version = '8.8.2';
-				var mi_track_user = true;
-				var mi_no_track_reason = '';
-				
-								var disableStrs = [
-										'ga-disable-G-9Z877QYTCT',
-														];
-
-				/* Function to detect opted out users */
-				function __gtagTrackerIsOptedOut() {
-					for (var index = 0; index < disableStrs.length; index++) {
-						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
-							return true;
-						}
-					}
-
-					return false;
-				}
-
-				/* Disable tracking if the opt-out cookie exists. */
-				if (__gtagTrackerIsOptedOut()) {
-					for (var index = 0; index < disableStrs.length; index++) {
-						window[disableStrs[index]] = true;
-					}
-				}
-
-				/* Opt-out function */
-				function __gtagTrackerOptout() {
-					for (var index = 0; index < disableStrs.length; index++) {
-						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-						window[disableStrs[index]] = true;
-					}
-				}
-
-				if ('undefined' === typeof gaOptout) {
-					function gaOptout() {
-						__gtagTrackerOptout();
-					}
-				}
-								window.dataLayer = window.dataLayer || [];
-
-				window.MonsterInsightsDualTracker = {
-					helpers: {},
-					trackers: {},
-				};
-				if (mi_track_user) {
-					function __gtagDataLayer() {
-						dataLayer.push(arguments);
-					}
-
-					function __gtagTracker(type, name, parameters) {
-						if (!parameters) {
-							parameters = {};
-						}
-
-						if (parameters.send_to) {
-							__gtagDataLayer.apply(null, arguments);
-							return;
-						}
-
-						if (type === 'event') {
-														parameters.send_to = monsterinsights_frontend.v4_id;
-							var hookName = name;
-							if (typeof parameters['event_category'] !== 'undefined') {
-								hookName = parameters['event_category'] + ':' + name;
-							}
-
-							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
-								MonsterInsightsDualTracker.trackers[hookName](parameters);
-							} else {
-								__gtagDataLayer('event', name, parameters);
-							}
-							
-													} else {
-							__gtagDataLayer.apply(null, arguments);
-						}
-					}
-
-					__gtagTracker('js', new Date());
-					__gtagTracker('set', {
-						'developer_id.dZGIzZG': true,
-											});
-										__gtagTracker('config', 'G-9Z877QYTCT', {"forceSSL":"true","link_attribution":"true"} );
-															window.gtag = __gtagTracker;										(function () {
-						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
-						/* ga and __gaTracker compatibility shim. */
-						var noopfn = function () {
-							return null;
-						};
-						var newtracker = function () {
-							return new Tracker();
-						};
-						var Tracker = function () {
-							return null;
-						};
-						var p = Tracker.prototype;
-						p.get = noopfn;
-						p.set = noopfn;
-						p.send = function () {
-							var args = Array.prototype.slice.call(arguments);
-							args.unshift('send');
-							__gaTracker.apply(null, args);
-						};
-						var __gaTracker = function () {
-							var len = arguments.length;
-							if (len === 0) {
-								return;
-							}
-							var f = arguments[len - 1];
-							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
-								if ('send' === arguments[0]) {
-									var hitConverted, hitObject = false, action;
-									if ('event' === arguments[1]) {
-										if ('undefined' !== typeof arguments[3]) {
-											hitObject = {
-												'eventAction': arguments[3],
-												'eventCategory': arguments[2],
-												'eventLabel': arguments[4],
-												'value': arguments[5] ? arguments[5] : 1,
-											}
-										}
-									}
-									if ('pageview' === arguments[1]) {
-										if ('undefined' !== typeof arguments[2]) {
-											hitObject = {
-												'eventAction': 'page_view',
-												'page_path': arguments[2],
-											}
-										}
-									}
-									if (typeof arguments[2] === 'object') {
-										hitObject = arguments[2];
-									}
-									if (typeof arguments[5] === 'object') {
-										Object.assign(hitObject, arguments[5]);
-									}
-									if ('undefined' !== typeof arguments[1].hitType) {
-										hitObject = arguments[1];
-										if ('pageview' === hitObject.hitType) {
-											hitObject.eventAction = 'page_view';
-										}
-									}
-									if (hitObject) {
-										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
-										hitConverted = mapArgs(hitObject);
-										__gtagTracker('event', action, hitConverted);
-									}
-								}
-								return;
-							}
-
-							function mapArgs(args) {
-								var arg, hit = {};
-								var gaMap = {
-									'eventCategory': 'event_category',
-									'eventAction': 'event_action',
-									'eventLabel': 'event_label',
-									'eventValue': 'event_value',
-									'nonInteraction': 'non_interaction',
-									'timingCategory': 'event_category',
-									'timingVar': 'name',
-									'timingValue': 'value',
-									'timingLabel': 'event_label',
-									'page': 'page_path',
-									'location': 'page_location',
-									'title': 'page_title',
-								};
-								for (arg in args) {
-																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
-										hit[gaMap[arg]] = args[arg];
-									} else {
-										hit[arg] = args[arg];
-									}
-								}
-								return hit;
-							}
-
-							try {
-								f.hitCallback();
-							} catch (ex) {
-							}
-						};
-						__gaTracker.create = newtracker;
-						__gaTracker.getByName = newtracker;
-						__gaTracker.getAll = function () {
-							return [];
-						};
-						__gaTracker.remove = noopfn;
-						__gaTracker.loaded = true;
-						window['__gaTracker'] = __gaTracker;
-					})();
-									} else {
-										console.log("");
-					(function () {
-						function __gtagTracker() {
-							return null;
-						}
-
-						window['__gtagTracker'] = __gtagTracker;
-						window['gtag'] = __gtagTracker;
-					})();
-									}
-			</script>
-				<!-- / Google Analytics by MonsterInsights -->
-		<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
+<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-theme-classic-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-font-monaco-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.27' type='text/css' media='all' />
 <style id='global-styles-inline-css' type='text/css'>
@@ -338,7 +130,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">ubuntu14.04 安装和使用 GDriveFS 挂载 GoogleDrive</h1>
                             <div class="meta">
                                 <span>2017年12月3日</span>
-                                                                    <span>434点热度</span>
+                                                                    <span>435点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -350,7 +142,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <div id="wiz_cm_1512232823307_4864" class="wiz-code-container" data-mode="HTML" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269d3779a934052390" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c66ad591864580192" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 sudo apt-get install python-pip
@@ -360,9 +152,9 @@ sudo pip install gdrivefs</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d3779a934052390-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d3779a934052390-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d3779a934052390-3">3</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad591864580192-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad591864580192-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad591864580192-3">3</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d3779a934052390-1"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">install </span><span class="crayon-v">python</span><span class="crayon-o">-</span><span class="crayon-e">pip</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d3779a934052390-2"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">install </span><span class="crayon-v">build</span><span class="crayon-o">-</span><span class="crayon-e">essential </span><span class="crayon-v">python</span><span class="crayon-o">-</span><span class="crayon-e">dev</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d3779a934052390-3"><span class="crayon-e">sudo </span><span class="crayon-e">pip </span><span class="crayon-e">install </span><span class="crayon-v">gdrivefs</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad591864580192-1"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">install </span><span class="crayon-v">python</span><span class="crayon-o">-</span><span class="crayon-e">pip</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad591864580192-2"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">install </span><span class="crayon-v">build</span><span class="crayon-o">-</span><span class="crayon-e">essential </span><span class="crayon-v">python</span><span class="crayon-o">-</span><span class="crayon-e">dev</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad591864580192-3"><span class="crayon-e">sudo </span><span class="crayon-e">pip </span><span class="crayon-e">install </span><span class="crayon-v">gdrivefs</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -375,7 +167,7 @@ sudo pip install gdrivefs</textarea></div>
 <div id="wiz_cm_1512233131104_9458" class="wiz-code-container" data-mode="HTML" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269d377a2095824931" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c66ad598394377994" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 Successfully installed gdrivefs fusepy gevent gipc google-api-python-client greenlet httplib2 python-dateutil six
@@ -385,9 +177,9 @@ Cleaning up...
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377a2095824931-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377a2095824931-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377a2095824931-3">3</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad598394377994-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad598394377994-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad598394377994-3">3</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377a2095824931-1"><span class="crayon-e">Successfully </span><span class="crayon-e">installed </span><span class="crayon-e">gdrivefs </span><span class="crayon-e">fusepy </span><span class="crayon-e">gevent </span><span class="crayon-e">gipc </span><span class="crayon-v">google</span><span class="crayon-o">-</span><span class="crayon-v">api</span><span class="crayon-o">-</span><span class="crayon-v">python</span><span class="crayon-o">-</span><span class="crayon-e">client </span><span class="crayon-e">greenlet </span><span class="crayon-e">httplib2 </span><span class="crayon-v">python</span><span class="crayon-o">-</span><span class="crayon-e">dateutil </span><span class="crayon-e">six</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377a2095824931-2"><span class="crayon-e">Cleaning </span><span class="crayon-v">up</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377a2095824931-3"><span class="crayon-sy">@</span><span class="crayon-v">ubuntu</span><span class="crayon-o">:</span><span class="crayon-o">~</span><span class="crayon-sy">$</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad598394377994-1"><span class="crayon-e">Successfully </span><span class="crayon-e">installed </span><span class="crayon-e">gdrivefs </span><span class="crayon-e">fusepy </span><span class="crayon-e">gevent </span><span class="crayon-e">gipc </span><span class="crayon-v">google</span><span class="crayon-o">-</span><span class="crayon-v">api</span><span class="crayon-o">-</span><span class="crayon-v">python</span><span class="crayon-o">-</span><span class="crayon-e">client </span><span class="crayon-e">greenlet </span><span class="crayon-e">httplib2 </span><span class="crayon-v">python</span><span class="crayon-o">-</span><span class="crayon-e">dateutil </span><span class="crayon-e">six</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad598394377994-2"><span class="crayon-e">Cleaning </span><span class="crayon-v">up</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad598394377994-3"><span class="crayon-sy">@</span><span class="crayon-v">ubuntu</span><span class="crayon-o">:</span><span class="crayon-o">~</span><span class="crayon-sy">$</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -401,7 +193,7 @@ Cleaning up...
 <div id="wiz_cm_1512233202642_3094" class="wiz-code-container" data-mode="HTML" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269d377a4088278839" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c66ad59a773062333" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 @ubuntu:~$ gdfstool auth -u
@@ -412,9 +204,9 @@ https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377a4088278839-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377a4088278839-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377a4088278839-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377a4088278839-4">4</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad59a773062333-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad59a773062333-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad59a773062333-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad59a773062333-4">4</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377a4088278839-1"><span class="crayon-sy">@</span><span class="crayon-v">ubuntu</span><span class="crayon-o">:</span><span class="crayon-o">~</span><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">gdfstool </span><span class="crayon-v">auth</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">u</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377a4088278839-2"><span class="crayon-st">To</span><span class="crayon-h"> </span><span class="crayon-e">authorize </span><span class="crayon-e">FUSE </span><span class="crayon-st">to</span><span class="crayon-h"> </span><span class="crayon-st">use</span><span class="crayon-h"> </span><span class="crayon-e">your </span><span class="crayon-e">Google </span><span class="crayon-e">Drive </span><span class="crayon-v">account</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-e">visit </span><span class="crayon-e">the </span><span class="crayon-e">following </span><span class="crayon-e">URL </span><span class="crayon-st">to</span><span class="crayon-h"> </span><span class="crayon-e">produce </span><span class="crayon-e">an </span><span class="crayon-e">authorization </span><span class="crayon-v">code</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377a4088278839-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377a4088278839-4"><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.file&amp;redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&amp;response_type=code&amp;client_id=105681.apps.googleusercontent.com&amp;access_type=offline</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad59a773062333-1"><span class="crayon-sy">@</span><span class="crayon-v">ubuntu</span><span class="crayon-o">:</span><span class="crayon-o">~</span><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">gdfstool </span><span class="crayon-v">auth</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">u</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad59a773062333-2"><span class="crayon-st">To</span><span class="crayon-h"> </span><span class="crayon-e">authorize </span><span class="crayon-e">FUSE </span><span class="crayon-st">to</span><span class="crayon-h"> </span><span class="crayon-st">use</span><span class="crayon-h"> </span><span class="crayon-e">your </span><span class="crayon-e">Google </span><span class="crayon-e">Drive </span><span class="crayon-v">account</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-e">visit </span><span class="crayon-e">the </span><span class="crayon-e">following </span><span class="crayon-e">URL </span><span class="crayon-st">to</span><span class="crayon-h"> </span><span class="crayon-e">produce </span><span class="crayon-e">an </span><span class="crayon-e">authorization </span><span class="crayon-v">code</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad59a773062333-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad59a773062333-4"><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.file&amp;redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&amp;response_type=code&amp;client_id=105681.apps.googleusercontent.com&amp;access_type=offline</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -433,7 +225,7 @@ https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com
 <div id="wiz_cm_1512233336692_5082" class="wiz-code-container" data-mode="HTML" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269d377a5619654962" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c66ad59c223180743" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 @ubuntu:~$ pwd //获取当前目录
@@ -446,9 +238,9 @@ Authorization code recorded.//授权码已记录</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377a5619654962-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377a5619654962-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377a5619654962-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377a5619654962-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377a5619654962-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377a5619654962-6">6</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad59c223180743-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad59c223180743-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad59c223180743-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad59c223180743-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad59c223180743-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad59c223180743-6">6</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377a5619654962-1"><span class="crayon-sy">@</span><span class="crayon-v">ubuntu</span><span class="crayon-o">:</span><span class="crayon-o">~</span><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-v">pwd</span><span class="crayon-h"> </span><span class="crayon-c">//获取当前目录</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377a5619654962-2"><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377a5619654962-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377a5619654962-4"><span class="crayon-e">gdfstool </span><span class="crayon-v">auth</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">a</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-v">gdfs</span><span class="crayon-sy">.</span><span class="crayon-i">creds</span><span class="crayon-h"> </span><span class="crayon-s">"4/nIpgBHM6ml8DbV02ZUOaXIGLsPO4HGl7NBxxxxx"</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377a5619654962-5">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377a5619654962-6"><span class="crayon-e">Authorization </span><span class="crayon-e">code </span><span class="crayon-v">recorded</span><span class="crayon-sy">.</span><span class="crayon-c">//授权码已记录</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad59c223180743-1"><span class="crayon-sy">@</span><span class="crayon-v">ubuntu</span><span class="crayon-o">:</span><span class="crayon-o">~</span><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-v">pwd</span><span class="crayon-h"> </span><span class="crayon-c">//获取当前目录</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad59c223180743-2"><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad59c223180743-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad59c223180743-4"><span class="crayon-e">gdfstool </span><span class="crayon-v">auth</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">a</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-v">gdfs</span><span class="crayon-sy">.</span><span class="crayon-i">creds</span><span class="crayon-h"> </span><span class="crayon-s">"4/nIpgBHM6ml8DbV02ZUOaXIGLsPO4HGl7NBxxxxx"</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad59c223180743-5">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad59c223180743-6"><span class="crayon-e">Authorization </span><span class="crayon-e">code </span><span class="crayon-v">recorded</span><span class="crayon-sy">.</span><span class="crayon-c">//授权码已记录</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -462,7 +254,7 @@ Authorization code recorded.//授权码已记录</textarea></div>
 <div id="wiz_cm_1512233604889_8485" class="wiz-code-container" data-mode="HTML" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269d377ac511789323" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c66ad5a0865155517" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 @ubuntu:~$ gdfstool auth -a /var/cache/gdfs.creds "4/nIpgBHM6ml8DbV02ZUOaXIGLsPO4HGl7NBxxxxx"
@@ -480,9 +272,9 @@ IOError: [Errno 13] Permission denied: '/var/cache/gdfs.creds' //错误:无权�
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377ac511789323-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377ac511789323-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377ac511789323-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377ac511789323-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377ac511789323-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377ac511789323-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377ac511789323-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377ac511789323-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377ac511789323-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377ac511789323-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377ac511789323-11">11</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a0865155517-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a0865155517-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a0865155517-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a0865155517-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a0865155517-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a0865155517-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a0865155517-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a0865155517-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a0865155517-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a0865155517-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a0865155517-11">11</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377ac511789323-1"><span class="crayon-sy">@</span><span class="crayon-v">ubuntu</span><span class="crayon-o">:</span><span class="crayon-o">~</span><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">gdfstool </span><span class="crayon-v">auth</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">a</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">cache</span><span class="crayon-o">/</span><span class="crayon-v">gdfs</span><span class="crayon-sy">.</span><span class="crayon-i">creds</span><span class="crayon-h"> </span><span class="crayon-s">"4/nIpgBHM6ml8DbV02ZUOaXIGLsPO4HGl7NBxxxxx"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377ac511789323-2"><span class="crayon-e">Traceback</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-e">most </span><span class="crayon-e">recent </span><span class="crayon-e">call </span><span class="crayon-v">last</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377ac511789323-3"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">File</span><span class="crayon-h"> </span><span class="crayon-s">"/usr/local/bin/gdfstool"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">line</span><span class="crayon-h"> </span><span class="crayon-cn">125</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-v">module</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377ac511789323-4"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">main</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377ac511789323-5"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">File</span><span class="crayon-h"> </span><span class="crayon-s">"/usr/local/bin/gdfstool"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">line</span><span class="crayon-h"> </span><span class="crayon-cn">118</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-e">main</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377ac511789323-6"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">_handle_auth</span><span class="crayon-sy">(</span><span class="crayon-v">args</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377ac511789323-7"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">File</span><span class="crayon-h"> </span><span class="crayon-s">"/usr/local/bin/gdfstool"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">line</span><span class="crayon-h"> </span><span class="crayon-cn">56</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-e">_handle_auth</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377ac511789323-8"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">_handle_auth_store</span><span class="crayon-sy">(</span><span class="crayon-o">*</span><span class="crayon-v">args</span><span class="crayon-sy">.</span><span class="crayon-v">auth</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377ac511789323-9"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">File</span><span class="crayon-h"> </span><span class="crayon-s">"/usr/local/bin/gdfstool"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">line</span><span class="crayon-h"> </span><span class="crayon-cn">44</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-e">_handle_auth_store</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377ac511789323-10"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">with </span><span class="crayon-e">open</span><span class="crayon-sy">(</span><span class="crayon-v">auth_storage_filepath</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'w'</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377ac511789323-11"><span class="crayon-v">IOError</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-i">Errno</span><span class="crayon-h"> </span><span class="crayon-cn">13</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-e">Permission </span><span class="crayon-v">denied</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">'/var/cache/gdfs.creds'</span><span class="crayon-h"> </span><span class="crayon-c">//错误:无权限</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a0865155517-1"><span class="crayon-sy">@</span><span class="crayon-v">ubuntu</span><span class="crayon-o">:</span><span class="crayon-o">~</span><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">gdfstool </span><span class="crayon-v">auth</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">a</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">cache</span><span class="crayon-o">/</span><span class="crayon-v">gdfs</span><span class="crayon-sy">.</span><span class="crayon-i">creds</span><span class="crayon-h"> </span><span class="crayon-s">"4/nIpgBHM6ml8DbV02ZUOaXIGLsPO4HGl7NBxxxxx"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad5a0865155517-2"><span class="crayon-e">Traceback</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-e">most </span><span class="crayon-e">recent </span><span class="crayon-e">call </span><span class="crayon-v">last</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a0865155517-3"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">File</span><span class="crayon-h"> </span><span class="crayon-s">"/usr/local/bin/gdfstool"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">line</span><span class="crayon-h"> </span><span class="crayon-cn">125</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-v">module</span><span class="crayon-o">&gt;</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad5a0865155517-4"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">main</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a0865155517-5"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">File</span><span class="crayon-h"> </span><span class="crayon-s">"/usr/local/bin/gdfstool"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">line</span><span class="crayon-h"> </span><span class="crayon-cn">118</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-e">main</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad5a0865155517-6"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">_handle_auth</span><span class="crayon-sy">(</span><span class="crayon-v">args</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a0865155517-7"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">File</span><span class="crayon-h"> </span><span class="crayon-s">"/usr/local/bin/gdfstool"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">line</span><span class="crayon-h"> </span><span class="crayon-cn">56</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-e">_handle_auth</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad5a0865155517-8"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">_handle_auth_store</span><span class="crayon-sy">(</span><span class="crayon-o">*</span><span class="crayon-v">args</span><span class="crayon-sy">.</span><span class="crayon-v">auth</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a0865155517-9"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">File</span><span class="crayon-h"> </span><span class="crayon-s">"/usr/local/bin/gdfstool"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">line</span><span class="crayon-h"> </span><span class="crayon-cn">44</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-e">_handle_auth_store</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad5a0865155517-10"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">with </span><span class="crayon-e">open</span><span class="crayon-sy">(</span><span class="crayon-v">auth_storage_filepath</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'w'</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a0865155517-11"><span class="crayon-v">IOError</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-i">Errno</span><span class="crayon-h"> </span><span class="crayon-cn">13</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-e">Permission </span><span class="crayon-v">denied</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">'/var/cache/gdfs.creds'</span><span class="crayon-h"> </span><span class="crayon-c">//错误:无权限</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -496,7 +288,7 @@ IOError: [Errno 13] Permission denied: '/var/cache/gdfs.creds' //错误:无权�
 <div id="wiz_cm_1512235816752_8409" class="wiz-code-container" data-mode="HTML" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269d377ad590827254" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c66ad5a2025584501" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 mkdir /home/用户/gdrivefs
@@ -505,14 +297,14 @@ gdfstool mount /home/用户/gdfs.creds /home/用户/gdrivefs</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377ad590827254-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377ad590827254-2">2</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a2025584501-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a2025584501-2">2</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377ad590827254-1"><span class="crayon-v">mkdir</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-e">gdrivefs</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377ad590827254-2"><span class="crayon-e">gdfstool </span><span class="crayon-v">mount</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-v">gdfs</span><span class="crayon-sy">.</span><span class="crayon-v">creds</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-v">gdrivefs</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a2025584501-1"><span class="crayon-v">mkdir</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-e">gdrivefs</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad5a2025584501-2"><span class="crayon-e">gdfstool </span><span class="crayon-v">mount</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-v">gdfs</span><span class="crayon-sy">.</span><span class="crayon-v">creds</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-v">gdrivefs</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0001 seconds] -->
+<!-- [Format Time: 0.0002 seconds] -->
 </p>
 <div></div>
 </div>
@@ -520,7 +312,7 @@ gdfstool mount /home/用户/gdfs.creds /home/用户/gdrivefs</textarea></div>
 <div id="wiz_cm_1512234189174_8357" class="wiz-code-container" data-mode="HTML" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631e269d377b0958858695" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2c66ad5a5720638300" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 @ubuntu:~/gdrive$ df -lh
@@ -537,9 +329,9 @@ gdfs(/home/用户/gdfs.creds)   12T  1.3T   10T  12% /home/用户/gdrive</textar
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377b0958858695-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377b0958858695-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377b0958858695-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377b0958858695-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377b0958858695-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377b0958858695-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377b0958858695-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377b0958858695-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e269d377b0958858695-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e269d377b0958858695-10">10</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a5720638300-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a5720638300-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a5720638300-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a5720638300-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a5720638300-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a5720638300-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a5720638300-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a5720638300-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a5720638300-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2c66ad5a5720638300-10">10</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377b0958858695-1"><span class="crayon-sy">@</span><span class="crayon-v">ubuntu</span><span class="crayon-o">:</span><span class="crayon-o">~</span><span class="crayon-o">/</span><span class="crayon-v">gdrive</span><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-v">df</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-e">lh</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377b0958858695-2"><span class="crayon-e">Filesystem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-e">Size&nbsp;&nbsp;</span><span class="crayon-e">Used </span><span class="crayon-e">Avail </span><span class="crayon-st">Use</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-e">Mounted </span><span class="crayon-e">on</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377b0958858695-3"><span class="crayon-i">udev</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">486M</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">8.0K</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">486M</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">1</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-e">dev</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377b0958858695-4"><span class="crayon-i">tmpfs</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-cn">100M</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">364K</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">99M</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">1</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">run</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377b0958858695-5"><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-i">sda1</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-cn">985G</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">4.6G</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">981G</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">1</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377b0958858695-6"><span class="crayon-i">none</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">4.0K</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">4.0K</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">sys</span><span class="crayon-o">/</span><span class="crayon-v">fs</span><span class="crayon-o">/</span><span class="crayon-e">cgroup</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377b0958858695-7"><span class="crayon-i">none</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">5.0M</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">5.0M</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">run</span><span class="crayon-o">/</span><span class="crayon-e">lock</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377b0958858695-8"><span class="crayon-i">none</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">497M</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">497M</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">run</span><span class="crayon-o">/</span><span class="crayon-e">shm</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e269d377b0958858695-9"><span class="crayon-i">none</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">100M</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">100M</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">run</span><span class="crayon-o">/</span><span class="crayon-e">user</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e269d377b0958858695-10"><span class="crayon-e">gdfs</span><span class="crayon-sy">(</span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-v">gdfs</span><span class="crayon-sy">.</span><span class="crayon-v">creds</span><span class="crayon-sy">)</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">12T</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">1.3T</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">10T</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">12</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-v">gdrive</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a5720638300-1"><span class="crayon-sy">@</span><span class="crayon-v">ubuntu</span><span class="crayon-o">:</span><span class="crayon-o">~</span><span class="crayon-o">/</span><span class="crayon-v">gdrive</span><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-v">df</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-e">lh</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad5a5720638300-2"><span class="crayon-e">Filesystem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-e">Size&nbsp;&nbsp;</span><span class="crayon-e">Used </span><span class="crayon-e">Avail </span><span class="crayon-st">Use</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-e">Mounted </span><span class="crayon-e">on</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a5720638300-3"><span class="crayon-i">udev</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">486M</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">8.0K</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">486M</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">1</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-e">dev</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad5a5720638300-4"><span class="crayon-i">tmpfs</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-cn">100M</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">364K</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">99M</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">1</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">run</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a5720638300-5"><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-i">sda1</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-cn">985G</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">4.6G</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">981G</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">1</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad5a5720638300-6"><span class="crayon-i">none</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">4.0K</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">4.0K</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">sys</span><span class="crayon-o">/</span><span class="crayon-v">fs</span><span class="crayon-o">/</span><span class="crayon-e">cgroup</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a5720638300-7"><span class="crayon-i">none</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">5.0M</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">5.0M</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">run</span><span class="crayon-o">/</span><span class="crayon-e">lock</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad5a5720638300-8"><span class="crayon-i">none</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">497M</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">497M</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">run</span><span class="crayon-o">/</span><span class="crayon-e">shm</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2c66ad5a5720638300-9"><span class="crayon-i">none</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">100M</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">100M</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">run</span><span class="crayon-o">/</span><span class="crayon-e">user</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2c66ad5a5720638300-10"><span class="crayon-e">gdfs</span><span class="crayon-sy">(</span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-v">gdfs</span><span class="crayon-sy">.</span><span class="crayon-v">creds</span><span class="crayon-sy">)</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">12T</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">1.3T</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">10T</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">12</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">home</span><span class="crayon-o">/</span>用户<span class="crayon-o">/</span><span class="crayon-v">gdrive</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -630,10 +422,6 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.27' id='urvanov_syntax_highlighter_js-js'></script>
-<script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.8.2' id='monsterinsights-frontend-script-js'></script>
-<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
-var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/luojimen.github.io","hash_tracking":"false","ua":"","v4_id":"G-9Z877QYTCT"};/* ]]> */
-</script>
 <script type='text/javascript' id='image-sizes-js-extra'>
 /* <![CDATA[ */
 var IMAGE_SIZES = {"version":"3.5","disables":["thumbnail","medium","medium_large","large","1536x1536","2048x2048","kratos-thumbnail"]};
