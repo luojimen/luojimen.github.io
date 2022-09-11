@@ -14,7 +14,215 @@
         <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.seatonjiang.com' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
-<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.8.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script
+				src="//www.googletagmanager.com/gtag/js?id=G-9Z877QYTCT"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var mi_version = '8.8.2';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+										'ga-disable-G-9Z877QYTCT',
+														];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+													} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+										__gtagTracker('config', 'G-9Z877QYTCT', {"forceSSL":"true","link_attribution":"true"} );
+															window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+		<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-theme-classic-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-font-monaco-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.27' type='text/css' media='all' />
 <style id='global-styles-inline-css' type='text/css'>
@@ -123,7 +331,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <a class="label" href="https://luojimen.github.io/category/linux/">Linux<i class="label-arrow"></i></a>            <h3 class="title"><a href="https://luojimen.github.io/2017/12/ubuntu14-04%e5%ae%89%e8%a3%85rtorrent-rutorrent%e4%b8%80%e9%94%ae%e5%ae%89%e8%a3%85%e5%8c%85/">ubuntu14.04安装rTorrent + ruTorrent一键安装包</a></h3>
         </div>
         <div class="content">
-            <p>项目地址:https://github.com/dannyti/sboxsetup 脚本特点: [crayon-631d9ba762422554823540/] 脚本支持的系统 [crayon-631 [&hellip;]</p>
+            <p>项目地址:https://github.com/dannyti/sboxsetup 脚本特点: [crayon-631e21b560e36469806562/] 脚本支持的系统 [crayon-631 [&hellip;]</p>
         </div>
     </div>
     <div class="a-meta">
@@ -131,7 +339,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <span class="mr-2"><i class="kicon i-calendar"></i>2017年12月6日</span>
                     </span>
         <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>531点热度</span>
+                            <span class="mr-2"><i class="kicon i-hot"></i>533点热度</span>
                     </span>
         <span class="float-right">
             <a href="https://luojimen.github.io/2017/12/ubuntu14-04%e5%ae%89%e8%a3%85rtorrent-rutorrent%e4%b8%80%e9%94%ae%e5%ae%89%e8%a3%85%e5%8c%85/">阅读全文<i class="kicon i-rightbutton"></i></a>
@@ -154,7 +362,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <span class="mr-2"><i class="kicon i-calendar"></i>2017年9月14日</span>
                     </span>
         <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>450点热度</span>
+                            <span class="mr-2"><i class="kicon i-hot"></i>452点热度</span>
                     </span>
         <span class="float-right">
             <a href="https://luojimen.github.io/2017/09/%e7%bb%bf%e8%89%b2%e5%8c%96filezilla%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%ef%bc%8c%e8%ae%a9%e9%87%8d%e8%a3%85%e7%b3%bb%e7%bb%9f%e4%b8%8d%e5%86%8d%e4%b8%a2ftp%e4%bf%a1%e6%81%af/">阅读全文<i class="kicon i-rightbutton"></i></a>
@@ -248,6 +456,10 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.27' id='urvanov_syntax_highlighter_js-js'></script>
+<script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.8.2' id='monsterinsights-frontend-script-js'></script>
+<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/luojimen.github.io","hash_tracking":"false","ua":"","v4_id":"G-9Z877QYTCT"};/* ]]> */
+</script>
 <script type='text/javascript' id='image-sizes-js-extra'>
 /* <![CDATA[ */
 var IMAGE_SIZES = {"version":"3.5","disables":["thumbnail","medium","medium_large","large","1536x1536","2048x2048","kratos-thumbnail"]};

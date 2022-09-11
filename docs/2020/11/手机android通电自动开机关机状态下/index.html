@@ -11,11 +11,218 @@
     <meta name="description" itemprop="description" content="目的需求:在手机关机状态下,若是通电,则自动开机. 使用场景:手机做4G路由器热点使用;备用手机常年通电做转发短信未接来电;做车载导航行车记录仪等; 方法思路:确定手机关机状态下充电时会调用什么脚本命 [&hellip;]">
     <meta name="theme-color" content="#282a2c">
     <meta itemprop="image" content="https://luoji.men/wp-content/themes/kratos-4.1.2/assets/img/default.jpg" />
-        <meta name='description' content='目的需求:在手机关机状态下,若是通电,则自动开机. 使用场景:手机做4G路由器热点使用;备用手机常年通电做转发短信未接来电;做车载导航行车记录仪等; 方法思路:确定手机关机状态下充电时会调用什么脚本命 [&hellip;]' />
-<meta name='robots' content='max-image-preview:large' />
+        <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.seatonjiang.com' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
-<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.8.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script
+				src="//www.googletagmanager.com/gtag/js?id=G-9Z877QYTCT"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var mi_version = '8.8.2';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+										'ga-disable-G-9Z877QYTCT',
+														];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+													} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+										__gtagTracker('config', 'G-9Z877QYTCT', {"forceSSL":"true","link_attribution":"true"} );
+															window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+		<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-theme-classic-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-font-monaco-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.27' type='text/css' media='all' />
 <style id='global-styles-inline-css' type='text/css'>
@@ -131,7 +338,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">手机Android通电自动开机(关机状态下)教程</h1>
                             <div class="meta">
                                 <span>2020年11月18日</span>
-                                                                    <span>672点热度</span>
+                                                                    <span>673点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -163,7 +370,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </ul>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631d9b724c415238185480" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e217cb1c42395881261" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 C:\platform-tools&gt;adb devices
@@ -173,9 +380,9 @@ List of devices attached
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c415238185480-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c415238185480-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c415238185480-3">3</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c42395881261-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c42395881261-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c42395881261-3">3</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c415238185480-1"><span class="crayon-v">C</span><span class="crayon-o">:</span><span class="crayon-sy">\</span><span class="crayon-v">platform</span><span class="crayon-o">-</span><span class="crayon-v">tools</span><span class="crayon-o">&gt;</span><span class="crayon-e">adb </span><span class="crayon-e">devices</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c415238185480-2"><span class="crayon-e">List </span><span class="crayon-e">of </span><span class="crayon-e">devices </span><span class="crayon-i">attached</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c415238185480-3"><span class="crayon-cn">63d76abf</span><span class="crayon-h"> </span><span class="crayon-i">device</span><span class="crayon-h"> </span><span class="crayon-p">#连接成功</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c42395881261-1"><span class="crayon-v">C</span><span class="crayon-o">:</span><span class="crayon-sy">\</span><span class="crayon-v">platform</span><span class="crayon-o">-</span><span class="crayon-v">tools</span><span class="crayon-o">&gt;</span><span class="crayon-e">adb </span><span class="crayon-e">devices</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c42395881261-2"><span class="crayon-e">List </span><span class="crayon-e">of </span><span class="crayon-e">devices </span><span class="crayon-i">attached</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c42395881261-3"><span class="crayon-cn">63d76abf</span><span class="crayon-h"> </span><span class="crayon-i">device</span><span class="crayon-h"> </span><span class="crayon-p">#连接成功</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -188,7 +395,7 @@ List of devices attached
 </ul>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631d9b724c41c291217162" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e217cb1c48340150895" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 2|:/dev # find /dev/block/platform/ -name by-name
@@ -199,9 +406,9 @@ find /dev/block/platform/ -name by-name
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c41c291217162-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c41c291217162-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c41c291217162-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c41c291217162-4">4</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c48340150895-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c48340150895-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c48340150895-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c48340150895-4">4</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c41c291217162-1"><span class="crayon-cn">2</span><span class="crayon-o">|</span><span class="crayon-o">:</span><span class="crayon-o">/</span><span class="crayon-i">dev</span><span class="crayon-h"> </span><span class="crayon-p"># find /dev/block/platform/ -name by-name</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c41c291217162-2"><span class="crayon-v">find</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-v">platform</span><span class="crayon-o">/</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-e">name </span><span class="crayon-v">by</span><span class="crayon-o">-</span><span class="crayon-e">name</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c41c291217162-3"><span class="crayon-v">find</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-v">platform</span><span class="crayon-o">/</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-e">name </span><span class="crayon-v">by</span><span class="crayon-o">-</span><span class="crayon-v">name</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c41c291217162-4"><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-v">platform</span><span class="crayon-o">/</span><span class="crayon-v">soc</span><span class="crayon-o">/</span><span class="crayon-v">c0c4000</span><span class="crayon-sy">.</span><span class="crayon-v">sdhci</span><span class="crayon-o">/</span><span class="crayon-v">by</span><span class="crayon-o">-</span><span class="crayon-v">name</span><span class="crayon-h"> </span><span class="crayon-c">//找到需要的路径</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c48340150895-1"><span class="crayon-cn">2</span><span class="crayon-o">|</span><span class="crayon-o">:</span><span class="crayon-o">/</span><span class="crayon-i">dev</span><span class="crayon-h"> </span><span class="crayon-p"># find /dev/block/platform/ -name by-name</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c48340150895-2"><span class="crayon-v">find</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-v">platform</span><span class="crayon-o">/</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-e">name </span><span class="crayon-v">by</span><span class="crayon-o">-</span><span class="crayon-e">name</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c48340150895-3"><span class="crayon-v">find</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-v">platform</span><span class="crayon-o">/</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-e">name </span><span class="crayon-v">by</span><span class="crayon-o">-</span><span class="crayon-v">name</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c48340150895-4"><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-v">platform</span><span class="crayon-o">/</span><span class="crayon-v">soc</span><span class="crayon-o">/</span><span class="crayon-v">c0c4000</span><span class="crayon-sy">.</span><span class="crayon-v">sdhci</span><span class="crayon-o">/</span><span class="crayon-v">by</span><span class="crayon-o">-</span><span class="crayon-v">name</span><span class="crayon-h"> </span><span class="crayon-c">//找到需要的路径</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -213,7 +420,7 @@ find /dev/block/platform/ -name by-name
 </ul>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631d9b724c41e492746012" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e217cb1c4a262959178" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 ls -al /dev/block/platform/soc/c0c4000.sdhci/by-name
@@ -231,9 +438,9 @@ lrwxrwxrwx 1 root root 21 1970-01-01 08:02 boot -&gt; /dev/block/mmcblk0p58 //�
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c41e492746012-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c41e492746012-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c41e492746012-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c41e492746012-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c41e492746012-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c41e492746012-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c41e492746012-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c41e492746012-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c41e492746012-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c41e492746012-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c41e492746012-11">11</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4a262959178-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4a262959178-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4a262959178-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4a262959178-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4a262959178-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4a262959178-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4a262959178-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4a262959178-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4a262959178-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4a262959178-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4a262959178-11">11</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c41e492746012-1"><span class="crayon-v">ls</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">al</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-v">platform</span><span class="crayon-o">/</span><span class="crayon-v">soc</span><span class="crayon-o">/</span><span class="crayon-v">c0c4000</span><span class="crayon-sy">.</span><span class="crayon-v">sdhci</span><span class="crayon-o">/</span><span class="crayon-v">by</span><span class="crayon-o">-</span><span class="crayon-e">name</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c41e492746012-2"><span class="crayon-i">total</span><span class="crayon-h"> </span><span class="crayon-cn">0</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c41e492746012-3"><span class="crayon-v">drwxr</span><span class="crayon-o">-</span><span class="crayon-v">xr</span><span class="crayon-o">-</span><span class="crayon-i">x</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">1320</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-sy">.</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c41e492746012-4"><span class="crayon-v">drwxr</span><span class="crayon-o">-</span><span class="crayon-v">xr</span><span class="crayon-o">-</span><span class="crayon-i">x</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">1380</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c41e492746012-5"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">abl</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p25</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c41e492746012-6"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">ablbak</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p26</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c41e492746012-7"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">apdp</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p11</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c41e492746012-8"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">bk1</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p49</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c41e492746012-9"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">bk2</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p51</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c41e492746012-10"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">bluetooth</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p38</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c41e492746012-11"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">boot</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-v">mmcblk0p58</span><span class="crayon-h"> </span><span class="crayon-c">//找到boot对应文件名称为"mmcblk0p58"</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4a262959178-1"><span class="crayon-v">ls</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">al</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-v">platform</span><span class="crayon-o">/</span><span class="crayon-v">soc</span><span class="crayon-o">/</span><span class="crayon-v">c0c4000</span><span class="crayon-sy">.</span><span class="crayon-v">sdhci</span><span class="crayon-o">/</span><span class="crayon-v">by</span><span class="crayon-o">-</span><span class="crayon-e">name</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4a262959178-2"><span class="crayon-i">total</span><span class="crayon-h"> </span><span class="crayon-cn">0</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4a262959178-3"><span class="crayon-v">drwxr</span><span class="crayon-o">-</span><span class="crayon-v">xr</span><span class="crayon-o">-</span><span class="crayon-i">x</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">1320</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-sy">.</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4a262959178-4"><span class="crayon-v">drwxr</span><span class="crayon-o">-</span><span class="crayon-v">xr</span><span class="crayon-o">-</span><span class="crayon-i">x</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">1380</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4a262959178-5"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">abl</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p25</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4a262959178-6"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">ablbak</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p26</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4a262959178-7"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">apdp</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p11</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4a262959178-8"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">bk1</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p49</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4a262959178-9"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">bk2</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p51</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4a262959178-10"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">bluetooth</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-e">mmcblk0p38</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4a262959178-11"><span class="crayon-i">lrwxrwxrwx</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">root </span><span class="crayon-i">root</span><span class="crayon-h"> </span><span class="crayon-cn">21</span><span class="crayon-h"> </span><span class="crayon-cn">1970</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-o">-</span><span class="crayon-cn">01</span><span class="crayon-h"> </span><span class="crayon-cn">08</span><span class="crayon-o">:</span><span class="crayon-cn">02</span><span class="crayon-h"> </span><span class="crayon-v">boot</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">dev</span><span class="crayon-o">/</span><span class="crayon-v">block</span><span class="crayon-o">/</span><span class="crayon-v">mmcblk0p58</span><span class="crayon-h"> </span><span class="crayon-c">//找到boot对应文件名称为"mmcblk0p58"</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -251,7 +458,7 @@ lrwxrwxrwx 1 root root 21 1970-01-01 08:02 boot -&gt; /dev/block/mmcblk0p58 //�
 </ul>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631d9b724c420372951185" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e217cb1c4c919973826" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 C:\platform-tools\bootimg&gt;bootimg --unpack-bootimg
@@ -275,9 +482,9 @@ compress: True</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-11">11</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-12">12</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-13">13</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-14">14</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-15">15</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-16">16</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c420372951185-17">17</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-11">11</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-12">12</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-13">13</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-14">14</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-15">15</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-16">16</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4c919973826-17">17</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-1"><span class="crayon-v">C</span><span class="crayon-o">:</span><span class="crayon-sy">\</span><span class="crayon-v">platform</span><span class="crayon-o">-</span><span class="crayon-v">tools</span><span class="crayon-sy">\</span><span class="crayon-v">bootimg</span><span class="crayon-o">&gt;</span><span class="crayon-v">bootimg</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-v">unpack</span><span class="crayon-o">-</span><span class="crayon-e">bootimg</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-2"><span class="crayon-v">arguments</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-e">bootimg </span><span class="crayon-v">file</span><span class="crayon-sy">]</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-3"><span class="crayon-e">bootimg </span><span class="crayon-v">file</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">boot</span><span class="crayon-sy">.</span><span class="crayon-e">img</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-4"><span class="crayon-v">output</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">kernel</span><span class="crayon-sy">[</span><span class="crayon-sy">.</span><span class="crayon-v">gz</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-v">ramdisk</span><span class="crayon-sy">[</span><span class="crayon-sy">.</span><span class="crayon-v">gz</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-v">second</span><span class="crayon-sy">[</span><span class="crayon-sy">.</span><span class="crayon-v">gz</span><span class="crayon-sy">]</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-5"><span class="crayon-v">base</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">0x0</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-6"><span class="crayon-v">ramdisk_addr</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">0x1000000</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-7"><span class="crayon-v">second_addr</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">0xf00000</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-8"><span class="crayon-v">tags_addr</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">0x100</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-9"><span class="crayon-v">page_size</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">4096</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-10"><span class="crayon-v">name</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">""</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-11"><span class="crayon-v">cmdline</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 buildvariant=user"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-12"><span class="crayon-v">padding_size</span><span class="crayon-o">=</span><span class="crayon-cn">4096</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-13"><span class="crayon-v">arguments</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-e">ramdisk </span><span class="crayon-v">file</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-v">directory</span><span class="crayon-sy">]</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-14"><span class="crayon-e">ramdisk </span><span class="crayon-v">file</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">ramdisk</span><span class="crayon-sy">.</span><span class="crayon-e">gz</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-15"><span class="crayon-v">directory</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">initrd</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-16"><span class="crayon-v">output</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">cpiolist</span><span class="crayon-sy">.</span><span class="crayon-e">txt</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c420372951185-17"><span class="crayon-v">compress</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">True</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-1"><span class="crayon-v">C</span><span class="crayon-o">:</span><span class="crayon-sy">\</span><span class="crayon-v">platform</span><span class="crayon-o">-</span><span class="crayon-v">tools</span><span class="crayon-sy">\</span><span class="crayon-v">bootimg</span><span class="crayon-o">&gt;</span><span class="crayon-v">bootimg</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-v">unpack</span><span class="crayon-o">-</span><span class="crayon-e">bootimg</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-2"><span class="crayon-v">arguments</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-e">bootimg </span><span class="crayon-v">file</span><span class="crayon-sy">]</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-3"><span class="crayon-e">bootimg </span><span class="crayon-v">file</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">boot</span><span class="crayon-sy">.</span><span class="crayon-e">img</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-4"><span class="crayon-v">output</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">kernel</span><span class="crayon-sy">[</span><span class="crayon-sy">.</span><span class="crayon-v">gz</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-v">ramdisk</span><span class="crayon-sy">[</span><span class="crayon-sy">.</span><span class="crayon-v">gz</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-v">second</span><span class="crayon-sy">[</span><span class="crayon-sy">.</span><span class="crayon-v">gz</span><span class="crayon-sy">]</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-5"><span class="crayon-v">base</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">0x0</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-6"><span class="crayon-v">ramdisk_addr</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">0x1000000</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-7"><span class="crayon-v">second_addr</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">0xf00000</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-8"><span class="crayon-v">tags_addr</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">0x100</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-9"><span class="crayon-v">page_size</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">4096</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-10"><span class="crayon-v">name</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">""</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-11"><span class="crayon-v">cmdline</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 buildvariant=user"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-12"><span class="crayon-v">padding_size</span><span class="crayon-o">=</span><span class="crayon-cn">4096</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-13"><span class="crayon-v">arguments</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-e">ramdisk </span><span class="crayon-v">file</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-v">directory</span><span class="crayon-sy">]</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-14"><span class="crayon-e">ramdisk </span><span class="crayon-v">file</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">ramdisk</span><span class="crayon-sy">.</span><span class="crayon-e">gz</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-15"><span class="crayon-v">directory</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">initrd</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-16"><span class="crayon-v">output</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">cpiolist</span><span class="crayon-sy">.</span><span class="crayon-e">txt</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4c919973826-17"><span class="crayon-v">compress</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">True</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -291,7 +498,7 @@ compress: True</textarea></div>
 </ul>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631d9b724c423032454488" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e217cb1c4e467961418" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 on charger
@@ -301,14 +508,14 @@ on charger
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c423032454488-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b724c423032454488-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b724c423032454488-3">3</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4e467961418-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e217cb1c4e467961418-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e217cb1c4e467961418-3">3</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c423032454488-1"><span class="crayon-e">on </span><span class="crayon-e">charger</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b724c423032454488-2"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">class_start </span><span class="crayon-i">charger</span><span class="crayon-h"> </span><span class="crayon-p">#这段自带不用删也可以,而且听说某些系统需要先进入charger流程，否则会卡第一屏</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b724c423032454488-3"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">setprop </span><span class="crayon-v">sys</span><span class="crayon-sy">.</span><span class="crayon-e">powerctl </span><span class="crayon-i">reboot</span><span class="crayon-h"> </span><span class="crayon-p">#添加进这段</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4e467961418-1"><span class="crayon-e">on </span><span class="crayon-e">charger</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e217cb1c4e467961418-2"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">class_start </span><span class="crayon-i">charger</span><span class="crayon-h"> </span><span class="crayon-p">#这段自带不用删也可以,而且听说某些系统需要先进入charger流程，否则会卡第一屏</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e217cb1c4e467961418-3"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">setprop </span><span class="crayon-v">sys</span><span class="crayon-sy">.</span><span class="crayon-e">powerctl </span><span class="crayon-i">reboot</span><span class="crayon-h"> </span><span class="crayon-p">#添加进这段</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0003 seconds] -->
+<!-- [Format Time: 0.0001 seconds] -->
 </div>
 <ul>
 <li>3.3. 修改init.rc完毕,保存.</li>
@@ -411,6 +618,10 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.27' id='urvanov_syntax_highlighter_js-js'></script>
+<script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.8.2' id='monsterinsights-frontend-script-js'></script>
+<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/luojimen.github.io","hash_tracking":"false","ua":"","v4_id":"G-9Z877QYTCT"};/* ]]> */
+</script>
 <script type='text/javascript' id='image-sizes-js-extra'>
 /* <![CDATA[ */
 var IMAGE_SIZES = {"version":"3.5","disables":["thumbnail","medium","medium_large","large","1536x1536","2048x2048","kratos-thumbnail"]};

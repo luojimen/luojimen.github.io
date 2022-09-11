@@ -11,11 +11,218 @@
     <meta name="description" itemprop="description" content="适用场景：Windows有UPS供电，但UPS没有USB通讯功能，无法自己停电后通知Win，就需要Win自己判断关机， 脚本逻辑规则：通过间隔ping路由器，若是ping不通则判断为停电，会在（shu [&hellip;]">
     <meta name="theme-color" content="#282a2c">
     <meta itemprop="image" content="https://luojimen.github.io/wp-content/uploads/2022/02/089f6f9d29ac74a5765be5878041d794_c6462272-a363-46c5-8e45-74f9bedfeacf.jpg" />
-        <meta name='description' content='适用场景：Windows有UPS供电，但UPS没有USB通讯功能，无法自己停电后通知Win，就需要Win自己判断关机， 脚本逻辑规则：通过间隔ping路由器，若是ping不通则判断为停电，会在（shu [&hellip;]' />
-<meta name='robots' content='max-image-preview:large' />
+        <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.seatonjiang.com' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
-<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.8.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script
+				src="//www.googletagmanager.com/gtag/js?id=G-9Z877QYTCT"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var mi_version = '8.8.2';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+										'ga-disable-G-9Z877QYTCT',
+														];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+													} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+										__gtagTracker('config', 'G-9Z877QYTCT', {"forceSSL":"true","link_attribution":"true"} );
+															window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+		<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-theme-classic-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-font-monaco-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.27' type='text/css' media='all' />
 <style id='global-styles-inline-css' type='text/css'>
@@ -131,7 +338,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">UPS无通讯功能Windows停电自动关机脚本</h1>
                             <div class="meta">
                                 <span>2022年2月28日</span>
-                                                                    <span>633点热度</span>
+                                                                    <span>634点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -142,7 +349,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <div>
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631d9b78031f8898474151" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e2182aa620458136175" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 @echo off
@@ -172,9 +379,9 @@ REM exit 0</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-11">11</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-12">12</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-13">13</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-14">14</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-15">15</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-16">16</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-17">17</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-18">18</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-19">19</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-20">20</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-21">21</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-22">22</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b78031f8898474151-23">23</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-11">11</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-12">12</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-13">13</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-14">14</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-15">15</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-16">16</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-17">17</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-18">18</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-19">19</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-20">20</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-21">21</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-22">22</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e2182aa620458136175-23">23</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-1"><span class="crayon-sy">@</span><span class="crayon-e">echo </span><span class="crayon-e">off</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-2"><span class="crayon-i">REM</span><span class="crayon-h"> </span>注意：此脚本需要在执行的计算机具备<span class="crayon-i">UPS</span>为前提的条件下进行，且目标<span class="crayon-i">IP</span>设备不能具有<span class="crayon-i">UPS</span>。</div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-3"><span class="crayon-i">REM</span><span class="crayon-h"> </span>此批处理可以检测目标<span class="crayon-i">IP</span>是否因为停电而失效，一旦失效则在<span class="crayon-cn">180</span>秒后关机。</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-4"><span class="crayon-i">REM</span><span class="crayon-h"> </span>需将此批处理写入计划任务才能使用，建议每隔<span class="crayon-cn">60</span>秒执行一次。</div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-5"><span class="crayon-i">REM</span><span class="crayon-h"> </span>若不知道如何配置计划任务，请参阅<span class="crayon-h"> </span><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//twitter.com/chenshaoju/status/973109556640333825</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-6"><span class="crayon-i">REM</span><span class="crayon-h"> </span>若参照<span class="crayon-cn">60</span>秒执行一次的话，在<span class="crayon-cn">120</span>至<span class="crayon-cn">180</span>秒内若恢复供电（能<span class="crayon-i">Ping</span>通），则会取消关机。</div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-7"><span class="crayon-i">REM</span><span class="crayon-h"> </span>若路由器或需要检测的目标<span class="crayon-i">IP</span>不是<span class="crayon-h"> </span><span class="crayon-cn">192.168.1.1</span><span class="crayon-h"> </span>，请手动修改下方的<span class="crayon-h"> </span><span class="crayon-cn">192.168.1.1</span><span class="crayon-h"> </span><span class="crayon-i">IP</span>地址。</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-8"><span class="crayon-i">REM</span><span class="crayon-h"> </span>关机等待时间不建议设置太短，避免手动开机但目标<span class="crayon-i">IP</span>未启动时又立刻自动关机。</div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-9">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-10"><span class="crayon-i">REM</span><span class="crayon-h"> </span>若只需要监控一个设备（默认），请勿注释下一行。</div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-11"><span class="crayon-v">ping</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">n</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">l</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-cn">192.168.123.1</span><span class="crayon-o">|</span><span class="crayon-i">findstr</span><span class="crayon-h"> </span><span class="crayon-s">"TTL="</span><span class="crayon-h"> </span><span class="crayon-o">&amp;&amp;</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-st">goto</span><span class="crayon-h"> </span><span class="crayon-i">PowerOn</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">||</span><span class="crayon-h"> </span><span class="crayon-st">goto</span><span class="crayon-h"> </span><span class="crayon-e">PowerOff</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-12">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-13"><span class="crayon-i">REM</span><span class="crayon-h"> </span>若需要监控两个（或多个，请自行参考格式添加）设备（可选），请取消注释下一行（删除开头的<span class="crayon-h"> </span><span class="crayon-s">"REM "</span><span class="crayon-h"> </span>），并注释或删除上一行，此行是“和”（<span class="crayon-st">AND</span>）的逻辑情况，只有两个<span class="crayon-i">IP</span>都失效的情况下才会执行关机。</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-14"><span class="crayon-e">REM </span><span class="crayon-v">ping</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">n</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">l</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-cn">192.168.1.1</span><span class="crayon-o">|</span><span class="crayon-i">findstr</span><span class="crayon-h"> </span><span class="crayon-s">"TTL="</span><span class="crayon-h"> </span><span class="crayon-o">&amp;&amp;</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-st">goto</span><span class="crayon-h"> </span><span class="crayon-i">PowerOn</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">||</span><span class="crayon-h"> </span><span class="crayon-v">ping</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">n</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">l</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-cn">192.168.1.2</span><span class="crayon-o">|</span><span class="crayon-i">findstr</span><span class="crayon-h"> </span><span class="crayon-s">"TTL="</span><span class="crayon-h"> </span><span class="crayon-o">&amp;&amp;</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-st">goto</span><span class="crayon-h"> </span><span class="crayon-i">PowerOn</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">||</span><span class="crayon-h"> </span><span class="crayon-st">goto</span><span class="crayon-h"> </span><span class="crayon-v">PowerOff</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-15">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-16"><span class="crayon-o">:</span><span class="crayon-e">PowerOn</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-17"><span class="crayon-v">shutdown</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">a</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-18"><span class="crayon-i">exit</span><span class="crayon-h"> </span><span class="crayon-cn">0</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-19">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-20"><span class="crayon-o">:</span><span class="crayon-e">PowerOff</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-21"><span class="crayon-v">echo</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-v">date</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-v">time</span><span class="crayon-o">%</span><span class="crayon-o">&gt;</span><span class="crayon-s">"D:\Program Files\UPS Tools\bat_PowerCheck_test\log.txt"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-22"><span class="crayon-v">shutdown</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">s</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">t</span><span class="crayon-h"> </span><span class="crayon-cn">300</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b78031f8898474151-23"><span class="crayon-e">REM </span><span class="crayon-i">exit</span><span class="crayon-h"> </span><span class="crayon-cn">0</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-1"><span class="crayon-sy">@</span><span class="crayon-e">echo </span><span class="crayon-e">off</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-2"><span class="crayon-i">REM</span><span class="crayon-h"> </span>注意：此脚本需要在执行的计算机具备<span class="crayon-i">UPS</span>为前提的条件下进行，且目标<span class="crayon-i">IP</span>设备不能具有<span class="crayon-i">UPS</span>。</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-3"><span class="crayon-i">REM</span><span class="crayon-h"> </span>此批处理可以检测目标<span class="crayon-i">IP</span>是否因为停电而失效，一旦失效则在<span class="crayon-cn">180</span>秒后关机。</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-4"><span class="crayon-i">REM</span><span class="crayon-h"> </span>需将此批处理写入计划任务才能使用，建议每隔<span class="crayon-cn">60</span>秒执行一次。</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-5"><span class="crayon-i">REM</span><span class="crayon-h"> </span>若不知道如何配置计划任务，请参阅<span class="crayon-h"> </span><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//twitter.com/chenshaoju/status/973109556640333825</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-6"><span class="crayon-i">REM</span><span class="crayon-h"> </span>若参照<span class="crayon-cn">60</span>秒执行一次的话，在<span class="crayon-cn">120</span>至<span class="crayon-cn">180</span>秒内若恢复供电（能<span class="crayon-i">Ping</span>通），则会取消关机。</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-7"><span class="crayon-i">REM</span><span class="crayon-h"> </span>若路由器或需要检测的目标<span class="crayon-i">IP</span>不是<span class="crayon-h"> </span><span class="crayon-cn">192.168.1.1</span><span class="crayon-h"> </span>，请手动修改下方的<span class="crayon-h"> </span><span class="crayon-cn">192.168.1.1</span><span class="crayon-h"> </span><span class="crayon-i">IP</span>地址。</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-8"><span class="crayon-i">REM</span><span class="crayon-h"> </span>关机等待时间不建议设置太短，避免手动开机但目标<span class="crayon-i">IP</span>未启动时又立刻自动关机。</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-9">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-10"><span class="crayon-i">REM</span><span class="crayon-h"> </span>若只需要监控一个设备（默认），请勿注释下一行。</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-11"><span class="crayon-v">ping</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">n</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">l</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-cn">192.168.123.1</span><span class="crayon-o">|</span><span class="crayon-i">findstr</span><span class="crayon-h"> </span><span class="crayon-s">"TTL="</span><span class="crayon-h"> </span><span class="crayon-o">&amp;&amp;</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-st">goto</span><span class="crayon-h"> </span><span class="crayon-i">PowerOn</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">||</span><span class="crayon-h"> </span><span class="crayon-st">goto</span><span class="crayon-h"> </span><span class="crayon-e">PowerOff</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-12">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-13"><span class="crayon-i">REM</span><span class="crayon-h"> </span>若需要监控两个（或多个，请自行参考格式添加）设备（可选），请取消注释下一行（删除开头的<span class="crayon-h"> </span><span class="crayon-s">"REM "</span><span class="crayon-h"> </span>），并注释或删除上一行，此行是“和”（<span class="crayon-st">AND</span>）的逻辑情况，只有两个<span class="crayon-i">IP</span>都失效的情况下才会执行关机。</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-14"><span class="crayon-e">REM </span><span class="crayon-v">ping</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">n</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">l</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-cn">192.168.1.1</span><span class="crayon-o">|</span><span class="crayon-i">findstr</span><span class="crayon-h"> </span><span class="crayon-s">"TTL="</span><span class="crayon-h"> </span><span class="crayon-o">&amp;&amp;</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-st">goto</span><span class="crayon-h"> </span><span class="crayon-i">PowerOn</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">||</span><span class="crayon-h"> </span><span class="crayon-v">ping</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">n</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">l</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-cn">192.168.1.2</span><span class="crayon-o">|</span><span class="crayon-i">findstr</span><span class="crayon-h"> </span><span class="crayon-s">"TTL="</span><span class="crayon-h"> </span><span class="crayon-o">&amp;&amp;</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-h"> </span><span class="crayon-st">goto</span><span class="crayon-h"> </span><span class="crayon-i">PowerOn</span><span class="crayon-h"> </span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">||</span><span class="crayon-h"> </span><span class="crayon-st">goto</span><span class="crayon-h"> </span><span class="crayon-v">PowerOff</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-15">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-16"><span class="crayon-o">:</span><span class="crayon-e">PowerOn</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-17"><span class="crayon-v">shutdown</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">a</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-18"><span class="crayon-i">exit</span><span class="crayon-h"> </span><span class="crayon-cn">0</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-19">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-20"><span class="crayon-o">:</span><span class="crayon-e">PowerOff</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-21"><span class="crayon-v">echo</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-v">date</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-v">time</span><span class="crayon-o">%</span><span class="crayon-o">&gt;</span><span class="crayon-s">"D:\Program Files\UPS Tools\bat_PowerCheck_test\log.txt"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-22"><span class="crayon-v">shutdown</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">s</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-i">t</span><span class="crayon-h"> </span><span class="crayon-cn">300</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e2182aa620458136175-23"><span class="crayon-e">REM </span><span class="crayon-i">exit</span><span class="crayon-h"> </span><span class="crayon-cn">0</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -253,6 +460,10 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.27' id='urvanov_syntax_highlighter_js-js'></script>
+<script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.8.2' id='monsterinsights-frontend-script-js'></script>
+<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/luojimen.github.io","hash_tracking":"false","ua":"","v4_id":"G-9Z877QYTCT"};/* ]]> */
+</script>
 <script type='text/javascript' id='image-sizes-js-extra'>
 /* <![CDATA[ */
 var IMAGE_SIZES = {"version":"3.5","disables":["thumbnail","medium","medium_large","large","1536x1536","2048x2048","kratos-thumbnail"]};

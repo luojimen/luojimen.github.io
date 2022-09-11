@@ -11,11 +11,218 @@
     <meta name="description" itemprop="description" content="前言：虽然docker-compose.yml单个配置文件中可以添入你想要的所有容器，只是一个配置文件管理十几个容器实在不便，而分成多份虽然方便单个容器的反复删除调试，但手动批量运行时难免繁琐，因此使 [&hellip;]">
     <meta name="theme-color" content="#282a2c">
     <meta itemprop="image" content="https://luoji.men/wp-content/themes/kratos-4.1.2/assets/img/default.jpg" />
-        <meta name='description' content='前言：虽然docker-compose.yml单个配置文件中可以添入你想要的所有容器，只是一个配置文件管理十几个容器实在不便，而分成多份虽然方便单个容器的反复删除调试，但手动批量运行时难免繁琐，因此使 [&hellip;]' />
-<meta name='robots' content='max-image-preview:large' />
+        <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.seatonjiang.com' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
-<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.8.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script
+				src="//www.googletagmanager.com/gtag/js?id=G-9Z877QYTCT"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var mi_version = '8.8.2';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+										'ga-disable-G-9Z877QYTCT',
+														];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+													} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+										__gtagTracker('config', 'G-9Z877QYTCT', {"forceSSL":"true","link_attribution":"true"} );
+															window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+		<link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-theme-classic-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-font-monaco-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.27' type='text/css' media='all' />
 <style id='global-styles-inline-css' type='text/css'>
@@ -131,7 +338,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">一键启动多个docker-compose配置容器</h1>
                             <div class="meta">
                                 <span>2022年4月5日</span>
-                                                                    <span>359点热度</span>
+                                                                    <span>360点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -141,7 +348,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <strong>举例目录</strong>：</p>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631d9b7f80711864431372" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e218b7f9e5191172865" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 /root/docker/docker-compose.yml
@@ -151,9 +358,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b7f80711864431372-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b7f80711864431372-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b7f80711864431372-3">3</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e218b7f9e5191172865-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e218b7f9e5191172865-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e218b7f9e5191172865-3">3</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b7f80711864431372-1"><span class="crayon-o">/</span><span class="crayon-v">root</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-sy">.</span><span class="crayon-v">yml</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b7f80711864431372-2"><span class="crayon-o">/</span><span class="crayon-v">root</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">/</span><span class="crayon-v">tunel</span><span class="crayon-o">/</span><span class="crayon-v">frps</span><span class="crayon-sy">.</span><span class="crayon-v">yml</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b7f80711864431372-3"><span class="crayon-o">/</span><span class="crayon-v">root</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">/</span><span class="crayon-v">compose</span><span class="crayon-o">/</span><span class="crayon-v">portainer</span><span class="crayon-o">-</span><span class="crayon-v">ce</span><span class="crayon-sy">.</span><span class="crayon-v">yml</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e218b7f9e5191172865-1"><span class="crayon-o">/</span><span class="crayon-v">root</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-sy">.</span><span class="crayon-v">yml</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e218b7f9e5191172865-2"><span class="crayon-o">/</span><span class="crayon-v">root</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">/</span><span class="crayon-v">tunel</span><span class="crayon-o">/</span><span class="crayon-v">frps</span><span class="crayon-sy">.</span><span class="crayon-v">yml</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e218b7f9e5191172865-3"><span class="crayon-o">/</span><span class="crayon-v">root</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">/</span><span class="crayon-v">compose</span><span class="crayon-o">/</span><span class="crayon-v">portainer</span><span class="crayon-o">-</span><span class="crayon-v">ce</span><span class="crayon-sy">.</span><span class="crayon-v">yml</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -165,7 +372,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <p><strong>一键启动脚本</strong> 在/root/docker/目录下新建all.yml.sh脚本写入：</p>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631d9b7f80718757323559" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e218b7f9eb465782027" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 var=` find ./ -maxdepth 2 -name "*.yml"   -printf "docker-compose -f %p up -d; " `
@@ -174,9 +381,9 @@ echo $var | sh</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b7f80718757323559-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b7f80718757323559-2">2</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e218b7f9eb465782027-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e218b7f9eb465782027-2">2</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b7f80718757323559-1"><span class="crayon-t">var</span><span class="crayon-o">=</span><span class="crayon-sy">`</span><span class="crayon-h"> </span><span class="crayon-i">find</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">maxdepth</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">name</span><span class="crayon-h"> </span><span class="crayon-s">"*.yml"</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">-</span><span class="crayon-i">printf</span><span class="crayon-h"> </span><span class="crayon-s">"docker-compose -f %p up -d; "</span><span class="crayon-h"> </span><span class="crayon-sy">`</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b7f80718757323559-2"><span class="crayon-i">echo</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-v">sh</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e218b7f9eb465782027-1"><span class="crayon-t">var</span><span class="crayon-o">=</span><span class="crayon-sy">`</span><span class="crayon-h"> </span><span class="crayon-i">find</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">maxdepth</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">name</span><span class="crayon-h"> </span><span class="crayon-s">"*.yml"</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-o">-</span><span class="crayon-i">printf</span><span class="crayon-h"> </span><span class="crayon-s">"docker-compose -f %p up -d; "</span><span class="crayon-h"> </span><span class="crayon-sy">`</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e218b7f9eb465782027-2"><span class="crayon-i">echo</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-v">sh</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -187,7 +394,7 @@ echo $var | sh</textarea></div>
 <strong>生成结果</strong>：</p>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631d9b7f8071a041611816" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e218b7f9ed708475497" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 docker-compose -f ./compose/portainer-ce.yml up -d; docker-compose -f ./tunel/frps.yml up -d; docker-compose -f ./docker-compose.yml up -d; </textarea></div>
@@ -195,9 +402,9 @@ docker-compose -f ./compose/portainer-ce.yml up -d; docker-compose -f ./tunel/fr
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b7f8071a041611816-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e218b7f9ed708475497-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b7f8071a041611816-1"><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">f</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-v">compose</span><span class="crayon-o">/</span><span class="crayon-v">portainer</span><span class="crayon-o">-</span><span class="crayon-v">ce</span><span class="crayon-sy">.</span><span class="crayon-e">yml </span><span class="crayon-v">up</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">d</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">f</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-v">tunel</span><span class="crayon-o">/</span><span class="crayon-v">frps</span><span class="crayon-sy">.</span><span class="crayon-e">yml </span><span class="crayon-v">up</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">d</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">f</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-sy">.</span><span class="crayon-e">yml </span><span class="crayon-v">up</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">d</span><span class="crayon-sy">;</span><span class="crayon-h"> </span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e218b7f9ed708475497-1"><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">f</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-v">compose</span><span class="crayon-o">/</span><span class="crayon-v">portainer</span><span class="crayon-o">-</span><span class="crayon-v">ce</span><span class="crayon-sy">.</span><span class="crayon-e">yml </span><span class="crayon-v">up</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">d</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">f</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-v">tunel</span><span class="crayon-o">/</span><span class="crayon-v">frps</span><span class="crayon-sy">.</span><span class="crayon-e">yml </span><span class="crayon-v">up</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">d</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">f</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-v">docker</span><span class="crayon-o">-</span><span class="crayon-v">compose</span><span class="crayon-sy">.</span><span class="crayon-e">yml </span><span class="crayon-v">up</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">d</span><span class="crayon-sy">;</span><span class="crayon-h"> </span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -207,7 +414,7 @@ docker-compose -f ./compose/portainer-ce.yml up -d; docker-compose -f ./tunel/fr
 <p><strong>命令解释</strong>：</p>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-631d9b7f8071d326061568" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-631e218b7f9ef116596140" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 -maxdepth 2    # 往下搜索的子目录层级，1是脚本同级目录，2是包含同级和往下一级的目录。
@@ -217,9 +424,9 @@ echo $var | sh     # 执行命令</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b7f8071d326061568-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631d9b7f8071d326061568-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631d9b7f8071d326061568-3">3</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e218b7f9ef116596140-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-631e218b7f9ef116596140-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-631e218b7f9ef116596140-3">3</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b7f8071d326061568-1"><span class="crayon-o">-</span><span class="crayon-i">maxdepth</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-p"># 往下搜索的子目录层级，1是脚本同级目录，2是包含同级和往下一级的目录。</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631d9b7f8071d326061568-2"><span class="crayon-o">-</span><span class="crayon-i">printf</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-p"># find命令的格式化参数，变量%p是搜索的每条结果，格式化成“docker-compose -f /root/docker/tunel/frps.yml up -d”语句</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631d9b7f8071d326061568-3"><span class="crayon-i">echo</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-i">sh</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-p"># 执行命令</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-631e218b7f9ef116596140-1"><span class="crayon-o">-</span><span class="crayon-i">maxdepth</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-p"># 往下搜索的子目录层级，1是脚本同级目录，2是包含同级和往下一级的目录。</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-631e218b7f9ef116596140-2"><span class="crayon-o">-</span><span class="crayon-i">printf</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-p"># find命令的格式化参数，变量%p是搜索的每条结果，格式化成“docker-compose -f /root/docker/tunel/frps.yml up -d”语句</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-631e218b7f9ef116596140-3"><span class="crayon-i">echo</span><span class="crayon-h"> </span><span class="crayon-sy">$</span><span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-i">sh</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-p"># 执行命令</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -282,6 +489,10 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.27' id='urvanov_syntax_highlighter_js-js'></script>
+<script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.8.2' id='monsterinsights-frontend-script-js'></script>
+<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/luojimen.github.io","hash_tracking":"false","ua":"","v4_id":"G-9Z877QYTCT"};/* ]]> */
+</script>
 <script type='text/javascript' id='image-sizes-js-extra'>
 /* <![CDATA[ */
 var IMAGE_SIZES = {"version":"3.5","disables":["thumbnail","medium","medium_large","large","1536x1536","2048x2048","kratos-thumbnail"]};
