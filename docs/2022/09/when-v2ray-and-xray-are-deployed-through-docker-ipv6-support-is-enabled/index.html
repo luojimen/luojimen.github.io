@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edge/Chrome在当前标签页的右侧打开新Tab【Tab Position Options】 - LuoJi.men</title>
+    <title>V2Ray和Xray通过Docker部署时开启对IPv6支持 - LuoJi.men</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telphone=no, email=no">
     <meta name="keywords" content="">
-    <meta name="description" itemprop="description" content="【Tab Position Options】扩展说明 使用Edge或者Chrome时，当新建标签页，默认是在最末尾（最右端）标签的右侧再新建Tab打开，而不是当前标签页的右侧，——在Tab较多时，这种 [&hellip;]">
+    <meta name="description" itemprop="description" content="V2Ray和Xray开启IPv6支持 &nbsp; &nbsp;&nbsp;Docker容器部署V2Ray和Xray是支持IPv6的，但是需要host主机网络模式才可以！ 注意：Docker网络模式设 [&hellip;]">
     <meta name="theme-color" content="#282a2c">
     <meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg" />
         <meta name='robots' content='max-image-preview:large' />
@@ -40,8 +40,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 height: 100%;
             }
 </style>
-<link rel="alternate" type="application/json+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.men%2F2022%2F09%2Fedge-chrome%25e5%259c%25a8%25e5%25bd%2593%25e5%2589%258d%25e6%25a0%2587%25e7%25ad%25be%25e9%25a1%25b5%25e7%259a%2584%25e5%258f%25b3%25e4%25be%25a7%25e6%2589%2593%25e5%25bc%2580%25e6%2596%25b0tab%25e3%2580%2590tab-position-options%25e3%2580%2591%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.men%2F2022%2F09%2Fedge-chrome%25e5%259c%25a8%25e5%25bd%2593%25e5%2589%258d%25e6%25a0%2587%25e7%25ad%25be%25e9%25a1%25b5%25e7%259a%2584%25e5%258f%25b3%25e4%25be%25a7%25e6%2589%2593%25e5%25bc%2580%25e6%2596%25b0tab%25e3%2580%2590tab-position-options%25e3%2580%2591%2F&#038;format=xml" />
+<link rel="alternate" type="application/json+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.men%2F2022%2F09%2Fwhen-v2ray-and-xray-are-deployed-through-docker-ipv6-support-is-enabled%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.men%2F2022%2F09%2Fwhen-v2ray-and-xray-are-deployed-through-docker-ipv6-support-is-enabled%2F&#038;format=xml" />
 <style type="text/css">.broken_link, a.broken_link {
 	text-decoration: line-through;
 }</style><!-- Google tag (gtag.js) -->
@@ -121,34 +121,85 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                                 <li class="breadcrumb-item">
                                     <a class="text-dark" href="https://luojimen.github.io"> 首页</a>
                                 </li>
-                                <li class="breadcrumb-item"> <a class="text-dark" href="https://luojimen.github.io/category/pc/">电脑相关</a></li>                                <li class="breadcrumb-item active" aria-current="page"> 正文</li>
+                                <li class="breadcrumb-item"> <a class="text-dark" href="https://luojimen.github.io/category/linux/">Linux</a></li>                                <li class="breadcrumb-item active" aria-current="page"> 正文</li>
                             </ol>
                         </div>
                         <div class="header">
-                            <h1 class="title">Edge/Chrome在当前标签页的右侧打开新Tab【Tab Position Options】</h1>
+                            <h1 class="title">V2Ray和Xray通过Docker部署时开启对IPv6支持</h1>
                             <div class="meta">
-                                <span>2022年9月9日</span>
-                                                                    <span>74点热度</span>
+                                <span>2022年9月13日</span>
+                                                                    <span>2点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
-                            <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><div><b style="font-size:1.667rem"><span data-wiz-span="data-wiz-span">【Tab Position Options】扩展说明</span></b></div>
-<div>使用Edge或者Chrome时，当<span style="">新建标签页，</span><span style="">默认是在最末尾（最右端）标签的右侧再新建Tab打开，而不是当前标签页的右侧，——</span><span style="">在Tab较多时，这种总是切换到最右的机制很影响使用体验。</span></div>
-<div><span style=""><br /></span></div>
-<div><b>【Tab Position Options】</b>可以解决这个问题</div>
+                            <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><h2 ><a name="toc-1"></a><span style="">V2Ray和Xray开启</span><span style="">IPv6</span><span style="">支持</span></h2>
+<div><span style="">&nbsp; &nbsp;&nbsp;</span><span style="">Docker容器部署V2Ray和Xray是支持</span><span style="">IPv6</span><span style="">的，但是需要host主机网络模式才可以！</span></div>
 <div>
 <ul>
-<li>安装扩展后进入设置页面，“New Tab”勾选“Right of current tab”，当前选项卡的右侧新建Tab。</li>
-<li>无需保存，即可生效！</li>
+<li>注意：Docker网络模式设为 <span data-wiz-span="data-wiz-span" style="color: rgb(255, 0, 0);">network_mode: "host"</span> 后支持IPv6。虚拟网络模式的映射<span style="">单</span>端口并不支持IPv6（只支持IPv4）。</li>
+<li>注意：隧道类的应用，通过Docker方式部署，应尽量使用host主机网络模式，避免虚拟网络自身限制的原因而走各种弯路：以为是服务端配置、客户端设置、或者其他哪里网络没弄好而造成的不支持IPv6~，实际却是容器框架的使用问题！</li>
+</ul>
+<div></div>
+</div>
+<div>
+<div style="">
+<div>
+<h2 ><a name="toc-2"></a>服务端不同配置对IPv6的影响</h2>
+</div>
+<div>&nbsp; &nbsp;&nbsp;Docker容器网络<span data-wiz-span="data-wiz-span" style="color: rgb(255, 0, 0);">【虚拟网Bridge】模式不支持IPv6</span>，<span data-wiz-span="data-wiz-span" style="color: rgb(255, 0, 0);">【host】模式支持IPv6</span>：</div>
+<ul>
+<li><span data-wiz-span="data-wiz-span" style="color: rgb(255, 0, 0);">【虚拟网】</span>or1-xray-ws：不支持<span>IPv6</span></li>
+<li><span data-wiz-span="data-wiz-span" style="color: rgb(255, 0, 0);">【虚拟网】</span>or2-xray-tcp：不支持<span>IPv6</span></li>
+<li>【host】or2-x2ray-tcp：支持<span>IPv6</span></li>
+<li><span data-wiz-span="data-wiz-span" style="color: rgb(255, 0, 0);">【虚拟网】</span>or2-xray-ws：不支持<span>IPv6</span></li>
+<li>【host】or2-xray-ws：支持<span>IPv6</span></li>
+<li>【host】or2-v2fly-ws-tls-web_nginx：<span>支持</span><span>IPv6</span></li>
+</ul>
+<ul>
+<li><span>【host】or2-v2fly-ws：支持</span><span>IPv6</span></li>
 </ul>
 </div>
-<div></div>
-<div><b style="font-size:1.667rem"><span data-wiz-span="data-wiz-span">下载地址</span></b></div>
+<div style="">
+<div>
+<div>&nbsp; &nbsp;&nbsp;</div>
+</div>
+</div>
+</div>
+<h2 ><a name="toc-3"></a>客户端IPv6测试信息</h2>
+<div>&nbsp; &nbsp; 客户端使用 v2rayN 和 Clash 测试结果一致。</div>
+<div>&nbsp; &nbsp;&nbsp;访问IPv6连接测试站：https://test-ipv6.com/index.html.zh_CN</div>
 <div>
 <ul>
-<li>Microsoft Edge 扩展市场没有这个扩展。</li>
-<li><a href="https://chrome.google.com/webstore/detail/tab-position-options/fjccjnfkdkdmjohojoggodkigkjkkjhl/related?hl=zh-CN" target="_blank"  rel="nofollow" >Tab Position Options - Chrome 应用商店 (google.com)</a></li>
+<li>服务端Docker使用【虚拟网络】模式时不支持IPv6的测试结果：</li>
 </ul>
+</div>
+<div data-mode="Shell" data-theme="default">
+<pre><code>IPv4 域名连接测试 成功 (0.925s) 使用 ipv4
+IPv6 域名连接测试 —————————— 失败 (0.433s)
+双栈域名连接测试 成功 (0.900s) 使用 ipv4
+双栈域名大数据包传输测试 成功 (0.840s) 使用 ipv4
+IPv6 大数据包传输测试——————————失败 (0.838s)
+测试运营商 DNS 是否接入 IPv6——————————失败 (2.312s)
+查询 IPv4 运营商 成功 (0.581s) 使用 ipv4 ASN 16509
+查询 IPv6 运营商——————————失败 (0.428s)</code></pre>
+</div>
+<div>
+<ul>
+<li>服务Docker使用【host】模式时支持IPv6的测试结果：</li>
+</ul>
+</div>
+<div data-mode="Shell" data-theme="default">
+<pre><code>IPv4 域名连接测试 成功 (0.661s) 使用 ipv4
+IPv6 域名连接测试 成功 (0.773s) 使用 ipv6
+双栈域名连接测试 成功 (0.731s) 使用 ipv6
+双栈域名大数据包传输测试 成功 (0.872s) 使用 ipv6
+IPv6 大数据包传输测试 成功 (0.684s) 使用 ipv6
+测试运营商 DNS 是否接入 IPv6 —————————— 失败 (3.471s)
+查询 IPv4 运营商 成功 (1.071s) 使用 ipv4 ASN 31898
+查询 IPv6 运营商 成功 (0.668s) 使用 ipv6 ASN 31898</code></pre>
+</div>
+<div>
+<div></div>
 </div>
                         </div>
                                                 <div class="footer clearfix">
@@ -156,7 +207,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                                 <span>标签：</span>
                                 <a>暂无</a>                            </div>
                             <div class="tool float-right d-none d-lg-block">
-                                <span>最后更新：2022年9月9日</span>
+                                <span>最后更新：2022年9月13日</span>
                             </div>
                         </div>
                     </div>
@@ -167,11 +218,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		<p class="motto mb-0">不积跬步无以至千里</p>
 	</div>
 	<div class="share float-md-right text-center">
-				<a href="javascript:;" id="thumbs" data-action="love" data-id="2775" role="button" class="btn btn-thumbs "><i class="kicon i-like"></i><span class="ml-1">点赞</span></a>
+				<a href="javascript:;" id="thumbs" data-action="love" data-id="2801" role="button" class="btn btn-thumbs "><i class="kicon i-like"></i><span class="ml-1">点赞</span></a>
 	</div>
 </div>
                 <nav class="navigation post-navigation clearfix" role="navigation">
-                    <div class="nav-previous clearfix"><a title="【怠惰小说下载器】在线阅读小说站的通用爬虫抓取工具" href="https://luojimen.github.io/2022/09/lazy-novel-downloader-a-general-crawler-for-online-reading-novel-stations/">< 上一篇</a></div><div class="nav-next"><a title="PotPlayer批量创建视频缩略图" href="https://luojimen.github.io/2022/09/potplayer-creates-video-thumbnails-in-batch/">下一篇 ></a></div>                </nav>
+                    <div class="nav-previous clearfix"><a title="Snap的Docker效率很低-甲骨文Ubuntu" href="https://luojimen.github.io/2022/09/snaps-docker-is-inefficient-oracle-ubuntu/">< 上一篇</a></div>                </nav>
                             </div>
                     </div>
     </div>
