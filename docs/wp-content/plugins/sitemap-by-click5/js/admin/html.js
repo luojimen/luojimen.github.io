@@ -7,6 +7,8 @@ const redirectToAioSeo = () => {
 }
 
 const sortOrderList = () => {
+  if(jQuery("#sorting_notification").hasClass("disabled") && jQuery("#click5_sitemap_display_style").val() == "merge")
+    return;
   var ul = jQuery("#sitemap-order");
   var arr = jQuery.makeArray(ul.children("li"));
 
@@ -46,6 +48,8 @@ const relocateSubItems = () => {
 }
 
 const sortSubOrderList = () => {
+  if(jQuery("#sorting_notification").hasClass("disabled"))
+    return;
   document.querySelectorAll('#sitemap-order > li ol').forEach(ol => {
     var ul = jQuery(ol);
     var arr = jQuery.makeArray(ul.children("li"));
@@ -84,8 +88,6 @@ const sortListByCurrentSortData = () => {
         sortOrderList();
         relocateSubItems();
         sortSubOrderList();
-
-        //console.log('loaded');
         jQuery("#btnSaveOrder").trigger('click');
       }
     }
@@ -93,20 +95,18 @@ const sortListByCurrentSortData = () => {
 }
 
 const sortOrderClick = () => {
-  serializeOrderList();
-  BTNserializeOrderList();
+  /*serializeOrderList();
+  BTNserializeOrderList();*/
   window.location.reload();
 }
 
 const loadOrderList22 = (callback = undefined) => {
   getRequest(c5resturl.wpjson + 'click5_sitemap/API/get_order_list_HTML_nested', (dataFull) => {
     var data = dataFull[0];
-    //var nestedElements = dataFull[1];
     var dataOrder = dataFull[2];
     let list = '<div class="dd" id="orderList"><ol class="dd-list" id="sitemap-order">';
     if (data) {
       if (data.length) {
-        //console.log(data);
         list += data;
       }
     }
@@ -115,7 +115,6 @@ const loadOrderList22 = (callback = undefined) => {
     let listEl = jQuery(list);
     jQuery(listEl).hide();
     jQuery('#post-body-content > #order-sitemap > div').prepend(listEl);
-    //sortListByCurrentSortData();
     if (dataOrder) {
       if(dataOrder.length) {
         dataOrder.forEach(sortObject => {
@@ -131,12 +130,12 @@ const loadOrderList22 = (callback = undefined) => {
         relocateSubItems();
         sortSubOrderList();
 
-        //console.log('loaded');
         serializeOrderListNoNotification();
         BTNserializeOrderList();
       }
     }
-    jQuery(listEl).show();
+
+      jQuery(listEl).show();
 
     getRequest(c5resturl.wpjson + 'click5_sitemap/API/get_nested_elements', (nestedElements) => {
       forceSerializeOrderList();
@@ -226,7 +225,6 @@ const loadOrderList22 = (callback = undefined) => {
               }
       
               postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/post_update_nested_elements', nestedElements, (data) => {
-                console.log('saved nested elements');
               });
 
             }
@@ -261,174 +259,199 @@ const loadOrderList22 = (callback = undefined) => {
     }
   });
 };
-/*
-const sortOrderClick = () => {
-  serializeOrderList();
-  BTNserializeOrderList();
-  window.location.reload();
-}*/
+
+let dragged = false;
 
 const loadOrderList = (callback = undefined) => {
-  getRequest(c5resturl.wpjson + 'click5_sitemap/API/get_order_list_HTML_nested', (dataFull) => {
-    var data = dataFull[0];
-    //var nestedElements = dataFull[1];
-    var dataOrder = dataFull[2];
-    let list = '<div class="dd" id="orderList"><ol class="dd-list" id="sitemap-order">';
-    if (data) {
-      if (data.length) {
-        //console.log(data);
-        list += data;
-      }
-    }
-    list += '</ol></div>';
-
-    let listEl = jQuery(list);
-    jQuery(listEl).hide();
-    jQuery('#post-body-content > #order-sitemap > div').prepend(listEl);
-    //sortListByCurrentSortData();
-    if (dataOrder) {
-      if(dataOrder.length) {
-        dataOrder.forEach(sortObject => {
-          sortElement = document.querySelector('li[data-value="'+sortObject.ID+'"]');
-          if(sortElement) {
-            sortElement.setAttribute('value', sortObject.order);
-            if (sortObject.parent) {
-              sortElement.setAttribute('name', sortObject.parent);
-            }
-          }
-        });
-        sortOrderList();
-        relocateSubItems();
-        sortSubOrderList();
-
-        //console.log('loaded');
-        serializeOrderListNoNotification();
-        BTNserializeOrderList();
-      }
-    }
-    jQuery(listEl).show();
-
-    getRequest(c5resturl.wpjson + 'click5_sitemap/API/get_nested_elements', (nestedElements) => {
-      
-      let currentParrent;
-
-      jQuery('#orderList').nestable({
-        maxDepth: 3,
-        expandBtnHTML: '<button class="dd-expand" data-action="expand" type="button"></button>',
-        collapseBtnHTML: '<button class="dd-collapse" data-action="collapse" type="button"></button>',
-        onDragStart: function(l,e){
-          currentParrent = jQuery(e).parent().closest('li').attr('data-value')
-        },
-        beforeDragStop: function(l, e, p){
-
-            var currentElementValue = jQuery(e).attr('data-value')
-            var currentElementValueTitle = jQuery(e).find('.dd-handle').text()
-            var newParentValue = p[0].offsetParent.dataset.value
-
-            if(jQuery(e).hasClass("group") && p[0].offsetParent.className.includes('group')){
-              return false;
-            }
-
-            if(jQuery(e).hasClass('sub-item') && p[0].getAttribute('id') === 'sitemap-order') {
-              return false;
-            }
-
-            if (!jQuery(e).hasClass("group") && currentParrent != newParentValue) {
-
-              jQuery(e).attr('name', newParentValue);
-
-              if(!jQuery(e).hasClass('original-nested')){
-                jQuery(e).addClass('custom-nested');
-              }
-              
-              let main_list = false;
-              if ((jQuery('li.dd-item.group[data-value='+newParentValue+']').length > 0) && jQuery(e).hasClass('custom-nested')){
-                main_list = true;
-              }
-
-              let original_parent = false;
-              if(jQuery(e).hasClass('original-nested')){
-                original_parent = currentParrent
-              }
-
-              let toOriginalNested = false;
-              p[0].childNodes.forEach(childNode => {
-                if(childNode.className.includes('original-nested')){
-                  toOriginalNested = true;
-                }
-              });
-
-              item = {
-                element: currentElementValue,
-                parent: newParentValue,
-                title: currentElementValueTitle,
-                original_parent: original_parent,
-                toOriginalNested: toOriginalNested
-              };
-      
-              var added = false;
-              jQuery.map(nestedElements, function(elementOfArray, indexInArray) {
-                if (elementOfArray.element == item.element) {
-                  added = true;
-                }
-              });
-              if (!added) {
-                nestedElements.push(item);
-              } else {
-                jQuery.each( nestedElements, function( key, value ) {
-                  if( value.element == item.element) {
-                      value.parent = item.parent;
-                  }
-                });
-              }
-
-              if(main_list){
-                nestedElements = jQuery.grep(nestedElements, function(value) {
-                  return value.element != item.element;
-                });
-              }
-
-              if(original_parent){
-                nestedElements = jQuery.grep(nestedElements, function(value) {
-                  return value.original_parent != item.parent;
-                });
-              }
-      
-              postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/post_update_nested_elements', nestedElements, (data) => {
-                console.log('saved nested elements');
-              });
-
-            }
-
-        }
-      })
-      jQuery('#orderList').nestable('collapseAll');
-
-      jQuery("#orderList li.sub-item").each(function() {
-        var this_elem = jQuery(this)
-        if (this_elem.hasClass("dd-collapsed")) {
-          this_elem.removeClass("dd-collapsed")
-        }
-        if(this_elem.find('ol li').length == 0){
-          var handlediv = this_elem.find('div.dd-handle').detach();
-          this_elem.empty().append(handlediv);
-        }
-
-        var original_nested = this_elem.find('ol li').not('.custom-nested');
-        original_nested.addClass('original-nested')
+    
+      getRequest(c5resturl.wpjson + 'click5_sitemap/API/get_order_list_HTML_nested', (dataFull) => {
+        var data = dataFull[0];
         
+        var dataOrder = dataFull[2];
+        let list = '<div class="dd" id="orderList"><ol class="dd-list" id="sitemap-order">';
+        if (data) {
+          if (data.length) {
+            list += data;
+          }
+        }
+        list += '</ol></div>';
+
+        let listEl = jQuery(list);
+        jQuery(listEl).hide();
+        jQuery('#post-body-content > #order-sitemap > div').prepend(listEl);
+        dataOrder.reverse();
+        if (dataOrder) {
+          if(dataOrder.length) {
+            dataOrder.forEach(sortObject => {
+              sortElement = document.querySelector('li[data-value="'+sortObject.ID+'"]');
+              if(sortElement) {
+                sortElement.setAttribute('value', sortObject.order);
+                if (sortObject.parent) {
+                  sortElement.setAttribute('name', sortObject.parent);
+                }
+              }
+            });
+            sortOrderList();
+            relocateSubItems();
+            sortSubOrderList();
+
+            serializeOrderListNoNotification();
+            BTNserializeOrderList();
+          }
+        }
+          jQuery(listEl).show();
+        
+
+        getRequest(c5resturl.wpjson + 'click5_sitemap/API/get_nested_elements', (nestedElements) => {
+          
+          let currentParrent;
+          let currentParentFull;
+
+          jQuery('#orderList').nestable({
+            maxDepth: 3,
+            expandBtnHTML: '<button class="dd-expand" data-action="expand" type="button"></button>',
+            collapseBtnHTML: '<button class="dd-collapse" data-action="collapse" type="button"></button>',
+            onDragStart: function(l,e){
+              currentParrent = jQuery(e).parent().closest('li').attr('data-value')
+              currentParentFull = jQuery(e).parent().closest('li');
+            },
+            beforeDragStop: function(l, e, p){
+
+                if(e.hasClass("dd-item") && (currentParrent != undefined || jQuery('#click5_sitemap_display_style').val() == "merge")){
+                  let _ps = jQuery(e.attr("id")).parent(0).find(".dd-item[value="+(parseInt(e.val())+100)+"]");;
+                  let _px = e.parent().find(".dd-item[value="+(parseInt(e.val())-100)+"]");
+                  dragged = true;
+                }
+
+                var currentElementValue = jQuery(e).attr('data-value')
+                var currentElementValueTitle = jQuery(e).find('.dd-handle').text()
+                var newParentValue = p[0].offsetParent.dataset.value
+
+                if(typeof newParentValue != 'undefined'){
+                  newParent = p[0].offsetParent;
+                  if(newParent.offsetParent.id != 'sitemap-order'){
+                    newParent = newParent.offsetParent.offsetParent.dataset.value;
+                  }else{
+                    newParent = newParent.dataset.value;
+                  }
+      
+                  let found = false;
+
+                  while(!found){
+                    if(currentParentFull.parent().attr('id') != 'sitemap-order'){
+                      currentParentFull = currentParentFull.parent();
+                    }else{
+                      found = true;
+                    }
+                  }
+      
+                  if(currentParentFull.closest('li').data('value') != newParent)
+                    return false;
+                }
+                
+                if(jQuery(e).hasClass("group") && p[0].offsetParent.className.includes('group')){
+                  return false;
+                }
+
+                if(jQuery(e).hasClass('sub-item') && p[0].getAttribute('id') === 'sitemap-order') {
+                  return false;
+                }
+
+                if (!jQuery(e).hasClass("group") && currentParrent != newParentValue) {
+
+                  jQuery(e).attr('name', newParentValue);
+
+                  if(!jQuery(e).hasClass('original-nested')){
+                    jQuery(e).addClass('custom-nested');
+                  }
+                  
+                  let main_list = false;
+                  if ((jQuery('li.dd-item.group[data-value='+newParentValue+']').length > 0) && jQuery(e).hasClass('custom-nested')){
+                    main_list = true;
+                  }
+
+                  let original_parent = false;
+                  if(jQuery(e).hasClass('original-nested')){
+                    original_parent = currentParrent
+                  }
+
+                  let toOriginalNested = false;
+                  p[0].childNodes.forEach(childNode => {
+                    if(childNode.className.includes('original-nested')){
+                      toOriginalNested = true;
+                    }
+                  });
+
+                  item = {
+                    element: currentElementValue,
+                    parent: newParentValue,
+                    title: currentElementValueTitle,
+                    original_parent: original_parent,
+                    toOriginalNested: toOriginalNested
+                  };
+          
+                  var added = false;
+                  jQuery.map(nestedElements, function(elementOfArray, indexInArray) {
+                    if (elementOfArray.element == item.element) {
+                      added = true;
+                    }
+                  });
+                  if (!added) {
+                    nestedElements.push(item);
+                  } else {
+                    jQuery.each( nestedElements, function( key, value ) {
+                      if( value.element == item.element) {
+                          value.parent = item.parent;
+                      }
+                    });
+                  }
+
+                  if(main_list){
+                    nestedElements = jQuery.grep(nestedElements, function(value) {
+                      return value.element != item.element;
+                    });
+                  }
+
+                  if(original_parent){
+                    nestedElements = jQuery.grep(nestedElements, function(value) {
+                      return value.original_parent != item.parent;
+                    });
+                  }
+
+                  postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/post_update_nested_elements', nestedElements, (data) => {
+                  });
+
+                }
+
+            }
+          })
+          jQuery('#orderList').nestable('collapseAll');
+
+          jQuery("#orderList li.sub-item").each(function() {
+            var this_elem = jQuery(this)
+            if (this_elem.hasClass("dd-collapsed")) {
+              this_elem.removeClass("dd-collapsed")
+            }
+            if(this_elem.find('ol li').length == 0){
+              var handlediv = this_elem.find('div.dd-handle').detach();
+              this_elem.empty().append(handlediv);
+            }
+
+            var original_nested = this_elem.find('ol li').not('.custom-nested');
+            original_nested.addClass('original-nested')
+            
+          });
+
+          jQuery("#orderList li").each(function() {
+            var this_elem = jQuery(this);
+            this_elem.attr('id', this_elem.data().value);
+          });  
+        });
+
+        if (callback) {
+          callback();
+        }
       });
-
-      jQuery("#orderList li").each(function() {
-        var this_elem = jQuery(this);
-        this_elem.attr('id', this_elem.data().value);
-      });  
-    });
-
-    if (callback) {
-      callback();
-    }
-  });
 };
 
 //recursive
@@ -449,6 +472,7 @@ const serializeOrderList = () => {
   document.querySelectorAll('#sitemap-order > *').forEach(firstLevelNode => {
     arrayResult.push(getOrderElement(firstLevelNode));
   });
+    
   postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/post_update_list_HTML', arrayResult, (data) => {
     click5_sitemap_notification('success', 'HTML Sitemap order has been updated.');
   });
@@ -471,8 +495,11 @@ const BTNserializeOrderList = () => {
     arrayResult.push(getOrderElement(firstLevelNode));
   });
 
+  if(saveOrder && dragged){
+    arrayResult.push({"save_order":true});
+  }
+
   postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/post_update_list_HTML_save_btn', arrayResult, (data) => {
-    //console.log('default order');
   });
 }
 
@@ -480,7 +507,6 @@ const reloadOrderList = (callback = undefined) => {
   document.querySelector('#sitemap-order').remove();
   loadOrderList(callback);
 
-  //console.log('reload');
 }
 
 const updateEnableCustomHeading = (checkboxElement) => {
@@ -488,7 +514,7 @@ const updateEnableCustomHeading = (checkboxElement) => {
   const option_value = checkboxElement.checked;
   postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/update_option_AJAX', { option_name, option_value, type: 'bool' }, (data) => {
     if (data == true) {
-      click5_sitemap_notification('success', 'Settings saved.', 2000);
+      click5_sitemap_notification('success', 'Settings have been saved.', 2000);
       reloadOrderList(serializeOrderList);
     }
   });
@@ -530,6 +556,7 @@ const TotalresetSitemapOrder = () => {
 }
 
 const updateGeneralHtmlOptions = () => {
+  
   document.getElementById("items_1000_error").style.display = "none";
   let dataOptions = [];
   document.querySelectorAll('.setting_block input').forEach(item => {
@@ -544,14 +571,13 @@ const updateGeneralHtmlOptions = () => {
     let opt_select = item.id;
     dataOptions[opt_select] = item.value;
   });
-  console.log(dataOptions);
   let itemsCount = parseInt(dataOptions["click5_sitemap_html_pagination_items_per_page"]);
   if(itemsCount > 1000) {
     document.getElementById("items_1000_error").style.display = "block";
   } else {
     let obData = Object.assign({}, dataOptions);
     postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/update_html_option_AJAX', obData, (data) => {
-      click5_sitemap_notification('success', 'HTML options saved.', 2000);
+      click5_sitemap_notification('success', 'HTML options have been saved.', 2000);
       //serializeOrderList();
       //BTNserializeOrderList();
       
@@ -560,6 +586,7 @@ const updateGeneralHtmlOptions = () => {
       //forceSerializeOrderList();
       //BTNserializeOrderList();
       jQuery('.dd').remove();
+      
       loadOrderList22();
     });
   }
@@ -592,6 +619,7 @@ const forceSerializeOrderList = () => {
   });
 }
 
+let saveOrder = false;
 
 (() => {
   document.addEventListener("DOMContentLoaded", function (event) {
@@ -610,16 +638,23 @@ const forceSerializeOrderList = () => {
     let selectType = document.querySelector('#page_type');
     let hiddenAllTypes = document.querySelector('#all_types');
 
-    document.querySelector('#btnSaveOrder').addEventListener('click', function (e) {
+    if(jQuery('#btnSaveOrder').length != 0){
+      document.querySelector('#btnSaveOrder').addEventListener('click', function (e) {
 
+        saveOrder = true;
+        e.preventDefault();
+        e.stopPropagation();
+        serializeOrderList();
+        BTNserializeOrderList();
+        if(dragged){
+          jQuery("#sorting_notification").removeClass("disabled");
+          jQuery("#sorting_notification").addClass("enabled");
+        }
+  
+  
+      });
+    }
 
-      e.preventDefault();
-      e.stopPropagation();
-      serializeOrderList();
-      BTNserializeOrderList();
-
-
-    });
 
     document.addEventListener('click5_sitemap_force_order_list_update', function() {
       reloadOrderList(serializeOrderList);
@@ -649,12 +684,16 @@ const forceSerializeOrderList = () => {
       });
     });
 
-    document.getElementById('btnResetOrder').addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      TotalresetSitemapOrder();
-    });
+    if(jQuery('#btnResetOrder').length != 0){
+      document.getElementById('btnResetOrder').addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dragged = false;
+        TotalresetSitemapOrder();
+        jQuery("#sorting_notification").addClass("disabled");
+        jQuery("#sorting_notification").removeClass("enabled");
+      });
+    }
     
     document.querySelectorAll('#enableSitemap input[type="checkbox"]').forEach(checkbox => {
       checkbox.addEventListener('change', function(e) {
@@ -666,9 +705,6 @@ const forceSerializeOrderList = () => {
       checkbox.addEventListener('change', function(e) {
         const option_name = this.getAttribute('name');
         const option_value = this.value;
-       /* postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/update_option_AJAX', { option_name, option_value, type: 'text' }, (data) => {
-          resetSitemapOrder();
-        });*/
       });
     });
 
@@ -676,13 +712,6 @@ const forceSerializeOrderList = () => {
       checkbox.addEventListener('change', function(e) {
         const option_name = this.getAttribute('name');
         const option_value = this.value;
-        /*postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/update_option_AJAX', { option_name, option_value, type: 'text' }, (data) => {
-          
-          if(resetSitemapOrder()){
-            window.location.href = window.location.href
-          }
-          
-        });*/
       });
     });
 
@@ -690,12 +719,6 @@ const forceSerializeOrderList = () => {
       checkbox.addEventListener('change', debounce(function (e) {
         const option_name = this.getAttribute('name');
         const option_value = parseInt(this.value);
-        /*postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/update_option_AJAX', { option_name, option_value, type: 'text' }, (data) => {
-          if (data == true) {
-            click5_sitemap_notification('success', 'Settings saved.', 2000);
-            resetSitemapOrder();
-          }
-        });*/
       }, 300));
     });
     document.querySelectorAll('#enableSitemap input[type="text"]').forEach(checkbox => {
@@ -708,13 +731,6 @@ const forceSerializeOrderList = () => {
           this.previousElementSibling.control.checked = false;
         }
 
-        /*postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/update_option_AJAX', { option_name, option_value, type: 'text' }, (data) => {
-          if (data == true) {
-            click5_sitemap_notification('success', 'Settings saved.', 2000);
-            updateEnableCustomHeading(this.previousElementSibling.control);
-            resetSitemapOrder();
-          }
-        });*/
       }, 300));
     });
 
@@ -762,7 +778,6 @@ jQuery(document).ready(function() {
 
     jQuery(window).unbind('beforeunload');
     postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/checkrobots', {text: send_data}, (data) => {
-      //location.reload();
       if(data) {
         jQuery('[name="robots_error"]').css( "display", "block" );
       } else {

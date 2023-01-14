@@ -128,13 +128,13 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">WordPress删文章时自动删除图片[代码实现]</h1>
                             <div class="meta">
                                 <span>2022年4月9日</span>
-                                                                    <span>560点热度</span>
+                                                                    <span>805点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
                             <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><div><b style="">需求说明：</b><span style="">WordPress删除文章时，文章内所上传的图片并不会自动删除，久而久之占用了存储空</span><span style="">间。虽然有其他批量删除未被文章调用的方法，但日常删除一篇文章也那样操作就过于笨拙。</span></div>
 <div>因此下面将通过几行代码的简单方式实现在删除文章时自动删除缩略图以及图片附件，这样就不用手动去媒体库寻找并删除，准确而且效率高。</div>
-<div><b style="">代码来源：</b><span style="">&nbsp;</span><a href="https://www.weiye.link/294.html" style="text-decoration-skip-ink: none;" target="_blank"  rel="nofollow" >wordpress<span id="wizkm_highlight_tmp_span">开发之博客文章删除时自动删除该文章附件图片 (weiye.link)</span></a></div>
+<div><b style="">代码来源：</b><span style="">&nbsp;</span><a href="https://www.weiye.link/294.html" style="text-decoration-skip-ink: none;" target="_blank" rel="nofollow" class="broken_link">wordpress<span id="wizkm_highlight_tmp_span">开发之博客文章删除时自动删除该文章附件图片 (weiye.link)</span></a></div>
 <div></div>
 <h2 ><a name="toc-1"></a>实现代码：</h2>
 <div>将下面代码插入到主题根目录 functions.php即可【推荐使用Code Snippets插件来对<span style="">functions.php插入自定义代码，这样更换主题才不会失效</span>】</div>
@@ -224,10 +224,10 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 <script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/js/min/urvanov_syntax_highlighter.min.js?ver=2.8.27' id='urvanov_syntax_highlighter_js-js'></script>
 <script type='text/javascript' id='image-sizes-js-extra'>
 /* <![CDATA[ */
-var IMAGE_SIZES = {"version":"3.5","disables":["thumbnail","medium","medium_large","large","1536x1536","2048x2048","kratos-thumbnail"]};
+var THUMBPRESS = {"version":"3.6.1","disables":["thumbnail","medium","medium_large","large","1536x1536","2048x2048","kratos-thumbnail"]};
 /* ]]> */
 </script>
-<script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/image-sizes/assets/js/front.min.js?ver=3.5' id='image-sizes-js'></script>
+<script type='text/javascript' src='https://luojimen.github.io/wp-content/plugins/image-sizes/assets/js/front.js?ver=3.6.1' id='image-sizes-js'></script>
 <script type='text/javascript' src='https://cdn.seatonjiang.com/kratos/4.1.2/assets/js/bootstrap.bundle.min.js?ver=4.5.0' id='bootstrap-bundle-js'></script>
 <script type='text/javascript' src='https://cdn.seatonjiang.com/kratos/4.1.2/assets/js/layer.min.js?ver=3.1.1' id='layer-js'></script>
 <script type='text/javascript' src='https://cdn.seatonjiang.com/kratos/4.1.2/assets/js/DPlayer.min.js?ver=4.1.2' id='dplayer-js'></script>
@@ -244,7 +244,7 @@ var ajaxcomment = {"ajax_url":"https:\/\/luojimen.github.io\/wp-admin\/admin-aja
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://cdn.seatonjiang.com/kratos/4.1.2/assets/js/comments.min.js?ver=4.1.2' id='comment-js'></script>
-<script type='text/javascript' src='https://zz.bdstatic.com/linksubmit/push.js?ver=6.0.2' id='baidu_zz_push-js'></script>
+<script type='text/javascript' src='https://zz.bdstatic.com/linksubmit/push.js?ver=6.0.3' id='baidu_zz_push-js'></script>
 </body>
 
 </html>

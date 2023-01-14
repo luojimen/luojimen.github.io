@@ -112,11 +112,17 @@ ul.subsubsub{margin-bottom: 6px;}
 table.wp-list-table th.check-column span.dashicons{margin-left:6px; color:#999; font-size: 16px; width: 16px; height:16px;}
 table.wp-list-table th.check-column span.spinner{margin:4px 0 0 0;}
 
+table.wp-list-table .pending th,
+table.wp-list-table .pending td{background-color: #f0f6fc;}
+table.wp-list-table .pending th.check-column {border-left: 4px solid #0073aa;}
+table.wp-list-table .pending th.check-column input{margin-left: 4px;}
+
 table.wp-list-table .unapproved th,
 table.wp-list-table .unapproved td{background-color: #fcf9e8;}
 table.wp-list-table .unapproved th.check-column {border-left: 4px solid #d63638;}
 table.wp-list-table .unapproved th.check-column input{margin-left: 4px;}
 table.wp-list-table .approve a,
+table.wp-list-table .audit a,
 table.wp-list-table .publish a{color: #007017;}
 table.wp-list-table .unapprove a,
 table.wp-list-table .unpublish a{color: #996800;}

@@ -33,7 +33,7 @@ const removeOne = (self) => {
   getRequest(c5resturl.wpjson + 'click5_sitemap/API/get_custom_url_delete_one?ID=' + self.getAttribute('data-value'), (data) => {
       if (data == true) {
         self.parentElement.parentElement.remove();
-        click5_sitemap_notification('success', 'Settings saved.', 2000);
+        click5_sitemap_notification('success', 'Settings have been saved.', 2000);
 
         if (!document.querySelectorAll('#custom_urls_list > li').length) {
           document.getElementById('click5_no_records_found').style.display = 'block';
@@ -43,10 +43,20 @@ const removeOne = (self) => {
       }
   });
 }
-
+let customURLEdited = false;
 const toggleEditCustom = (self) => {
   getRequest(c5resturl.wpjson + 'click5_sitemap/API/get_custom_url_single?ID=' + self.getAttribute('data-value'), (data) => {
-
+    jQuery(window).unbind('beforeunload');
+    jQuery("#edit_custom_url input").change(function(){
+      jQuery(window).on('beforeunload',function(){
+        return false;
+      });
+    });
+    jQuery("#edit_custom_url select").change(function(){
+      jQuery(window).on('beforeunload',function(){
+        return false;
+      });
+    });
       if (data !== false) {
         document.getElementById('edit_url_title').value = data.title;
         document.getElementById('edit_url_url').value = data.url;
@@ -88,7 +98,7 @@ const validAddNew = () => {
     return false;
   }
 
-  if (!document.getElementById('add_url_category_text').value.length) {
+  if (!document.getElementById('add_url_category_text').value.length && jQuery("#add_url_category_select option:selected").val() == "custom") {
     return false;
   }
 
@@ -108,7 +118,7 @@ const loadCustomURLSlist = () => {
       document.getElementById('click5_no_records_found').style.display = 'block';
     } else {
       document.getElementById('custom_urls_list').style.display = 'block';
-      document.getElementById('click5_clear_custom_list').style.display = 'block';
+      document.getElementById('click5_clear_custom_list').style.display = 'none';
       data.forEach(el => {
         let newListElement = document.createElement('li');
         let urlElement = document.createElement('a');
@@ -151,7 +161,7 @@ const loadCustomURLSlist = () => {
           let isChecked = e.target.checked;
           getRequest(c5resturl.wpjson + 'click5_sitemap/API/get_custom_url_toggle_HTML?ID=' + this.getAttribute('data-value') + '&newVal=' + isChecked, (data) => {
             if (data == true) {
-              click5_sitemap_notification('success', 'Settings saved.', 2000);
+              click5_sitemap_notification('success', 'Settings have been saved.', 2000);
             }
           });
         });
@@ -164,7 +174,7 @@ const loadCustomURLSlist = () => {
           let isChecked = e.target.checked;
           getRequest(c5resturl.wpjson + 'click5_sitemap/API/get_custom_url_toggle_XML?ID=' + this.getAttribute('data-value') + '&newVal=' + isChecked, (data) => {
             if (data == true) {
-              click5_sitemap_notification('success', 'Settings saved.', 2000);
+              click5_sitemap_notification('success', 'Settings have been saved.', 2000);
             }
           });
         });
@@ -178,6 +188,22 @@ const addNewURL = () => {
     click5_sitemap_notification('warning', 'Fill all required New Custom URL fields!', 2000);
     return;
   }
+  document.querySelectorAll('#custom_urls_list > li').forEach(el => el.remove());
+  toggleLoader('loader_custom_urls_list', true);
+  document.getElementById('click5_no_records_found').style.display = 'none';
+  document.getElementById('custom_urls_list').style.display = 'none';
+
+  jQuery("#add_url_category_select").val('custom').change();
+  jQuery("#add_url_category_text").css("display","inline-block");
+
+  let useCustom = 'false';
+  let categoryText  = '';
+  if(jQuery("#add_url_category_select option:selected").val() == "custom"){
+    useCustom = 'true';
+  }else{
+    categoryText = jQuery("#add_url_category_select option:selected").val();
+  }
+    
 
   const object = {
     title: document.getElementById('add_url_title').value,
@@ -187,19 +213,20 @@ const addNewURL = () => {
       name: document.getElementById('add_url_category_text').value
     },
     new_tab: document.getElementById('add_url_open_new_tab').checked,
-    last_mod: document.getElementById('add_url_last_mod_date').value
+    last_mod: document.getElementById('add_url_last_mod_date').value != '' ? document.getElementById('add_url_last_mod_date').value : document.getElementById('add_url_last_mod_date').placeholder
   };
 
   document.getElementById('add_url_title').value = '';
   document.getElementById('add_url_url').value = '';
-  document.getElementById('add_url_category_use_custom').value = 'true';
-  document.getElementById('add_url_category_text').value = '';
+  document.getElementById('add_url_category_use_custom').value = useCustom;
+  document.getElementById('add_url_category_text').value = categoryText;
   document.getElementById('add_url_open_new_tab').checked = false;
   document.getElementById('add_url_last_mod_date').value = '';
 
 
   postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/add_custom_url', object, (data) => {
       if (data == true) {
+        jQuery(window).unbind('beforeunload');
         click5_sitemap_notification('success', 'New custom URL has been added.', 2000);
 
         document.querySelectorAll('#custom_urls_list > li').forEach(el => {
@@ -267,7 +294,7 @@ const saveEdition = (id) => {
 
   postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/post_custom_url_save_edit?ID=' + id, object, (data) => {
     if (data == true) {
-      click5_sitemap_notification('success', 'URL saved.', 2000);
+      click5_sitemap_notification('success', 'URL has been saved.', 2000);
       document.getElementById('edit_custom_url').style.display = 'none';
       loadCustomURLSlist();
     } else {
@@ -409,7 +436,6 @@ const loadOrderListnew = (callback = undefined) => {
               }
       
               postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/post_update_nested_elements', nestedElements, (data) => {
-                console.log('saved nested elements');
               });
 
             }
@@ -557,7 +583,6 @@ const reloadOrder = (callback = undefined) => {
               }
       
               postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/post_update_nested_elements', nestedElements, (data) => {
-                console.log('saved nested elements');
               });
 
             }
@@ -605,15 +630,8 @@ const reloadOrder = (callback = undefined) => {
       e.stopPropagation();
 
       addNewURL();
+      reloadOrderList(serializeOrderList);
       
-      postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/reset_sitemap_order', {}, (data) => {
-        if (data) {
-          if (data.length) {
-            reloadOrderListnew(serializeOrderListnew);
-            window.location.href = window.location.href;
-          }
-        }
-      });
     });
 
     document.getElementById('click5_clear_custom_list').addEventListener('click', function(e) {
@@ -623,7 +641,7 @@ const reloadOrder = (callback = undefined) => {
       if (confirm('Are you sure you want delete all Custom URLs?')) {
         postRequest(c5resturl.wpjson + 'click5_sitemap/API/post_custom_url_clear', '', (data) => {
           if (data == true) {
-            click5_sitemap_notification('success', 'Settings saved.', 2000);
+            click5_sitemap_notification('success', 'Settings have been saved.', 2000);
             loadCustomURLSlist();
           }
         });
@@ -631,6 +649,7 @@ const reloadOrder = (callback = undefined) => {
     });
 
     document.getElementById('cancelURLbtn').addEventListener('click', function(e) {
+      jQuery(window).unbind('beforeunload');
       e.preventDefault();
       e.stopPropagation();
 
@@ -648,7 +667,6 @@ const reloadOrder = (callback = undefined) => {
         if (data) {
           if (data.length) {
             reloadOrderListnew(serializeOrderListnew);
-            window.location.href = window.location.href;
           }
         }
       });
@@ -661,7 +679,8 @@ const reloadOrder = (callback = undefined) => {
     jQuery(function() {
       jQuery('#add_url_last_mod_date, #edit_url_last_mod_date').datepicker({
         language: 'en-US',
-        format: 'mm/dd/yyyy'
+        format: 'mm/dd/yyyy',
+        date: new Date(jQuery("#add_url_last_mod_date").data("currentData"))
       });
     });
 

@@ -90,9 +90,50 @@ function reloadSitemapsLinks(callback = undefined) {
       }    
     }
   }),2000);
-  //console.log("location reload");
-  //location.reload();
+
   setTimeout(location.reload.bind(location), 5000);
+ 
+}
+
+function reloadSitemapsLinksNoRefresh(callback = undefined) {
+  document.querySelectorAll('#click5_sitemap_url_container a.click5_sitemap_urls').forEach(el => {
+    el.remove();
+  })
+  toggleLoader('loader_status_sitemap', true);
+  
+  setTimeout(
+  getRequest(c5resturl.wpjson + 'click5_sitemap/API/reload_sitemap_urls', (data) => {
+    toggleLoader('loader_status_sitemap', false);
+    let parsedData = data;
+    if (parsedData.length) {
+      try {
+        document.querySelector('p.sitemap_not_gen').remove();
+      } catch (e) {
+        
+      }
+
+      document.getElementById('click5_sitemap_url_container').innerHTML="";      
+      parsedData.forEach(el => {
+        document.getElementById('click5_sitemap_url_container').innerHTML += '<a href="' + el + '" style="display: block; width: 100%;" target="_blank" class="click5_sitemap_urls">' + el + '</a>';
+      });
+      if (callback !== undefined) {
+        
+        callback();
+        var tags = document.getElementById('tags_exist').value;
+        if(tags == "0"){
+          document.getElementById("click5_sitemap_seo_xml_tags").disabled= true;
+        }       
+         
+      }
+    } else {
+      document.getElementById('click5_sitemap_url_container').innerHTML = '<p class="sitemap_not_gen" style="width: 100%;">sitemap.xml not generated yet.</p>';
+      var tags = document.getElementById('tags_exist').value;
+      if(tags == "0"){
+        document.getElementById("click5_sitemap_seo_xml_tags").disabled= true;
+      }    
+    }
+  }),2000);
+  jQuery("#click5_sitemap_url_container").css("display","block");
  
 }
 
@@ -107,6 +148,46 @@ const checkSetting = (settings, setting_name) => {
   return result;
 }
 
+const reGenerateXML_blacklist = () => {
+      let settings = [];
+      document.querySelectorAll('#ajaxable select').forEach(el => {
+        settings.push({name: el.getAttribute('name'), value: el.value });
+      });
+      document.querySelectorAll('#ajaxable input[type="checkbox"]').forEach(el => {
+        settings.push({ name: el.getAttribute('name'), value: el.checked });
+      });
+      
+      postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/generate_manual', {options: settings}, (data) => {
+          if(data != "404" || data != "405" || data != "406" || data != "407") {
+            reloadRobotsTxt();
+          }     
+      })   
+}
+
+const reGenerateButtonSwitch = () => {
+  if(jQuery("#click5_sitemap_seo_cron").prop("checked")){
+    jQuery("#seoSave").removeAttr("onClick");
+    jQuery("#seoSave").attr("type","submit");
+  }
+  if(jQuery("#click5_sitemap_seo_auto,#click5_sitemap_seo_cron").length > 0){
+    jQuery("#click5_sitemap_seo_auto,#click5_sitemap_seo_cron").click(function(){
+      if(this.id === "click5_sitemap_seo_auto"){
+        jQuery("#seoSave").attr("onClick","reGenerateButton()");
+        jQuery("#seoSave").attr("type","button");
+        if(jQuery("#click5_sitemap_seo_cron").prop("checked")){
+          jQuery("#click5_sitemap_seo_cron").prop("checked",false);
+        }
+      }else{
+        jQuery("#seoSave").removeAttr("onClick");
+        jQuery("#seoSave").attr("type","submit");
+        if(jQuery("#click5_sitemap_seo_auto").prop("checked")){
+          jQuery("#click5_sitemap_seo_auto").prop("checked",false);
+        }
+      }
+    });
+  }
+}
+
 const reGenerateButton = () => {
   document.getElementById('click5-ajax-loader').style.display = 'inline-block';
 
@@ -117,8 +198,6 @@ const reGenerateButton = () => {
       document.querySelectorAll('#ajaxable input[type="checkbox"]').forEach(el => {
         settings.push({ name: el.getAttribute('name'), value: el.checked });
       });
-
-      //console.log(c5resturl.wpjson + 'click5_sitemap/API/generate_manual');
       
       postRequestJSON(c5resturl.wpjson + 'click5_sitemap/API/generate_manual', {options: settings}, (data) => {
         document.getElementById('click5-ajax-loader').style.display = 'none';
@@ -138,7 +217,7 @@ const reGenerateButton = () => {
             }
             if(data == "404") {
               reloadSitemapsLinks(() => {
-                click5_sitemap_notification('success', 'Sitemap XML updated.', 2000);
+                click5_sitemap_notification('success', 'Sitemap XML has been updated.', 2000);
                 jQuery('.click5_sitemap_options_wrapper input[type="checkbox"]').prop('disabled', false);
                 jQuery('[name="robots_error"]').css( "display", "block" );
               });
@@ -149,23 +228,20 @@ const reGenerateButton = () => {
           } else {
             
             reloadSitemapsLinks(() => {
-              click5_sitemap_notification('success', 'Sitemap XML updated.', 3000);
+              click5_sitemap_notification('success', 'Sitemap XML has been updated.', 3000);
               jQuery('.click5_sitemap_options_wrapper input[type="checkbox"]').prop('disabled', false);
             });
             
             reloadRobotsTxt(() => {
               if (enabledXML) {
-                click5_sitemap_notification('success', 'Sitemap XML updated.', 3000);
+                click5_sitemap_notification('success', 'Sitemap XML has been updated.', 3000);
               }
               jQuery('.click5_sitemap_options_wrapper input[type="checkbox"]').prop('disabled', false);
             });
           }     
       })   
-      //jQuery("#escape_id").val("OK");
 
-      //console.log(jQuery("#escape_id").val());
       jQuery(window).unbind('beforeunload');
-      //window.location.href = window.location.href;
       
 }
 
@@ -224,11 +300,11 @@ const reGenerateButton = () => {
      
     });
 
-    document.querySelectorAll('#ajaxable select').forEach(el => {
+    /*document.querySelectorAll('#ajaxable select').forEach(el => {
       el.addEventListener('change', debounce(function(e) {
         reGenerateButton();        
       }, 800));
-    });
+    });*/
     document.querySelectorAll('#ajaxable input[type="checkbox"]').forEach(el => {
       el.addEventListener('change', debounce(function(e) {
       }, 800));

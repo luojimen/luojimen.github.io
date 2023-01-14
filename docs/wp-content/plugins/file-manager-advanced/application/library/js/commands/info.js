@@ -223,8 +223,7 @@
 			!hideItems.owner && file.owner && content.push(row.replace(l, msg.owner).replace(v, file.owner));
 			!hideItems.group && file.group && content.push(row.replace(l, msg.group).replace(v, file.group));
 			!hideItems.perm && file.perm && content.push(row.replace(l, msg.perm).replace(v, fm.formatFileMode(file.perm)));
-		
-			
+
 			// Add custom info fields
 			if (o.custom) {
 				$.each(o.custom, function(name, details) {

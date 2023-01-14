@@ -19,14 +19,17 @@
 }
 
 #c5_sitemap_wrapper{
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   clear: both;
 }
 
 #c5_sitemap_wrapper h2{
   width: 100%;
-  float: left;
+  float: left
 }
 
 #c5_sitemap_wrapper ul.sub{
@@ -67,4 +70,9 @@
 
 #c5_sitemap_wrapper ul li.c5_child.child{
   width: 100% !important;
+}
+
+.c5_child a {
+  width: 90% !important;
+  display: block;
 }

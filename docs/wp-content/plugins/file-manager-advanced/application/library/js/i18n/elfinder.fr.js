@@ -184,7 +184,7 @@
 			'btnAll'    : 'Tous',       // from v2.1 added 22.5.2015
 			'btnMime'   : 'Type MIME', // from v2.1 added 22.5.2015
 			'btnFileName':'Nom du fichier',  // from v2.1 added 22.5.2015
-			'btnSaveClose': 'Enregistrer & Ferme', // from v2.1 added 12.6.2015
+			'btnSaveClose': 'Sauvegarder & Fermer', // from v2.1 added 12.6.2015
 			'btnBackup' : 'Sauvegarde', // fromv2.1 added 28.11.2015
 			'btnRename'    : 'Renommer',      // from v2.1.24 added 6.4.2017
 			'btnRenameAll' : 'Renommer (tous)', // from v2.1.24 added 6.4.2017
@@ -254,7 +254,7 @@
 			'April'       : 'Avril',
 			'May'         : 'Mai',
 			'June'        : 'Juin',
-			'July'        : 'Huillet',
+			'July'        : 'Juillet',
 			'August'      : 'Août',
 			'September'   : 'Septembre',
 			'October'     : 'Octobre',
@@ -298,7 +298,7 @@
 			/********************************** messages **********************************/
 			'confirmReq'      : 'Confirmation requise',
 			'confirmRm'       : 'Êtes-vous certain de vouloir supprimer les éléments ?<br/>Cela ne peut être annulé !',
-			'confirmRepl'     : 'Supprimer l\'ancien fichier par le nouveau ?',
+			'confirmRepl'     : 'Remplacer l\'ancien fichier par le nouveau ?',
 			'confirmRest'     : 'Remplacer l\'élément existant par l\'élément de la corbeille ?', // fromv2.1.24 added 5.5.2017
 			'confirmConvUTF8' : 'L\'encodage n\'est pas UTf-8<br/>Convertir en UTF-8 ?<br/>Les contenus deviendront UTF-8 en sauvegardant après la conversion.', // from v2.1 added 08.04.2014
 			'confirmNonUTF8'  : 'Impossible de détecter l\'encodage de ce fichier. Pour être modifié, il doit être temporairement convertit en UTF-8.<br/>Veuillez s\'il vous plaît sélectionner un encodage pour ce fichier.', // from v2.1.19 added 28.11.2016
@@ -348,8 +348,8 @@
 			'homepage'        : 'Page du projet',
 			'docs'            : 'Documentation',
 			'github'          : 'Forkez-nous sur Github',
-			'twitter'         : 'Suivez nous sur twitter',
-			'facebook'        : 'Joignez-nous facebook',
+			'twitter'         : 'Suivez nous sur Twitter',
+			'facebook'        : 'Joignez-nous sur Facebook',
 			'team'            : 'Équipe',
 			'chiefdev'        : 'Développeur en chef',
 			'developer'       : 'Développeur',
@@ -425,7 +425,7 @@
 			'8pxgrid'         : 'Grille 8px', // from v2.1.16 added 4.10.2016
 			'enabled'         : 'Actif', // from v2.1.16 added 4.10.2016
 			'disabled'        : 'Inactif', // from v2.1.16 added 4.10.2016
-			'emptyIncSearch'  : 'Aucun résultat trouvé.\\AAppuyez sur [Entrée] pour développer la cible de recherche.', // from v2.1.16 added 5.10.2016
+			'emptyIncSearch'  : 'Aucun résultat trouvé.\\Appuyez sur [Entrée] pour développer la cible de recherche.', // from v2.1.16 added 5.10.2016
 			'emptyLetSearch'  : 'Aucun résultat trouvé pour la recherche par première lettre.', // from v2.1.23 added 24.3.2017
 			'textLabel'       : 'Label texte', // from v2.1.17 added 13.10.2016
 			'minsLeft'        : '$1 mins restantes', // from v2.1.17 added 13.11.2016
@@ -438,7 +438,7 @@
 			'TextArea'        : 'Zone de texte', // from v2.1.25 added 14.6.2017
 			'folderToEmpty'   : 'Vider le dossier "$1".', // from v2.1.25 added 22.6.2017
 			'filderIsEmpty'   : 'Il n\'y a pas d\'élément dans le dossier "$1".', // from v2.1.25 added 22.6.2017
-			'preference'      : 'Préférence', // from v2.1.26 added 28.6.2017
+			'preference'      : 'Préférences', // from v2.1.26 added 28.6.2017
 			'language'        : 'Configuration de langue', // from v2.1.26 added 28.6.2017
 			'clearBrowserData': 'Initialisation des configurations sauvegardées dans ce navigateur', // from v2.1.26 added 28.6.2017
 			'toolbarPref'     : 'Paramètres de la barre d\'outils', // from v2.1.27 added 2.8.2017

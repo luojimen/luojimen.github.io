@@ -1,7 +1,24 @@
 var isSubmitting = false
-
+let submitted = false;
 jQuery(document).ready(function () {
-  console.log('ready');
+  if(jQuery.inArray("tab=seo",location.search.split("&")) != -1){
+    reloadSitemapsLinksNoRefresh();
+  }
+    
+
+  if(jQuery.inArray("tab=urls",location.search.split("&")) != -1){
+    jQuery("#add_custom_url input").change(function(){
+      jQuery(window).on('beforeunload',function(){
+        return false;
+      });
+    });
+    jQuery("#add_custom_url select").change(function(){
+      jQuery(window).on('beforeunload',function(){
+        return false;
+      });
+    });
+  } 
+    
   jQuery('#myForm').submit(function(){
         isSubmitting = true
     });
@@ -12,21 +29,51 @@ jQuery(document).ready(function () {
       isSubmitting = true;
     }
 
-    //var isReload = jQuery("#escape_id").val();
-    //console.log("isReload", isReload);
 
    
     jQuery(window).on('beforeunload', function() {
-      //console.log('ready2');
-      //console.log(isSubmitting);
-      //if( isReload !="OK"){
         if (!isSubmitting && jQuery('#myForm').serialize() != jQuery('#myForm').data('initial-state')){
             return 'You have unsaved changes which will not be saved.'
-        //}
       }
     });
+
+  jQuery("input[name='save_changes']").on("click",function(event){
+    event.preventDefault();
+    let url = "";
+    let page = "";
+    let query = new URL(location.href);
+    query = query.search.split("&");
+    jQuery.each(query,function(index, value){
+      if(value.search("tab") !== -1){
+        page = value.replace("tab=","");
+      }
+    });
+
+    let interval = setInterval(function(){
+      if (!isSubmitting){
+          reGenerateButton();
+          jQuery(window).on('beforeunload', function(e) {
+             e.preventDefault();
+          });
+          setTimeout(function(){
+            if(page == "seo"){
+              jQuery("[name='update_txt']").trigger("click");
+            }
+          },300);
+
+         
+            
+          jQuery('#myForm').submit();
+          
+          clearInterval(interval);
+        
+      }
+    },60);
+  });
+
+  reGenerateButtonSwitch();
   
-})
+});
 
 function openModalNoBackup(){
   let nonce = document.getElementById('click5_sitemap_nonce').value; 
@@ -103,6 +150,7 @@ function markRobotsToDeleteRevert() {
 let resultsLoader = false;
 
 function click5_sitemap_notification(type, msg, timeout = 3500) {
+  submitted = true;
   let curElement = document.getElementById('click5_sitemap_notification');
   if (curElement) {
     curElement.remove();
@@ -194,7 +242,6 @@ function getRequest(url, callback) {
     if (xhr.status === 200) {
       let resObject = [];
       try {
-          //console.log(xhr);
           resObject = JSON.parse(xhr.responseText);
           if (resObject) {
             if (resObject.notification) {
@@ -203,7 +250,6 @@ function getRequest(url, callback) {
             }
           }
       } catch (e) {
-        //console.log("err", e);
       }
       callback(resObject);
     }
@@ -263,14 +309,13 @@ function postRequestJSON(url, object, callback) {
           }
         }
       } catch (e) {
-        console.log(e);
       }
       callback(resObject);
     }
     else {
     }
   };
-  console.log(object);
+  (object);
   xhr.send(JSON.stringify(object));
 }
 
@@ -310,22 +355,58 @@ function postRequest(url, params, callback) {
   xhr.send(params);
 }
 
+function postRequestAJAX(url, params, callback) {
+  const authenticationObj = {
+    token: document.querySelector('#verification_token').value,
+    user: document.querySelector('#user_identificator').value
+  };
+
+  jQuery.ajax({
+    type: 'POST',
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader('token', authenticationObj.token);
+      xhr.setRequestHeader('user', authenticationObj.user);
+      xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          let resObject = [];
+          try {
+            resObject = JSON.parse(xhr.responseText)
+            if (resObject) {
+              if (resObject.notification) {
+                click5_sitemap_notification(resObject.type, resObject.message, 3500);
+                return;
+              }
+            }
+          } catch (e) {
+          }
+          callback(resObject);
+        }
+        else {
+        }
+      };
+    },
+    url: url,
+    data: JSON.stringify(params),
+    success: function(data){
+    }
+  });
+}
+
 const constructListElementBl = (el) => {
   let html = '';
+  let postType = jQuery("#page_type [value='"+el.post_type+"']").text();
+  html += '<span><a href="' + el.url + '" target="_blank">[' + postType + '] ' + el.post_title + '</a></span>';
 
-  html += '<span><a href="' + el.url + '" target="_blank">[' + el.post_type + '] ' + el.post_title + '</a></span>';
-
-  html += '<a href="#" class="click5_sitemap_remove_from_bl click5_sitemap_float_right" data-value="' + el.ID + '">Un-Blacklist</a>';
+  html += '<a href="#" class="click5_sitemap_remove_from_bl click5_sitemap_float_right" data-value="' + el.ID + '">Remove from Blacklist</a>';
 
   return html;
 }
 
 const constructListElementResults = (el) => {
   let html = '';
-
-  html += '<span><a href="' + el.url + '" target="_blank">[' + el.post_type + '] ' + el.post_title + '</a></span>';
-
-  //html += '<a href="#" class="click5_sitemap_addToBlacklist click5_sitemap_float_right" data-value="' + JSON.stringify({ ID: el.ID, post_title: el.post_title, post_type: el.post_type }).replace(new RegExp('"', 'g'), "'") + '">Add to Blacklist</a>';
+  let postType = jQuery("#page_type [value='"+el.post_type+"']").text();
+  html += '<span><a href="' + el.url + '" target="_blank">[' + postType+ '] ' + el.post_title + '</a></span>';
 
   html += '<a href="#" class="click5_sitemap_addToBlacklist click5_sitemap_float_right" data-value="' + JSON.stringify({
     ID: el.ID,
@@ -362,7 +443,6 @@ const addToBlacklistedSingleItem = (el, type = 'html') => {
 
   if(c5resturl.wpjson.includes(plainSubstring))
   {
-    //console.log ("plain");
 
     if(type =="html")
     {
@@ -375,7 +455,6 @@ const addToBlacklistedSingleItem = (el, type = 'html') => {
   }
   else
   {
-   //console.log ("custom");
     if(type =="html")
     {
       url = c5resturl.wpjson + 'click5_sitemap/API/unblacklist?ID=';
@@ -390,7 +469,17 @@ const addToBlacklistedSingleItem = (el, type = 'html') => {
 
     getRequest(url + idToRemove, (data) => {
       if (data !== false) {
-        //click5_sitemap_notification('success', 'Blacklist saved.', 2000);
+        let blPage = "HTML ";
+        if(jQuery.inArray("tab=seo",location.search.split("&")) != -1){
+          reGenerateXML_blacklist();
+          blPage = "XML ";
+        }
+
+        if(jQuery.inArray("tab=html",location.search.split("&")) != -1){
+          reloadOrderList(serializeOrderList);
+        }
+
+        click5_sitemap_notification('success', blPage+'Blacklist has been saved.', 2000);
         this.parentElement.remove();
         let inputSearch = document.querySelector('#page_search');
         let selectType = document.querySelector('#page_type');
@@ -398,54 +487,51 @@ const addToBlacklistedSingleItem = (el, type = 'html') => {
         searchFunc(inputSearch, selectType, hiddenAllTypes);
       }
       const event = new Event('blacklist_updated');
-      //document.dispatchEvent(event);
     });
   });
 }
 
 const saveBlackList = () => {
-  const event = new Event('blacklist_updated');
-  document.dispatchEvent(event);
+  window.location.reload();
 }
 
 const loadBlacklist = (type = 'html') => {
   toggleLoader('loader_blacklisted', true);
   getRequest(type == 'html' ? c5resturl.wpjson + 'click5_sitemap/API/get_blacklisted' : c5resturl.wpjson + 'click5_sitemap/API/get_seo_block_list', (data) => {
     try {
-      //console.log(data);
       let items = JSON.parse(data);
       toggleLoader('loader_blacklisted', false);
       items.forEach(el => {
         addToBlacklistedSingleItem(el, type);
       });
     } catch (e) {
-      //console.log(e);
       click5_sitemap_notification('error', 'Couldn\'t load blacklist.', 2000);
     }
   });
 }
 
 
-
-
+let typeFilterFirstLoad = true;
+let dataLen = 0;
+let typeSelect = "all";
 const searchFunc = (inputSearch = document.querySelector('#page_search'), selectType = document.querySelector('#page_type'), hiddenAllTypes = document.querySelector('#all_types'), type = 'html') => {
+
   let searchQuery = inputSearch.value.trim();
   let searchType = selectType.value.trim();
   let allTypes = hiddenAllTypes.value.trim();
-  let plainSubstring = "?rest_route=/";
-  let url = "";
+  let maxDataLen = 10;
 
-  if(c5resturl.wpjson.includes(plainSubstring))
-  {
-    console.log ("plain");
-    url = c5resturl.wpjson + 'click5_sitemap/API/request_pages&search='+ searchQuery + '&type=' + searchType + '&all_types=' + allTypes + '&type_tab=' + type;
+  if(inputSearch.value.length < 3 && inputSearch.value.length != 0){
+    searchQuery = "";
   }
-  else
-  {
-    url = c5resturl.wpjson + 'click5_sitemap/API/request_pages?search=' + searchQuery + '&type=' + searchType + '&all_types=' + allTypes + '&type_tab=' + type;
-  }
+  if(selectType.value !== typeSelect && inputSearch.value.length < 3 && inputSearch.value.length)
+    inputSearch.value = "";
 
-  getRequest(url, (data) => {
+  console.log(typeSelect);
+  console.log(selectType.value);
+  typeSelect = selectType.value;
+
+  if(searchQuery.length !== 0 && searchQuery.length < 3 && dataLen > maxDataLen){
     let results = document.querySelectorAll('#click5_sitemap_blacklist_container ul#results > li');
     if (results) {
       results.forEach(el => el.remove());
@@ -454,50 +540,114 @@ const searchFunc = (inputSearch = document.querySelector('#page_search'), select
     let listElement = document.querySelector('#click5_sitemap_blacklist_container ul#results');
     toggleLoader('loader_results', false);
 
-    if (!data) {
-      return;
+    let itemElement = document.createElement('li');
+    itemElement.innerHTML = "<center><br><br><b>Please search for the page/post you want to blacklist.</b><br><br><br></center>";
+    listElement.append(itemElement);
+    return false;
+  }
+
+  let plainSubstring = "?rest_route=/";
+  let url = "";
+  let query = new URL(location.href);
+  query = query.search.split("&");
+  jQuery.each(query,function(index, value){
+    if(value.search("tab") !== -1){
+      type = value.replace("tab=","");
     }
+  });
 
-    if (!data.length) {
-      return;
-    }
+  if(c5resturl.wpjson.includes(plainSubstring))
+  {
+    url = c5resturl.wpjson + 'click5_sitemap/API/request_pages&search='+ searchQuery + '&type=' + searchType + '&all_types=' + allTypes + '&type_tab=' + type;
+  }
+  else
+  {
+    url = c5resturl.wpjson + 'click5_sitemap/API/request_pages?search='+ searchQuery + '&type=' + searchType + '&all_types=' + allTypes + '&type_tab=' + type;
+  }
 
-    data.forEach(el => {
-      let itemElement = document.createElement('li');
-      itemElement.innerHTML = constructListElementResults(el);
-      listElement.append(itemElement);
-    });
-    let blacklistContainer = document.querySelector('#click5_sitemap_blacklist_container');
+    getRequest(url, (data) => {
+      let results = document.querySelectorAll('#click5_sitemap_blacklist_container ul#results > li');
+      if (results) {
+        results.forEach(el => el.remove());
+        toggleLoader('loader_results', true);
+      }
+      let listElement = document.querySelector('#click5_sitemap_blacklist_container ul#results');
+      toggleLoader('loader_results', false);
+      if (!data) {
+        return;
+      }
 
-    blacklistContainer.append(listElement);
+      if (!data.length) {
+        return;
+      }
 
-    let addToBlacklistBtn = document.querySelectorAll('#click5_sitemap_blacklist_container ul#results > li > a.click5_sitemap_addToBlacklist');
+      if(typeFilterFirstLoad){
+        let typeFilterArray = [];
+        jQuery.each(data,function(index, value){
+          if(jQuery.inArray(value['post_type'], typeFilterArray) == -1)
+            typeFilterArray.push(value['post_type']);
+        });
 
-    addToBlacklistBtn.forEach(el => {
-      el.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        //const dataValue = this.getAttribute("data-value").replace(new RegExp("'", 'g'), '"');
-
-        var dataValue = this.getAttribute("data-value").replace(new RegExp("'", 'g'), '');
-        dataValue = dataValue.replace(new RegExp("~", 'g'), '"');
-
-        const newBlItem = JSON.parse(dataValue);
-       
-        postRequest(type == 'html' ? c5resturl.wpjson + 'click5_sitemap/API/add_to_blacklisted' : c5resturl.wpjson + 'click5_sitemap/API/seo_block_page', `ID=${newBlItem.ID}&post_title=${newBlItem.post_title}&post_type=${newBlItem.post_type}`, (data) => {
-          try {
-            addToBlacklistedSingleItem(JSON.parse(data), type);
-            this.parentElement.remove();
-            //click5_sitemap_notification('success', 'Blacklist saved.', 2000);
-          } catch (err) {
-            click5_sitemap_notification('error', 'Something went wrong.', 2000);
+        jQuery("#page_type option").each(function(){
+          if(jQuery.inArray(jQuery(this).val(), typeFilterArray) === -1 && jQuery(this).val() != "all"){
+            jQuery(this).remove();
           }
-          const event = new Event('blacklist_updated');
-          //document.dispatchEvent(event);
+        });
+        jQuery("#page_type").removeAttr("disabled");
+        typeFilterFirstLoad = false;
+      }
+
+      data.forEach(el => {
+        let itemElement = document.createElement('li');
+        itemElement.innerHTML = constructListElementResults(el);
+        listElement.append(itemElement);
+      });
+      let blacklistContainer = document.querySelector('#click5_sitemap_blacklist_container');
+
+      blacklistContainer.append(listElement);
+
+      let addToBlacklistBtn = document.querySelectorAll('#click5_sitemap_blacklist_container ul#results > li > a.click5_sitemap_addToBlacklist');
+
+      addToBlacklistBtn.forEach(el => {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          var dataValue = this.getAttribute("data-value").replace(new RegExp("'", 'g'), '');
+          dataValue = dataValue.replace(new RegExp("~", 'g'), '"');
+
+          const newBlItem = JSON.parse(dataValue);
+        
+          postRequest(type == 'html' ? c5resturl.wpjson + 'click5_sitemap/API/add_to_blacklisted' : c5resturl.wpjson + 'click5_sitemap/API/seo_block_page', `ID=${newBlItem.ID}&post_title=${newBlItem.post_title}&post_type=${newBlItem.post_type}`, (data) => {
+            try {
+              addToBlacklistedSingleItem(JSON.parse(data), type);
+              this.parentElement.remove();
+              let blPage = "HTML ";
+              if(jQuery.inArray("tab=seo",location.search.split("&")) != -1){
+                reGenerateXML_blacklist();
+                blPage = "XML ";
+              }
+
+              if(jQuery.inArray("tab=html",location.search.split("&")) != -1){
+                reloadOrderList(serializeOrderList);
+              }
+              click5_sitemap_notification('success', blPage+'Blacklist has been saved.', 2000);
+            } catch (err) {
+              click5_sitemap_notification('error', 'Something went wrong.', 2000);
+            }
+            const event = new Event('blacklist_updated');
+          });
         });
       });
-    });
 
-  })
+    }); 
+}
+
+function saveChanges(){
+      jQuery(window).on('beforeunload', function(e) {
+        e.preventDefault();
+      });
+     
+    jQuery("#btnSaveOrder").trigger('click');
+    setTimeout(updateGeneralHtmlOptions,1000);
 }
