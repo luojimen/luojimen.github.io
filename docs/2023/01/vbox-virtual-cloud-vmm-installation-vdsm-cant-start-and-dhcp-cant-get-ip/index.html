@@ -128,7 +128,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">VBox虚拟群晖VMM安装VDSM无法启动和无法DHCP获取IP的解决</h1>
                             <div class="meta">
                                 <span>2023年1月15日</span>
-                                                                    <span>4点热度</span>
+                                                                    <span>10点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -136,7 +136,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <ul>
 <li><span style="">VBox：Oracle VM VirtualBox</span></li>
 <li><span style="">VMM：Synology Virtual Machine Manager 群晖虚拟机平台</span></li>
-<li><span style="">VDSM：VirtualDSM，是运行在VMM平台上的虚拟群晖系统，自带正版序列号，可以成功关联到QC账号。使用群晖官方DDNS。</span></li>
+<li><span style="">VDSM：VirtualDSM，是运行在VMM平台上的虚拟群晖系统，自带正版序列号，可以成功关联到QC账号、使用群晖官方DDNS等。</span></li>
 </ul>
 </div>
 <div><span style=""><br /></span></div>
@@ -158,6 +158,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <li>这样就将指定虚拟机的VT-X开启了</li>
 <li>接下来启动vbox群晖——群晖中安装VMM——VMM中安装VDSM——启动VDSM——启动成功。</li>
 </ul>
+</ul>
+<div></div>
+<ul>
 <li>VirtualBox新建虚拟机的默认桥接网卡高级设置中“混杂模式”是“拒绝<span style="">”——</span>这会导致VDSM无法通过DHCP获取IP，改为“全部允许”即可。</li>
 </ul>
 </div>
