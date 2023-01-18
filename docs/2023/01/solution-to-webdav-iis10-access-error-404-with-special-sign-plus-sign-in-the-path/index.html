@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telphone=no, email=no">
     <meta name="keywords" content="">
-    <meta name="description" itemprop="description" content="IIS10的默认规则不允许双重转义，若是访问如“视频60V+30G”文件夹则会报错404 &nbsp; &nbsp;&nbsp;这是因为虽然在window下，加号（+）是合法的文件名，但是在Url里却 [&hellip;]">
+    <meta name="description" itemprop="description" content="IIS10的默认规则不允许双重转义，若是访问如“视频60V+30G”文件夹则会报错&quot;staus 404&quot;. &nbsp; &nbsp;&nbsp;这是因为虽然在window下，加号（+）是合法的文件名 [&hellip;]">
     <meta name="theme-color" content="#282a2c">
     <meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg" />
         <meta name='robots' content='max-image-preview:large' />
@@ -128,12 +128,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">WebDav(IIS10)访问报错404的路径中有特殊符号加号的解决办法</h1>
                             <div class="meta">
                                 <span>2023年1月18日</span>
-                                                                    <span>6点热度</span>
+                                                                    <span>7点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
-                            <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><div>
-<div>IIS10的默认规则不允许双重转义，若是访问如“视频60V+30G”文件夹则会报错404</div>
+                            <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><div>IIS10的默认规则不允许双重转义，若是访问如“视频60V+30G”文件夹则会报错"staus 404".</div>
 <div>&nbsp; &nbsp;&nbsp;这是因为虽然<span style="">在window下，加号（+）是合法的文件名，但是在Url里却代表了不同的意思：</span></div>
 <ul>
 <li><span style="">若是作为queryString的一部分,那么+号代表空格：</span></li>
@@ -148,7 +147,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <div><span style=""></p>
 <div style="">
 <div></div>
-<div>解决404错误办法：IIS10设置允许双重转义</div>
+<div>解决404错误办法：</div>
+<div>办法一：IIS10设置允许双重转义</div>
 </div>
 <div style="">
 <ul>
@@ -156,6 +156,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </ul>
 </div>
 <p></span></div>
+<div>办法二：使用第三方WebDav客户端</div>
+<div>
+<ul>
+<li>群晖WebDav套件可以正常浏览SMB<span style="">远程</span>挂载并带有＋号路径的子目录，且可以播放<span style="">其下</span>视频（nplayer）。</li>
+</ul>
+</div>
 <div><span style=""><br /></span></div>
 <div><span style="">什么是双重转义?</span></div>
 <ul>
@@ -164,7 +170,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </ul>
 <div></div>
 <div></div>
-</div>
                         </div>
                                                 <div class="footer clearfix">
                             <div class="tags float-left">
