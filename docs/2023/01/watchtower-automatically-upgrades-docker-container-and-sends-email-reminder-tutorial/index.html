@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telphone=no, email=no">
     <meta name="keywords" content="">
-    <meta name="description" itemprop="description" content="# 最简范例： version: &quot;3&quot; services: watchtower: image: containrrr/watchtower container_name: watchtower r [&hellip;]">
+    <meta name="description" itemprop="description" content="# 监视容器更新最简范例： version: &quot;3&quot; services: watchtower: image: containrrr/watchtower container_name: watcht [&hellip;]">
     <meta name="theme-color" content="#282a2c">
     <meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg" />
         <meta name='robots' content='max-image-preview:large' />
@@ -128,11 +128,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">Watchtower自动升级Docker容器并发送邮件提醒教程</h1>
                             <div class="meta">
                                 <span>2023年1月23日</span>
-                                                                    <span>19点热度</span>
+                                                                    <span>24点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
-                            <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><div># 最简范例：</div>
+                            <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><div># 监视容器更新最简范例：</div>
 <div data-mode="JavaScript" data-theme="default">
 <pre><code>version: "3"
 services:
@@ -148,20 +148,20 @@ services:
 </div>
 <div></div>
 <div># 邮件提醒参数：</div>
-<div>注：每次启动带邮件参数的Watchtower容器，会立即发送一封基本信息邮件到设置邮箱，若未收到则自行排错哪里有问题：</div>
+<div>注：每次启动带邮件参数的Watchtower容器，会立即发送一封基本信息邮件到设置邮箱，若未收到请排错：</div>
 <div data-mode="JavaScript" data-theme="default">
 <pre><code>        - WATCHTOWER_NOTIFICATION_TITLE_TAG=vpsname
-        - WATCHTOWER_NOTIFICATIONS=email 
-        - WATCHTOWER_NOTIFICATION_EMAIL_FROM=fromaddress@gmail.com 
-        - WATCHTOWER_NOTIFICATION_EMAIL_TO=toaddress@gmail.com 
-        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER=smtp.gmail.com 
-        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PORT=587 \
-        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_USER=fromaddress@gmail.com 
-        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PASSWORD=app_password 
-        - WATCHTOWER_NOTIFICATION_EMAIL_DELAY=2 </code></pre>
+        - WATCHTOWER_NOTIFICATIONS=email
+        - WATCHTOWER_NOTIFICATION_EMAIL_FROM=fromaddress@gmail.com
+        - WATCHTOWER_NOTIFICATION_EMAIL_TO=toaddress@gmail.com
+        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER=smtp.gmail.com
+        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PORT=587
+        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_USER=fromaddress@gmail.com
+        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PASSWORD=app_password
+        - WATCHTOWER_NOTIFICATION_EMAIL_DELAY=2</code></pre>
 </div>
 <div></div>
-<div># 更新并发送邮件提醒<span style="">范例：</span></div>
+<div># 监视容器更新并发送邮件提醒<span style="">范例：</span></div>
 <div data-mode="JavaScript" data-theme="default">
 <pre><code>version: "3"
 services:
@@ -173,14 +173,14 @@ services:
 #        - WATCHTOWER_MONITOR_ONLY=true    #使用此参数则仅提醒有更新而不自动升级容器
         - TZ=Asia/Shanghai
         - WATCHTOWER_NOTIFICATION_TITLE_TAG=vpsname      #邮件标题前缀添加自定义内容
-        - WATCHTOWER_NOTIFICATIONS=email 
-        - WATCHTOWER_NOTIFICATION_EMAIL_FROM=fromaddress@gmail.com 
-        - WATCHTOWER_NOTIFICATION_EMAIL_TO=toaddress@gmail.com 
-        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER=smtp.gmail.com 
-        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PORT=587 \
-        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_USER=fromaddress@gmail.com 
-        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PASSWORD=app_password 
-        - WATCHTOWER_NOTIFICATION_EMAIL_DELAY=2 
+        - WATCHTOWER_NOTIFICATIONS=email
+        - WATCHTOWER_NOTIFICATION_EMAIL_FROM=fromaddress@gmail.com
+        - WATCHTOWER_NOTIFICATION_EMAIL_TO=toaddress@gmail.com
+        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER=smtp.gmail.com
+        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PORT=587
+        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_USER=fromaddress@gmail.com
+        - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PASSWORD=app_password
+        - WATCHTOWER_NOTIFICATION_EMAIL_DELAY=2
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command: hello-world freenom nginx portainer-ce next-terminal guacd watchtower --cleanup --schedule "0 33 3 * * *"
