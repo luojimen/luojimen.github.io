@@ -4,19 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>网卡 - LuoJi.men</title>
+    <title>定时执行任务的Windows软件对比选择 - LuoJi.men</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telphone=no, email=no">
-    <meta name="keywords" content="网卡">
-    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+    <meta name="description" itemprop="description" content="Windows做NAS通常需要用到各种批处理脚本，比如DDNS，Win自带的计划任务管理比较复杂，因此需要一个可替代的定时任务管理工具 核心要求：支持类型每间隔10分钟执行的时间规则（DDNS每10分 [&hellip;]">
     <meta name="theme-color" content="#282a2c">
     <meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg" />
         <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.seatonjiang.com' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
 <link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
-<link rel='stylesheet' id='crayon-theme-classic-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/themes/classic/classic.css?ver=2.8.27' type='text/css' media='all' />
-<link rel='stylesheet' id='crayon-font-monaco-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.27' type='text/css' media='all' />
 <style id='global-styles-inline-css' type='text/css'>
 body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
 </style>
@@ -42,6 +40,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 height: 100%;
             }
 </style>
+<link rel="alternate" type="application/json+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.men%2F2023%2F01%2Fcomparison-and-selection-of-windows-software-for-scheduled-tasks%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.men%2F2023%2F01%2Fcomparison-and-selection-of-windows-software-for-scheduled-tasks%2F&#038;format=xml" />
 <style type="text/css">.broken_link, a.broken_link {
 	text-decoration: line-through;
 }</style><!-- Google tag (gtag.js) -->
@@ -114,109 +114,126 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <div class="k-main color" style="background:#f5f5f5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 board">
-                <div class="article-panel">
-    <span class="a-card d-none d-md-block d-lg-block">
-            </span>
-        <div class="a-post a-none">
-        <div class="header">
-            <a class="label" href="https://luojimen.github.io/category/pc/">电脑相关<i class="label-arrow"></i></a>            <h3 class="title"><a href="https://luojimen.github.io/2019/08/%e7%a5%9e%e8%88%9f%e6%88%98%e7%a5%9ez7m-kp7gz%e7%ac%94%e8%ae%b0%e6%9c%acwindows10%e8%93%9d%e5%b1%8f%e6%95%85%e9%9a%9c%e8%a7%a3%e5%86%b3/">神舟战神Z7M-KP7GZ笔记本windows10蓝屏故障解决</a></h3>
-        </div>
-        <div class="content">
-            <p>这三四天来每日笔记本都会出现一次蓝屏自动重启；今天笔记本运行一晚上，早上醒来还正常，打开QQ使用一段时间胡，出现蓝屏，提示：FAULTY HARDWARE CORRUPTED PAGE。此蓝屏错误很可 [&hellip;]</p>
-        </div>
-    </div>
-    <div class="a-meta">
-        <span class="float-left d-none d-md-block">
-            <span class="mr-2"><i class="kicon i-calendar"></i>2019年8月6日</span>
-                    </span>
-        <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>954点热度</span>
-                    </span>
-        <span class="float-right">
-            <a href="https://luojimen.github.io/2019/08/%e7%a5%9e%e8%88%9f%e6%88%98%e7%a5%9ez7m-kp7gz%e7%ac%94%e8%ae%b0%e6%9c%acwindows10%e8%93%9d%e5%b1%8f%e6%95%85%e9%9a%9c%e8%a7%a3%e5%86%b3/">阅读全文<i class="kicon i-rightbutton"></i></a>
-        </span>
-    </div>
+            <div class="col-lg-12 details">
+                                    <div class="article">
+                        <div class="breadcrumb-box">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a class="text-dark" href="https://luojimen.github.io"> 首页</a>
+                                </li>
+                                <li class="breadcrumb-item"> <a class="text-dark" href="https://luojimen.github.io/category/pc/">电脑相关</a></li>                                <li class="breadcrumb-item active" aria-current="page"> 正文</li>
+                            </ol>
+                        </div>
+                        <div class="header">
+                            <h1 class="title">定时执行任务的Windows软件对比选择</h1>
+                            <div class="meta">
+                                <span>2023年1月29日</span>
+                                                                    <span>2点热度</span>
+                                                                                            </div>
+                        </div>
+                        <div class="content" id="lightgallery">
+                            <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><div>
+    Windows做NAS通常需要用到各种批处理<span style="">脚本，比如DDNS，Win自带的计划任务管理比较复杂，因此需要一个可替代的定时任务管理工具</span></div>
+<div><b>核心要求</b>：支持类型每间隔10分钟执行的时间规则（DDNS每10分钟提交一次IP更新）</div>
+<div><span style=""># 参考来源</span></div>
+<div>
+<ul>
+<li><a href="https://www.52pojie.cn/" target="_blank"  rel="nofollow" >吾爱破解 www.52pojie.cn</a>&nbsp;搜索“定时”</li>
+<li><a href="https://zh.altapps.net/soft/z-cron" target="_blank"  rel="nofollow" >Z-Cron替代品和类似软件 — Altapps.net</a><span style=""><br /></span></li>
+<li><a href="https://www.lsbin.com/41337.html" target="_blank"  rel="nofollow" >6款Windows最佳任务计划软件下载推荐合集：你需要哪个？ (lsbin.com)</a></li>
+</ul>
 </div>
-<div class="article-panel">
-    <span class="a-card d-none d-md-block d-lg-block">
-            </span>
-        <div class="a-post a-none">
-        <div class="header">
-            <a class="label" href="https://luojimen.github.io/category/linux/">Linux<i class="label-arrow"></i></a>            <h3 class="title"><a href="https://luojimen.github.io/2018/03/centos7%e5%ae%89%e8%a3%85vnstat%e7%9b%91%e6%8e%a7%e5%92%8c%e7%bb%9f%e8%ae%a1%e6%b5%81%e9%87%8f/">centos7安装vnstat监控和统计流量</a></h3>
-        </div>
-        <div class="content">
-            <p>安装: [crayon-63d6972420109699181185/] 如果没有为网卡生成数据库,会提示你建立: [crayon-63d697242010f801245796/] 生成相应网卡的数据 [&hellip;]</p>
-        </div>
-    </div>
-    <div class="a-meta">
-        <span class="float-left d-none d-md-block">
-            <span class="mr-2"><i class="kicon i-calendar"></i>2018年3月5日</span>
-                    </span>
-        <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>878点热度</span>
-                    </span>
-        <span class="float-right">
-            <a href="https://luojimen.github.io/2018/03/centos7%e5%ae%89%e8%a3%85vnstat%e7%9b%91%e6%8e%a7%e5%92%8c%e7%bb%9f%e8%ae%a1%e6%b5%81%e9%87%8f/">阅读全文<i class="kicon i-rightbutton"></i></a>
-        </span>
-    </div>
+<div class="wiz-table-container" style="position: relative; padding: 0px;" contenteditable="false">
+<div class="wiz-table-body" contenteditable="false">
+<table style="width: 610px;">
+<tbody>
+<tr>
+<td style="width: 173px;">【1】定时任务工具TimedTaskTool&nbsp;<br />[2023-01-29]<span style="">v1.2</span></td>
+<td style="width: 436px;">https://www.52pojie.cn/thread-716138-1-1.html<br /> +支持间隔分钟、绿色版、自带cmd后台隐藏执行【大赞】</td>
+</tr>
+<tr>
+<td style="width: 173px;">Free Alarm Clock<br />[2023-01-29]</td>
+<td style="width: 436px;">https://freealarmapp.com/<br />+绿色版；<br />-不支持间隔分钟</td>
+</tr>
+<tr>
+<td align="left" valign="middle" style="width: 173px;">Shutter<br />[2023-01-29]</td>
+<td align="left" valign="middle" style="width: 436px;">http://www.den4b.com/products/shutter<br />-不支持间隔分钟<br />+绿色版</td>
+</tr>
+<tr>
+<td style="width: 173px;">OnTimer<br />HOU任务计划<br />[2023-01-29]</td>
+<td style="width: 436px;" class="">https://yryz.net/soft-OnTimer.htm<br />+绿色版<br />-支持秒单位循环，但不能设置无限次数。</td>
+</tr>
+<tr>
+<td style="width: 173px;">System Scheduler<br />[2023-01-29]</td>
+<td style="width: 436px;">https://www.splinterware.com/tour/scheduler.html<br />-安装、免费版/付费版、英文<br />+支持间隔分钟设置</td>
+</tr>
+<tr>
+<td align="left" valign="middle" style="width: 173px;">定时执行专家<br />[2023-01-29]</td>
+<td align="left" valign="middle" style="width: 436px;">https://blog.csdn.net/boomworks<br /> -付费<br />+支持间隔分钟设置、绿色版</td>
+</tr>
+<tr>
+<td style="width: 173px;">Z-Cron<br />[2023-01-29]</td>
+<td style="width: 436px;">https://z-dbackup.de/en/z-cron-scheduler/<br />-付费29欧、安装、英文<br />+支持间隔分钟</td>
+</tr>
+<tr>
+<td style="width: 173px;">nncron<br />[2023-01-29]</td>
+<td style="width: 436px;">http://www.nncron.ru/<br />-2008年停更<br />-安装、英文、界面逻辑复杂难以开箱即用</td>
+</tr>
+<tr>
+<td style="width: 173px;">Freebyte <br />Task cheduler<br />[2023-01-29]</td>
+<td style="width: 436px;">https://www.freebyte.com/fbtaskscheduler/<br /> -不支持间隔分钟、2011年停更<br />+绿色版</td>
+</tr>
+<tr>
+<td style="width: 173px;" class="">Kana Reminder<br />[2023-01-29]</td>
+<td style="width: 436px;">https://kanasolution.com/products/kana-reminder/<br /> -2003年停更</td>
+</tr>
+</tbody>
+</table>
 </div>
-            </div>
-            <div class="col-lg-4 sidebar sticky-sidebar d-none d-lg-block">
-                <div class="widget w-search"><div class="item"> <form role="search" method="get" id="searchform" class="searchform" action="https://luojimen.github.io/"> <div class="input-group mt-2 mb-2"> <input type="text" name="s" id="search-widgets" class="form-control" placeholder="搜点什么呢?"> <div class="input-group-append"> <button class="btn btn-primary btn-search" type="submit" id="searchsubmit">搜索</button> </div> </div> </form></div></div><div class="widget widget_categories"><div class="title">分类</div>
-			<ul>
-					<li class="cat-item cat-item-37"><a href="https://luojimen.github.io/category/linux/">Linux</a>
-</li>
-	<li class="cat-item cat-item-36"><a href="https://luojimen.github.io/category/wp/">WordPress</a>
-</li>
-	<li class="cat-item cat-item-12"><a href="https://luojimen.github.io/category/pc/">电脑相关</a>
-</li>
-	<li class="cat-item cat-item-61"><a href="https://luojimen.github.io/category/mobile/">移动端</a>
-</li>
-	<li class="cat-item cat-item-11"><a href="https://luojimen.github.io/category/devops/">网站运维</a>
-</li>
-			</ul>
-
-			</div><div class="widget widget_archive"><div class="title">归档</div>
-			<ul>
-					<li><a href='https://luojimen.github.io/2023/01/'>2023年1月</a></li>
-	<li><a href='https://luojimen.github.io/2022/09/'>2022年9月</a></li>
-	<li><a href='https://luojimen.github.io/2022/08/'>2022年8月</a></li>
-	<li><a href='https://luojimen.github.io/2022/07/'>2022年7月</a></li>
-	<li><a href='https://luojimen.github.io/2022/06/'>2022年6月</a></li>
-	<li><a href='https://luojimen.github.io/2022/04/'>2022年4月</a></li>
-	<li><a href='https://luojimen.github.io/2022/03/'>2022年3月</a></li>
-	<li><a href='https://luojimen.github.io/2022/02/'>2022年2月</a></li>
-	<li><a href='https://luojimen.github.io/2021/03/'>2021年3月</a></li>
-	<li><a href='https://luojimen.github.io/2021/01/'>2021年1月</a></li>
-	<li><a href='https://luojimen.github.io/2020/12/'>2020年12月</a></li>
-	<li><a href='https://luojimen.github.io/2020/11/'>2020年11月</a></li>
-	<li><a href='https://luojimen.github.io/2020/10/'>2020年10月</a></li>
-	<li><a href='https://luojimen.github.io/2020/09/'>2020年9月</a></li>
-	<li><a href='https://luojimen.github.io/2020/08/'>2020年8月</a></li>
-	<li><a href='https://luojimen.github.io/2020/07/'>2020年7月</a></li>
-	<li><a href='https://luojimen.github.io/2020/06/'>2020年6月</a></li>
-	<li><a href='https://luojimen.github.io/2020/05/'>2020年5月</a></li>
-	<li><a href='https://luojimen.github.io/2020/04/'>2020年4月</a></li>
-	<li><a href='https://luojimen.github.io/2020/03/'>2020年3月</a></li>
-	<li><a href='https://luojimen.github.io/2020/02/'>2020年2月</a></li>
-	<li><a href='https://luojimen.github.io/2019/12/'>2019年12月</a></li>
-	<li><a href='https://luojimen.github.io/2019/08/'>2019年8月</a></li>
-	<li><a href='https://luojimen.github.io/2019/07/'>2019年7月</a></li>
-	<li><a href='https://luojimen.github.io/2019/05/'>2019年5月</a></li>
-	<li><a href='https://luojimen.github.io/2018/08/'>2018年8月</a></li>
-	<li><a href='https://luojimen.github.io/2018/07/'>2018年7月</a></li>
-	<li><a href='https://luojimen.github.io/2018/03/'>2018年3月</a></li>
-	<li><a href='https://luojimen.github.io/2018/02/'>2018年2月</a></li>
-	<li><a href='https://luojimen.github.io/2018/01/'>2018年1月</a></li>
-	<li><a href='https://luojimen.github.io/2017/12/'>2017年12月</a></li>
-	<li><a href='https://luojimen.github.io/2017/11/'>2017年11月</a></li>
-	<li><a href='https://luojimen.github.io/2017/09/'>2017年9月</a></li>
-	<li><a href='https://luojimen.github.io/2017/05/'>2017年5月</a></li>
-			</ul>
-
-			</div>            </div>
-        </div>
+</div>
+<div></div>
+<p><wiz_tmp_tag id="wiz-table-range-border" contenteditable="false" style="display: none;"></p>
+<div id="wiz-table-col-line" style="display: none;"></div>
+<div id="wiz-table-row-line" style="display: none;"></div>
+<div id="wiz-table-range-border_start" style="display: none;">
+<div id="wiz-table-range-border_start_top"></div>
+<div id="wiz-table-range-border_start_right"></div>
+<div id="wiz-table-range-border_start_bottom"></div>
+<div id="wiz-table-range-border_start_left"></div>
+<div id="wiz-table-range-border_start_dot"></div>
+</div>
+<div id="wiz-table-range-border_range" style="display: none;">
+<div id="wiz-table-range-border_range_top"></div>
+<div id="wiz-table-range-border_range_right"></div>
+<div id="wiz-table-range-border_range_bottom"></div>
+<div id="wiz-table-range-border_range_left"></div>
+<div id="wiz-table-range-border_range_dot"></div>
+</div>
+<p></wiz_tmp_tag></p>
+                        </div>
+                                                <div class="footer clearfix">
+                            <div class="tags float-left">
+                                <span>标签：</span>
+                                <a>暂无</a>                            </div>
+                            <div class="tool float-right d-none d-lg-block">
+                                <span>最后更新：2023年1月29日</span>
+                            </div>
+                        </div>
+                    </div>
+                                <div class="toolbar clearfix">
+	<div class="meta float-md-left">
+		<img src="https://sdn.geekzu.org/avatar/8dc48ab2afc8d5058df4be411bc61a15?s=96&r=g">
+		<p class="name">SSJ</p>
+		<p class="motto mb-0">不积跬步无以至千里</p>
+	</div>
+	<div class="share float-md-right text-center">
+				<a href="javascript:;" id="thumbs" data-action="love" data-id="2814" role="button" class="btn btn-thumbs "><i class="kicon i-like"></i><span class="ml-1">点赞</span></a>
+	</div>
+</div>
+                <nav class="navigation post-navigation clearfix" role="navigation">
+                    <div class="nav-previous clearfix"><a title="DDNS平台推荐：免费提供子域名和IPV6的动态域名" href="https://luojimen.github.io/2023/01/ddns-platform-recommendation-free-sub-domain-name-and-ipv6-dynamic-domain-name/">< 上一篇</a></div>                </nav>
+                            </div>
+                    </div>
     </div>
 </div>
 <div class="k-footer">
