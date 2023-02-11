@@ -129,7 +129,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">Padavan自动更新LAN的IPv6前缀地址</h1>
                             <div class="meta">
                                 <span>2023年2月11日</span>
-                                                                    <span>6点热度</span>
+                                                                    <span>7点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -196,9 +196,17 @@ fi</code></pre>
 </div>
 </div>
 </li>
-</ul>
-<div></div>
+<li>检测效果：重启光猫来获取新IPv6，<span style="">观测</span>路由器WebUI右上角Log，在执行newip6_restart_wan.sh后应当会有一个“Perform WAN manual reconnect”的记录，说明成功检测到IPv6变化并重新连接WAN：
+<div>
+<div data-mode="JavaScript" data-theme="default">
+<pre><code>crond[14641]: USER admin pid  cmd /etc/storage/sss/newip6_restart_wan.sh &amp;
+RM2100: Perform WAN manual reconnect</code></pre>
 </div>
+</div>
+</li>
+</ul>
+</div>
+<div></div>
 <div>方案二：</div>
 <div>
 <ul>
