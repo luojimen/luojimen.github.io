@@ -7,18 +7,18 @@
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/codexpertio/codexpert-plugin.git",
-                "reference": "f0077b5bbed94bfb003143dbd606ce96bef4ba7f"
+                "reference": "7c05a7c486f51a999c99d581f1247d88ff0a6991"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/codexpertio/codexpert-plugin/get/f0077b5bbed94bfb003143dbd606ce96bef4ba7f.zip",
-                "reference": "f0077b5bbed94bfb003143dbd606ce96bef4ba7f",
+                "url": "https://bitbucket.org/codexpertio/codexpert-plugin/get/7c05a7c486f51a999c99d581f1247d88ff0a6991.zip",
+                "reference": "7c05a7c486f51a999c99d581f1247d88ff0a6991",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2023-01-24T06:39:16+00:00",
+            "time": "2023-02-10T17:04:25+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",
@@ -46,7 +46,7 @@
                 "plugin"
             ],
             "support": {
-                "source": "https://bitbucket.org/codexpertio/codexpert-plugin/src/f0077b5bbed94bfb003143dbd606ce96bef4ba7f/?at=master"
+                "source": "https://bitbucket.org/codexpertio/codexpert-plugin/src/7c05a7c486f51a999c99d581f1247d88ff0a6991/?at=master"
             },
             "install-path": "../codexpert/plugin"
         }

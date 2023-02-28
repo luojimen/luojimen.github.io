@@ -218,10 +218,19 @@ console.log("Screen Init Done", initMedia, initCustom);
         return; // no switching needed.
       }
 
-  //    this.panels.forEach(function(panel, index)
-      for (var panelName in this.panels)
+			// This detour is due to the issue that other plugins can attach prototype functions to array and this would return here.
+			var panelKeys = Object.keys(this.panels);
+			for (var i = 0; i < panelKeys.length; i++)
       {
+				 var panelName = panelKeys[i];
          var panel = this.panels[panelName];
+
+				 // Another prevention.
+				 if (typeof panel.classList === 'undefined')
+				 {
+					 continue;
+				 }
+
          panel.classList.remove('active');
          panel.style.display = 'none';
       };
@@ -838,12 +847,12 @@ console.log("Screen Init Done", initMedia, initCustom);
             return;
           }
 
-          var value = parseInt(checker.innerHTML);
+          var value = self.ParseNumber(checker.innerHTML);
           if ( hasCompareControl)
           {
             var compareControl = document.querySelector('[' + element.getAttribute('data-control-check') + ']');
             if (compareControl !== null) {
-                var compareValue = parseInt(compareControl.innerHTML);
+                var compareValue = self.ParseNumber(compareControl.innerHTML);
             }
           }
           if (isNaN(value))
@@ -1125,6 +1134,13 @@ console.log("Screen Init Done", initMedia, initCustom);
 
 		 var shade = document.getElementById('LogModal-Shade');
 		 shade.style.display = 'none';
+	}
+
+	// @todo Find a better home for this. Global screen class?
+	this.ParseNumber = function(str)
+	{
+		 str = str.replace(',','', str).replace('.','',str);
+		 return parseInt(str);
 	}
 
   //this.CheckSelectionScreen()  = function()
