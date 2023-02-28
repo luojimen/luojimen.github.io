@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" itemprop="description" content="原理 通过POST方式向IFTTT的webhooks API提交变量数据,实现使用action@ifttt.com邮件服务给自己指定的邮箱发送邮件. 参考网站 教程.使用Tasker实现短信转发到邮箱 [&hellip;]">
     <meta name="theme-color" content="#282a2c">
-    <meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg" />
+    <meta itemprop="image" content="https://luoji.men/wp-content/themes/kratos-4.1.2/assets/img/default.jpg" />
         <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.seatonjiang.com' />
 <link rel='dns-prefetch' href='//push.zhanzhang.baidu.com' />
@@ -43,8 +43,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 height: 100%;
             }
 </style>
-<link rel="alternate" type="application/json+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fluoji.men%2F2020%2F10%2Fifttt%25e9%2580%259a%25e8%25bf%2587post%25e8%25b0%2583%25e7%2594%25a8api%25e5%258f%2591%25e9%2580%2581%25e9%2582%25ae%25e4%25bb%25b6%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fluoji.men%2F2020%2F10%2Fifttt%25e9%2580%259a%25e8%25bf%2587post%25e8%25b0%2583%25e7%2594%25a8api%25e5%258f%2591%25e9%2580%2581%25e9%2582%25ae%25e4%25bb%25b6%2F&#038;format=xml" />
+<link rel="alternate" type="application/json+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwp2.zmao.tk%3A20080%2F2020%2F10%2Fifttt%25e9%2580%259a%25e8%25bf%2587post%25e8%25b0%2583%25e7%2594%25a8api%25e5%258f%2591%25e9%2580%2581%25e9%2582%25ae%25e4%25bb%25b6%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwp2.zmao.tk%3A20080%2F2020%2F10%2Fifttt%25e9%2580%259a%25e8%25bf%2587post%25e8%25b0%2583%25e7%2594%25a8api%25e5%258f%2591%25e9%2580%2581%25e9%2582%25ae%25e4%25bb%25b6%2F&#038;format=xml" />
 <style type="text/css">.broken_link, a.broken_link {
 	text-decoration: line-through;
 }</style><!-- Google tag (gtag.js) -->
@@ -107,7 +107,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                         <span class="line third-line"></span>
                     </button>
                 <div id="navbarResponsive" class="collapse navbar-collapse"><ul id="menu-menu-1" class="navbar-nav ml-auto"><li class="nav-item" ><a title="我的" href="https://luojimen.github.io/my/" class="nav-link">我的</a></li>
-<li class="nav-item" ><a title="主站" href="https://luojimen.github.io/" class="nav-link">主站</a></li>
+<li class="nav-item" ><a title="主站" href="https://luoji.men/" class="nav-link">主站</a></li>
 <li class="nav-item" ><a title="在线工具站" href="https://luojimen.github.io/online-tool-station/" class="nav-link">在线工具站</a></li>
 <li class="nav-item" ><a title="运维" href="https://luojimen.github.io/operation-and-maintenance/" class="nav-link">运维</a></li>
 <li class="nav-item" ><a title="目录" href="https://luojimen.github.io/catalogue/" class="nav-link">目录</a></li>
@@ -131,7 +131,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">IFTTT通过POST调用API发送邮件</h1>
                             <div class="meta">
                                 <span>2020年10月27日</span>
-                                                                    <span>1182点热度</span>
+                                                                    <span>1183点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -175,7 +175,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </ul>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-63fe1804994aa036814579" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-63fe635e05f32201980416" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 基本格式: { "value1" : "变量1" }
@@ -186,14 +186,14 @@ IFTTT中使用&lt;br&gt;换行,json参数把&lt;br&gt;写进去可以实现文�
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-63fe1804994aa036814579-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-63fe1804994aa036814579-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-63fe1804994aa036814579-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-63fe1804994aa036814579-4">4</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-63fe635e05f32201980416-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-63fe635e05f32201980416-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-63fe635e05f32201980416-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-63fe635e05f32201980416-4">4</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-63fe1804994aa036814579-1">基本格式<span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-s">"value1"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"变量1"</span><span class="crayon-h"> </span><span class="crayon-sy">}</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-63fe1804994aa036814579-2">最多三个变量<span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-s">"value1"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"变量1"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"value2"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"变量2"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"value3"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"变量3"</span><span class="crayon-h"> </span><span class="crayon-sy">}</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-63fe1804994aa036814579-3"><span class="crayon-i">IFTTT</span>中使用<span class="crayon-o">&lt;</span><span class="crayon-v">br</span><span class="crayon-o">&gt;</span>换行<span class="crayon-sy">,</span><span class="crayon-e">json</span>参数把<span class="crayon-o">&lt;</span><span class="crayon-e">br</span><span class="crayon-o">&gt;</span>写进去可以实现文本的换行</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-63fe1804994aa036814579-4"><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-s">"value1"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"变量1"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"value2"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"&lt;br&gt;变量2"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"value3"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"&lt;br&gt;变量3"</span><span class="crayon-h"> </span><span class="crayon-sy">}</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-63fe635e05f32201980416-1">基本格式<span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-s">"value1"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"变量1"</span><span class="crayon-h"> </span><span class="crayon-sy">}</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-63fe635e05f32201980416-2">最多三个变量<span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-s">"value1"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"变量1"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"value2"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"变量2"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"value3"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"变量3"</span><span class="crayon-h"> </span><span class="crayon-sy">}</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-63fe635e05f32201980416-3"><span class="crayon-i">IFTTT</span>中使用<span class="crayon-o">&lt;</span><span class="crayon-v">br</span><span class="crayon-o">&gt;</span>换行<span class="crayon-sy">,</span><span class="crayon-e">json</span>参数把<span class="crayon-o">&lt;</span><span class="crayon-e">br</span><span class="crayon-o">&gt;</span>写进去可以实现文本的换行</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-63fe635e05f32201980416-4"><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-s">"value1"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"变量1"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"value2"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"&lt;br&gt;变量2"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"value3"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"&lt;br&gt;变量3"</span><span class="crayon-h"> </span><span class="crayon-sy">}</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0004 seconds] -->
+<!-- [Format Time: 0.0003 seconds] -->
 </div>
 <ul>
 <li>注意事项: JSON参数中变量传递的内容<strong><em>不能含有"\n"和"\r"换行符</em></strong>, 否则格式报错失败,需要换行的把"\n"和"\r"换行符改成&lt; br &gt;.</li>
@@ -284,7 +284,7 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 <script type='text/javascript' src='https://cdn.seatonjiang.com/kratos/4.1.2/assets/js/lightgallery.min.js?ver=1.4.0' id='lightgallery-js'></script>
 <script type='text/javascript' id='kratos-js-extra'>
 /* <![CDATA[ */
-var kratos = {"site":"http:\/\/luojimen.github.io","directory":"https:\/\/cdn.seatonjiang.com\/kratos\/4.1.2","alipay":"https:\/\/luojimen.github.io\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","wechat":"https:\/\/luojimen.github.io\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","repeat":"\u60a8\u5df2\u7ecf\u8d5e\u8fc7\u4e86","thanks":"\u611f\u8c22\u60a8\u7684\u652f\u6301","donate":"\u6253\u8d4f\u4f5c\u8005","scan":"\u626b\u7801\u652f\u4ed8"};
+var kratos = {"site":"http:\/\/luojimen.github.io","directory":"https:\/\/cdn.seatonjiang.com\/kratos\/4.1.2","alipay":"https:\/\/luoji.men\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","wechat":"https:\/\/luoji.men\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","repeat":"\u60a8\u5df2\u7ecf\u8d5e\u8fc7\u4e86","thanks":"\u611f\u8c22\u60a8\u7684\u652f\u6301","donate":"\u6253\u8d4f\u4f5c\u8005","scan":"\u626b\u7801\u652f\u4ed8"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://cdn.seatonjiang.com/kratos/4.1.2/assets/js/kratos.js?ver=4.1.2' id='kratos-js'></script>
