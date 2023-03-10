@@ -129,7 +129,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">Syncthing的Docker(Syncthing官方版)安装教程</h1>
                             <div class="meta">
                                 <span>2023年3月11日</span>
-                                                                    <span>7点热度</span>
+                                                                    <span>9点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -185,8 +185,7 @@ services:
 <hr>
 </div>
 <div><span style="font-size: 1.5rem; font-weight: bold;">健康检测：</span></div>
-<div>&nbsp; &nbsp; Dockerfile文件中预定义了健康检测【HEALTHCHECK --interval=1m --timeout=10s \<span style=""><br /></span></div>
-<div>&nbsp; CMD curl -fkLsS -m 2 127.0.0.1:8384/rest/noauth/health | grep -o --color=never OK || exit 1<span style="">】</span></div>
+<div>&nbsp; &nbsp; Dockerfile文件中预定义了健康检测：<span style="">【HEALTHCHECK --interval=1m --timeout=10s \</span><span style="">&nbsp;CMD curl -fkLsS -m 2 127.0.0.1:8384/rest/noauth/health | grep -o --color=never OK || exit 1</span><span style="">】</span></div>
 <div>&nbsp; &nbsp; 若修改了STGUIADDRESS端口,则健康检测就会误报，因此强制通过<span style="">健康</span><span style="">检测</span>：<span style=""><br /></span></div>
 <div data-mode="JavaScript" data-theme="default">
 <pre><code>version: '3'
