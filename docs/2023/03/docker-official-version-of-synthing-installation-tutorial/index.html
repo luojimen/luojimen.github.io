@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telphone=no, email=no">
     <meta name="keywords" content="">
-    <meta name="description" itemprop="description" content="syncthing/README-Docker.md at main · syncthing/syncthing (github.com) 运行 docker compose -f syncthing [&hellip;]">
+    <meta name="description" itemprop="description" content="构建：https://hub.docker.com/r/syncthing/syncthing/tags 说明：https://github.com/syncthing/syncthing/blob/ [&hellip;]">
     <meta name="theme-color" content="#282a2c">
     <meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg" />
         <meta name='robots' content='max-image-preview:large' />
@@ -129,11 +129,15 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">Syncthing的Docker(Syncthing官方版)安装教程</h1>
                             <div class="meta">
                                 <span>2023年3月11日</span>
-                                                                    <span>9点热度</span>
+                                                                    <span>13点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
-                            <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><div><a href="https://github.com/syncthing/syncthing/blob/main/README-Docker.md" target="_blank"  rel="nofollow" >syncthing/README-Docker.md at main · syncthing/syncthing (github.com)</a></div>
+                            <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><p>构建：https://hub.docker.com/r/syncthing/syncthing/tags</p>
+<div>说明：https://github.com/syncthing/syncthing/blob/main/README-Docker.md </div>
+<div>
+<hr>
+</div>
 <div></div>
 <div>运行 docker compose -f syncthing-st.yml up&nbsp;</div>
 <div data-mode="JavaScript" data-theme="default">
@@ -144,14 +148,17 @@ services:
     image: syncthing/syncthing:latest
     hostname: syncthing #optional    
     healthcheck:
-      test: ['CMD','true'] #disable the healthcheck 强制测试通过
+      test: ['CMD-SHELL',"curl -fkLsS -m 2 127.0.0.1:28384/rest/noauth/health | grep -o --color=never OK || exit 1"] #覆写正确的健康检测命令
+      #test: ['CMD','true'] #强制通过健康检测
+      #interval: 1m
+      #timeout: 10s
     environment:
       - STGUIADDRESS=0.0.0.0:28384	#docker只能使用这方式修改GUI端口
       - PUID=0  #不定义则默认1000用户，可能无法读取其他docker目录
       - PGID=0
     volumes:
       - ./var/syncthing:/var/syncthing
-      - /root/docker/自定义目录/:/自定义目录/
+      - /root/docker/hentaiathome/:/hentaiathome/
     restart: unless-stopped
     #ports:
       #- 28384:8384
@@ -160,6 +167,7 @@ services:
       #- 21027:21027/udp
     network_mode: "host"    #主机模式.无需预先映射端口</code></pre>
 </div>
+<div>
 <div></div>
 <h2 ><a name="toc-1"></a>使用说明</h2>
 <div>
@@ -176,27 +184,40 @@ services:
 </div>
 <div><span style="font-size: 1.5rem; font-weight: bold;">GUI启动项覆盖监听地址：</span></div>
 <div>&nbsp; &nbsp;&nbsp;Dockerfile文件中预定义了GUI的环境变量【ENV STGUIADDRESS=0.0.0.0:8384】，会覆盖 配置文件/GUI 中的监听地址：</div>
+</div>
 <div data-mode="JavaScript" data-theme="default">
 <pre><code>"GUI 地址已被启动选项覆盖。当覆盖存在时，此处的更改就不会生效。"
 "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place."</code></pre>
 </div>
+<div>
 <div>&nbsp; &nbsp; 想要修改Docker的GUI地址，在Compose文件中申明：【STGUIADDRESS=0.0.0.0:28384<span style="">】</span></div>
 <div>
 <hr>
 </div>
 <div><span style="font-size: 1.5rem; font-weight: bold;">健康检测：</span></div>
-<div>&nbsp; &nbsp; Dockerfile文件中预定义了健康检测：<span style="">【HEALTHCHECK --interval=1m --timeout=10s \</span><span style="">&nbsp;CMD curl -fkLsS -m 2 127.0.0.1:8384/rest/noauth/health | grep -o --color=never OK || exit 1</span><span style="">】</span></div>
-<div>&nbsp; &nbsp; 若修改了STGUIADDRESS端口,则健康检测就会误报，因此强制通过<span style="">健康</span><span style="">检测</span>：<span style=""><br /></span></div>
+<div>&nbsp; &nbsp; Dockerfile文件中预定义了健康检测，来获得 (health:starting)(healthy)(unhealthy) 三种状态：<span style="">【HEALTHCHECK --interval=1m --timeout=10s \</span><span style="">&nbsp;CMD curl -fkLsS -m 2 127.0.0.1:8384/rest/noauth/health | grep -o --color=never OK || exit 1</span><span style="">】。</span><span style="">&nbsp; &nbsp;&nbsp;</span></div>
+<div>&nbsp; &nbsp; 若修改了STGUIADDRESS端口,则健康检测就会误报，解决思路：和 CMD, ENTRYPOINT 一样，HEALTHCHECK 只可以出现一次，如果写了多个，只有最后一个生效。</div>
+<div>&nbsp; &nbsp; 两种解决方式：1、覆写正确的检测命令<span style="">&nbsp; &nbsp; 2、强制通过</span><span style="">检测：</span></div>
+</div>
 <div data-mode="JavaScript" data-theme="default">
 <pre><code>version: '3'
 services:
   syncthing-st: 
     healthcheck:
-      test: ['CMD','true'] #disable the healthcheck 强制测试通过</code></pre>
+      test: ['CMD-SHELL',"curl -fkLsS -m 2 127.0.0.1:28384/rest/noauth/health | grep -o --color=never OK || exit 1"] #覆写正确的健康检测命令
+      #test: ['CMD','true'] #强制通过健康检测</code></pre>
 </div>
-<div><span style=""><br /></span></div>
+<div>
+<div><span style="">&nbsp; &nbsp; 参考自：</span></div>
+<div>
+<ul>
+<li><a href="https://blog.csdn.net/DanielJackZ/article/details/94726086" target="_blank"  rel="nofollow" >docker和docker-compose中加入healthcheck 流浮生的博客-CSDN博客</a></li>
+<li><a href="https://stackoverflow.com/questions/68804892/controlling-healthcheck-with-a-compose-file-in-ddev-local" target="_blank"  rel="nofollow" >Controlling Healthcheck with a Compose file in DDEV-Local - Stack Overflow</a></li>
+</ul>
+</div>
 <div></div>
 <div></div>
+</div>
                         </div>
                                                 <div class="footer clearfix">
                             <div class="tags float-left">
