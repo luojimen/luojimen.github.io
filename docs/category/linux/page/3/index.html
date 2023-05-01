@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Linux - LuoJi.men - 第 3 页</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="format-detection" content="telphone=no, date=no, address=no, email=no"><meta name="theme-color" content="#282a2c"><meta name="keywords" itemprop="keywords" content="Linux"><meta name="description" itemprop="description" content=""><meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:site_name" content="LuoJi.men"><meta property="og:url" content="https://luojimen.github.io/2020/09/%e7%8c%ab%e7%9b%98%e5%8e%9f%e7%89%88frp-%e5%ae%89%e8%a3%85%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b-%e7%be%a4%e6%99%96arm/"><meta property="og:title" content="[猫盘]原版Frp.安装使用教程 (群晖)(ARM)"><meta property="og:image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:image:type" content="image/webp"><meta property="og:locale" content="zh-CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="[猫盘]原版Frp.安装使用教程 (群晖)(ARM)"><meta name='robots' content='max-image-preview:large' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="format-detection" content="telphone=no, date=no, address=no, email=no"><meta name="theme-color" content="#282a2c"><meta name="keywords" itemprop="keywords" content="Linux"><meta name="description" itemprop="description" content=""><meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:site_name" content="LuoJi.men"><meta property="og:url" content="https://luojimen.github.io/2020/11/%e4%bb%8erclone%e9%85%8d%e7%bd%ae%e4%b8%ad%e8%87%aa%e5%8a%a8%e6%8f%90%e5%8f%96%e4%b8%bb%e4%bb%8e%e8%b7%af%e5%be%84%e8%bf%9b%e8%a1%8c%e4%b8%80%e5%af%b9%e5%a4%9a%e5%a4%87%e4%bb%bd%e4%b8%bb%e4%bb%8e/"><meta property="og:title" content="从rclone配置中自动提取主/从路径进行一对多备份(主/从标识模式)"><meta property="og:image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:image:type" content="image/webp"><meta property="og:locale" content="zh-CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="从rclone配置中自动提取主/从路径进行一对多备份(主/从标识模式)"><meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
 <link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
@@ -114,6 +114,29 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             </span>
         <div class="a-post a-none">
         <div class="header">
+            <a class="label" href="https://luojimen.github.io/category/linux/">Linux<i class="label-arrow"></i></a>            <h3 class="title"><a href="https://luojimen.github.io/2020/11/%e4%bb%8erclone%e9%85%8d%e7%bd%ae%e4%b8%ad%e8%87%aa%e5%8a%a8%e6%8f%90%e5%8f%96%e4%b8%bb%e4%bb%8e%e8%b7%af%e5%be%84%e8%bf%9b%e8%a1%8c%e4%b8%80%e5%af%b9%e5%a4%9a%e5%a4%87%e4%bb%bd%e4%b8%bb%e4%bb%8e/">从rclone配置中自动提取主/从路径进行一对多备份(主/从标识模式)</a></h3>
+        </div>
+        <div class="content">
+            <p>原理:自动从rclone.conf配置中提取含有"MASTER"(主盘)和"SLAVE"(从盘)字符的配置名称列表, 配置名称格式参考 [crayon-644f3822c3665230351674/] [&hellip;]</p>
+        </div>
+    </div>
+    <div class="a-meta">
+        <span class="float-left d-none d-md-block">
+            <span class="mr-2"><i class="kicon i-calendar"></i>2020年11月22日</span>
+                    </span>
+        <span class="float-left d-block">
+                            <span class="mr-2"><i class="kicon i-hot"></i>1171点热度</span>
+                    </span>
+        <span class="float-right">
+            <a href="https://luojimen.github.io/2020/11/%e4%bb%8erclone%e9%85%8d%e7%bd%ae%e4%b8%ad%e8%87%aa%e5%8a%a8%e6%8f%90%e5%8f%96%e4%b8%bb%e4%bb%8e%e8%b7%af%e5%be%84%e8%bf%9b%e8%a1%8c%e4%b8%80%e5%af%b9%e5%a4%9a%e5%a4%87%e4%bb%bd%e4%b8%bb%e4%bb%8e/">阅读全文<i class="kicon i-rightbutton"></i></a>
+        </span>
+    </div>
+</div>
+<div class="article-panel">
+    <span class="a-card d-none d-md-block d-lg-block">
+            </span>
+        <div class="a-post a-none">
+        <div class="header">
             <a class="label" href="https://luojimen.github.io/category/linux/">Linux<i class="label-arrow"></i></a>            <h3 class="title"><a href="https://luojimen.github.io/2020/09/%e7%8c%ab%e7%9b%98%e5%8e%9f%e7%89%88frp-%e5%ae%89%e8%a3%85%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b-%e7%be%a4%e6%99%96arm/">[猫盘]原版Frp.安装使用教程 (群晖)(ARM)</a></h3>
         </div>
         <div class="content">
@@ -125,7 +148,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <span class="mr-2"><i class="kicon i-calendar"></i>2020年9月17日</span>
                     </span>
         <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>1123点热度</span>
+                            <span class="mr-2"><i class="kicon i-hot"></i>1173点热度</span>
                     </span>
         <span class="float-right">
             <a href="https://luojimen.github.io/2020/09/%e7%8c%ab%e7%9b%98%e5%8e%9f%e7%89%88frp-%e5%ae%89%e8%a3%85%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b-%e7%be%a4%e6%99%96arm/">阅读全文<i class="kicon i-rightbutton"></i></a>
@@ -148,7 +171,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <span class="mr-2"><i class="kicon i-calendar"></i>2020年9月16日</span>
                     </span>
         <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>1090点热度</span>
+                            <span class="mr-2"><i class="kicon i-hot"></i>1132点热度</span>
                     </span>
         <span class="float-right">
             <a href="https://luojimen.github.io/2020/09/%e7%8c%ab%e7%9b%98%e7%be%a4%e8%be%89arm-%e5%86%85%e7%bd%91%e7%a9%bf%e9%80%8fsakurafrp/">阅读全文<i class="kicon i-rightbutton"></i></a>
@@ -171,7 +194,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <span class="mr-2"><i class="kicon i-calendar"></i>2020年9月16日</span>
                     </span>
         <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>873点热度</span>
+                            <span class="mr-2"><i class="kicon i-hot"></i>903点热度</span>
                     </span>
         <span class="float-right">
             <a href="https://luojimen.github.io/2020/09/cat-disk-install-tmuxqunhuiarm/">阅读全文<i class="kicon i-rightbutton"></i></a>
@@ -194,7 +217,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <span class="mr-2"><i class="kicon i-calendar"></i>2020年9月9日</span>
                     </span>
         <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>1158点热度</span>
+                            <span class="mr-2"><i class="kicon i-hot"></i>1225点热度</span>
                     </span>
         <span class="float-right">
             <a href="https://luojimen.github.io/2020/09/%e7%be%a4%e6%99%96%ef%bc%88%e7%8c%ab%e7%9b%98%ef%bc%89ipv6%e5%92%8cipv4%e5%8a%a8%e6%80%81%e5%9f%9f%e5%90%8ddynv6-com/">阅读全文<i class="kicon i-rightbutton"></i></a>
@@ -217,7 +240,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <span class="mr-2"><i class="kicon i-calendar"></i>2020年6月12日</span>
                     </span>
         <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>1064点热度</span>
+                            <span class="mr-2"><i class="kicon i-hot"></i>1107点热度</span>
                     </span>
         <span class="float-right">
             <a href="https://luojimen.github.io/2020/06/python%e8%84%9a%e6%9c%acgetcwd%e6%8a%a5%e9%94%99no-such-file-or-directory/">阅读全文<i class="kicon i-rightbutton"></i></a>
@@ -240,7 +263,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <span class="mr-2"><i class="kicon i-calendar"></i>2020年5月29日</span>
                     </span>
         <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>1077点热度</span>
+                            <span class="mr-2"><i class="kicon i-hot"></i>1121点热度</span>
                     </span>
         <span class="float-right">
             <a href="https://luojimen.github.io/2020/05/rclone-config-mail-notif-%e6%8a%a5%e9%94%99%e9%82%ae%e4%bb%b6%e9%80%9a%e7%9f%a5/">阅读全文<i class="kicon i-rightbutton"></i></a>
@@ -263,7 +286,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <span class="mr-2"><i class="kicon i-calendar"></i>2020年5月28日</span>
                     </span>
         <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>1065点热度</span>
+                            <span class="mr-2"><i class="kicon i-hot"></i>1111点热度</span>
                     </span>
         <span class="float-right">
             <a href="https://luojimen.github.io/2020/05/rclone%e6%89%b9%e9%87%8f%e7%bc%96%e8%be%91%e8%b0%b7%e6%ad%8c%e5%85%b1%e4%ba%ab%e7%9b%98/">阅读全文<i class="kicon i-rightbutton"></i></a>
@@ -286,7 +309,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <span class="mr-2"><i class="kicon i-calendar"></i>2020年4月14日</span>
                     </span>
         <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>1200点热度</span>
+                            <span class="mr-2"><i class="kicon i-hot"></i>1245点热度</span>
                     </span>
         <span class="float-right">
             <a href="https://luojimen.github.io/2020/04/debian9%e5%ae%89%e8%a3%85dockercompose%e6%9c%80%e6%96%b0%e7%89%88/">阅读全文<i class="kicon i-rightbutton"></i></a>
@@ -301,7 +324,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <a class="label" href="https://luojimen.github.io/category/linux/">Linux<i class="label-arrow"></i></a>            <h3 class="title"><a href="https://luojimen.github.io/2020/03/tmux%e5%90%8e%e5%8f%b0%e6%89%a7%e8%a1%8ccaddy-webdav/">tmux后台执行caddy-webdav</a></h3>
         </div>
         <div class="content">
-            <p>目的 让webdav服务在后台执行,并且可窗口观测命令反馈信息来判断程序是否运行,方便排错. 准备 先手工测试代码可正确执行 [crayon-64302d974b086550467347/] 授予ca [&hellip;]</p>
+            <p>目的 让webdav服务在后台执行,并且可窗口观测命令反馈信息来判断程序是否运行,方便排错. 准备 先手工测试代码可正确执行 [crayon-644f3822c4764151191484/] 授予ca [&hellip;]</p>
         </div>
     </div>
     <div class="a-meta">
@@ -309,33 +332,10 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <span class="mr-2"><i class="kicon i-calendar"></i>2020年3月2日</span>
                     </span>
         <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>1072点热度</span>
+                            <span class="mr-2"><i class="kicon i-hot"></i>1111点热度</span>
                     </span>
         <span class="float-right">
             <a href="https://luojimen.github.io/2020/03/tmux%e5%90%8e%e5%8f%b0%e6%89%a7%e8%a1%8ccaddy-webdav/">阅读全文<i class="kicon i-rightbutton"></i></a>
-        </span>
-    </div>
-</div>
-<div class="article-panel">
-    <span class="a-card d-none d-md-block d-lg-block">
-            </span>
-        <div class="a-post a-none">
-        <div class="header">
-            <a class="label" href="https://luojimen.github.io/category/linux/">Linux<i class="label-arrow"></i></a>            <h3 class="title"><a href="https://luojimen.github.io/2020/03/padavan%e7%9a%84ipv6%e5%86%85%e7%bd%91%e7%a9%bf%e9%80%8f/">padavan的ipv6内网穿透</a></h3>
-        </div>
-        <div class="content">
-            <p>目的 让路由器下面的设备获取公网ipv6地址. 效果 移动4G手机使用mstsc远程桌面成功访问联通4G热点下二级路由器padavan(wan无线桥接到上级热点)下的windows桌面. 不影响内网设 [&hellip;]</p>
-        </div>
-    </div>
-    <div class="a-meta">
-        <span class="float-left d-none d-md-block">
-            <span class="mr-2"><i class="kicon i-calendar"></i>2020年3月1日</span>
-                    </span>
-        <span class="float-left d-block">
-                            <span class="mr-2"><i class="kicon i-hot"></i>1130点热度</span>
-                    </span>
-        <span class="float-right">
-            <a href="https://luojimen.github.io/2020/03/padavan%e7%9a%84ipv6%e5%86%85%e7%bd%91%e7%a9%bf%e9%80%8f/">阅读全文<i class="kicon i-rightbutton"></i></a>
         </span>
     </div>
 </div>
@@ -357,7 +357,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 			</div><div class="widget widget_archive"><div class="title">归档</div>
 			<ul>
-					<li><a href='https://luojimen.github.io/2023/03/'>2023年3月</a></li>
+					<li><a href='https://luojimen.github.io/2023/05/'>2023年5月</a></li>
+	<li><a href='https://luojimen.github.io/2023/03/'>2023年3月</a></li>
 	<li><a href='https://luojimen.github.io/2023/02/'>2023年2月</a></li>
 	<li><a href='https://luojimen.github.io/2023/01/'>2023年1月</a></li>
 	<li><a href='https://luojimen.github.io/2022/09/'>2022年9月</a></li>
