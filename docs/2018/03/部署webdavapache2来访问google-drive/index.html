@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>部署webdav(apache2)来访问google-drive - 逻辑 | LuoJi.eu.org</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="format-detection" content="telphone=no, date=no, address=no, email=no"><meta name="theme-color" content="#282a2c"><meta name="keywords" itemprop="keywords" content="apache,google drive,linux,nas,pt,rclone,vps,webdav,浏览器,网站"><meta name="description" itemprop="description" content="介绍 1.搭建webdav 2.使用rclone mount挂载google drive 环境:centos7 (注意可能需要关闭防火墙) 安装Apache [crayon-692a2a2c40177 [&hellip;]"><meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:site_name" content="逻辑 | LuoJi.eu.org"><meta property="og:url" content="https://luojimen.github.io/2018/03/%e9%83%a8%e7%bd%b2webdavapache2%e6%9d%a5%e8%ae%bf%e9%97%aegoogle-drive/"><meta property="og:title" content="部署webdav(apache2)来访问google-drive"><meta property="og:image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:image:type" content="image/webp"><meta property="og:locale" content="zh-CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="部署webdav(apache2)来访问google-drive"><meta name="twitter:creator" content="书三拾"><meta name='robots' content='max-image-preview:large' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="format-detection" content="telphone=no, date=no, address=no, email=no"><meta name="theme-color" content="#282a2c"><meta name="keywords" itemprop="keywords" content="apache,google drive,linux,nas,pt,rclone,vps,webdav,浏览器,网站"><meta name="description" itemprop="description" content="介绍 1.搭建webdav 2.使用rclone mount挂载google drive 环境:centos7 (注意可能需要关闭防火墙) 安装Apache [crayon-692a34524188e [&hellip;]"><meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:site_name" content="逻辑 | LuoJi.eu.org"><meta property="og:url" content="https://luojimen.github.io/2018/03/%e9%83%a8%e7%bd%b2webdavapache2%e6%9d%a5%e8%ae%bf%e9%97%aegoogle-drive/"><meta property="og:title" content="部署webdav(apache2)来访问google-drive"><meta property="og:image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:image:type" content="image/webp"><meta property="og:locale" content="zh-CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="部署webdav(apache2)来访问google-drive"><meta name="twitter:creator" content="书三拾"><meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
 <link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
@@ -124,7 +124,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">部署webdav(apache2)来访问google-drive</h1>
                             <div class="meta">
                                 <span>2018年3月3日</span>
-                                                                    <span>2659点热度</span>
+                                                                    <span>2662点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -137,7 +137,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <div id="wiz_cm_1520068231326_9034" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40177496355939" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a34524188e178585464" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 yum install httpd</textarea></div>
@@ -145,9 +145,9 @@ yum install httpd</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40177496355939-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a34524188e178585464-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40177496355939-1"><span class="crayon-e">yum </span><span class="crayon-e">install </span><span class="crayon-v">httpd</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a34524188e178585464-1"><span class="crayon-e">yum </span><span class="crayon-e">install </span><span class="crayon-v">httpd</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -160,7 +160,7 @@ yum install httpd</textarea></div>
 <div id="wiz_cm_1520068378122_6851" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40180573675971" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a345241897811506716" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 systemctl enable httpd.service</textarea></div>
@@ -168,14 +168,14 @@ systemctl enable httpd.service</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40180573675971-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a345241897811506716-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40180573675971-1"><span class="crayon-e">systemctl </span><span class="crayon-e">enable </span><span class="crayon-v">httpd</span><span class="crayon-sy">.</span><span class="crayon-v">service</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a345241897811506716-1"><span class="crayon-e">systemctl </span><span class="crayon-e">enable </span><span class="crayon-v">httpd</span><span class="crayon-sy">.</span><span class="crayon-v">service</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0002 seconds] -->
+<!-- [Format Time: 0.0001 seconds] -->
 </p>
 <div></div>
 </div>
@@ -184,7 +184,7 @@ systemctl enable httpd.service</textarea></div>
 <div id="wiz_cm_1520068451817_8473" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40182578672117" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a345241899035365517" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 systemctl is-enabled httpd.service</textarea></div>
@@ -192,9 +192,9 @@ systemctl is-enabled httpd.service</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40182578672117-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a345241899035365517-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40182578672117-1"><span class="crayon-e">systemctl </span><span class="crayon-st">is</span><span class="crayon-o">-</span><span class="crayon-e">enabled </span><span class="crayon-v">httpd</span><span class="crayon-sy">.</span><span class="crayon-v">service</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a345241899035365517-1"><span class="crayon-e">systemctl </span><span class="crayon-st">is</span><span class="crayon-o">-</span><span class="crayon-e">enabled </span><span class="crayon-v">httpd</span><span class="crayon-sy">.</span><span class="crayon-v">service</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -208,7 +208,7 @@ systemctl is-enabled httpd.service</textarea></div>
 <div id="wiz_cm_1520068590971_4610" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40184233822621" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a34524189c142224165" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 systemctl start httpd.service 在浏览器中输入IP地址即可验证是否启动成功</textarea></div>
@@ -216,9 +216,9 @@ systemctl start httpd.service 在浏览器中输入IP地址即可验证是否启
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40184233822621-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a34524189c142224165-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40184233822621-1"><span class="crayon-e">systemctl </span><span class="crayon-e">start </span><span class="crayon-v">httpd</span><span class="crayon-sy">.</span><span class="crayon-i">service</span><span class="crayon-h"> </span>在浏览器中输入<span class="crayon-i">IP</span>地址即可验证是否启动成功</div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a34524189c142224165-1"><span class="crayon-e">systemctl </span><span class="crayon-e">start </span><span class="crayon-v">httpd</span><span class="crayon-sy">.</span><span class="crayon-i">service</span><span class="crayon-h"> </span>在浏览器中输入<span class="crayon-i">IP</span>地址即可验证是否启动成功</div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -231,7 +231,7 @@ systemctl start httpd.service 在浏览器中输入IP地址即可验证是否启
 <div id="wiz_cm_1520068627373_5758" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40185328055580" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a34524189e526187049" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 systemctl restart httpd.service</textarea></div>
@@ -239,9 +239,9 @@ systemctl restart httpd.service</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40185328055580-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a34524189e526187049-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40185328055580-1"><span class="crayon-e">systemctl </span><span class="crayon-e">restart </span><span class="crayon-v">httpd</span><span class="crayon-sy">.</span><span class="crayon-v">service</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a34524189e526187049-1"><span class="crayon-e">systemctl </span><span class="crayon-e">restart </span><span class="crayon-v">httpd</span><span class="crayon-sy">.</span><span class="crayon-v">service</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -254,7 +254,7 @@ systemctl restart httpd.service</textarea></div>
 <div id="wiz_cm_1520068656292_5640" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40187207178066" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418a1327299121" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 systemctl stop httpd.service</textarea></div>
@@ -262,9 +262,9 @@ systemctl stop httpd.service</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40187207178066-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418a1327299121-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40187207178066-1"><span class="crayon-e">systemctl </span><span class="crayon-e">stop </span><span class="crayon-v">httpd</span><span class="crayon-sy">.</span><span class="crayon-v">service</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418a1327299121-1"><span class="crayon-e">systemctl </span><span class="crayon-e">stop </span><span class="crayon-v">httpd</span><span class="crayon-sy">.</span><span class="crayon-v">service</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -287,7 +287,7 @@ systemctl stop httpd.service</textarea></div>
 <div id="wiz_cm_1520069020443_3558" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40189376295331" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418a2533411719" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 httpd -M | grep fs</textarea></div>
@@ -295,14 +295,14 @@ httpd -M | grep fs</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40189376295331-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418a2533411719-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40189376295331-1"><span class="crayon-v">httpd</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">M</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-e">grep </span><span class="crayon-v">fs</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418a2533411719-1"><span class="crayon-v">httpd</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">M</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-e">grep </span><span class="crayon-v">fs</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0001 seconds] -->
+<!-- [Format Time: 0.0002 seconds] -->
 </p>
 <div></div>
 </div>
@@ -310,7 +310,7 @@ httpd -M | grep fs</textarea></div>
 <div id="wiz_cm_1520069077498_209" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c4018a870364598" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418a5926826646" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 dav_fs_module(shared)</textarea></div>
@@ -318,9 +318,9 @@ dav_fs_module(shared)</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c4018a870364598-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418a5926826646-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c4018a870364598-1"><span class="crayon-e">dav_fs_module</span><span class="crayon-sy">(</span><span class="crayon-v">shared</span><span class="crayon-sy">)</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418a5926826646-1"><span class="crayon-e">dav_fs_module</span><span class="crayon-sy">(</span><span class="crayon-v">shared</span><span class="crayon-sy">)</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -333,7 +333,7 @@ dav_fs_module(shared)</textarea></div>
 <div id="wiz_cm_1520069186415_6333" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c4018c761181356" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418a7338691008" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 mkdir /var/www/html/webdav</textarea></div>
@@ -341,9 +341,9 @@ mkdir /var/www/html/webdav</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c4018c761181356-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418a7338691008-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c4018c761181356-1"><span class="crayon-v">mkdir</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418a7338691008-1"><span class="crayon-v">mkdir</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -356,7 +356,7 @@ mkdir /var/www/html/webdav</textarea></div>
 <div id="wiz_cm_1520069409029_1406" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c4018d477104351" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418a9833709811" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 chown -R apache:apache /var/www/html/webdav        目录更改为apache用户拥有.
@@ -365,14 +365,14 @@ chmod -R 755 /var/www/html/webdav        * 755的权限就是：rwxr-xr-x。第�
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c4018d477104351-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a2a2c4018d477104351-2">2</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418a9833709811-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a3452418a9833709811-2">2</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c4018d477104351-1"><span class="crayon-v">chown</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">R</span><span class="crayon-h"> </span><span class="crayon-v">apache</span><span class="crayon-o">:</span><span class="crayon-v">apache</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-i">webdav</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>目录更改为<span class="crayon-i">apache</span>用户拥有<span class="crayon-sy">.</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a2a2c4018d477104351-2"><span class="crayon-v">chmod</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">R</span><span class="crayon-h"> </span><span class="crayon-cn">755</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-e ">webdav&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span><span class="crayon-h"> </span><span class="crayon-cn">755</span>的权限就是：<span class="crayon-v">rwxr</span><span class="crayon-o">-</span><span class="crayon-v">xr</span><span class="crayon-o">-</span><span class="crayon-i">x</span>。第一位<span class="crayon-cn">7</span>等于<span class="crayon-cn">4</span><span class="crayon-o">+</span><span class="crayon-cn">2</span><span class="crayon-o">+</span><span class="crayon-cn">1</span>，所以就是<span class="crayon-i">rwx</span>，所有者有读取、写入、执行的权限；第二位<span class="crayon-cn">5</span>也是<span class="crayon-cn">4</span><span class="crayon-o">+</span><span class="crayon-cn">0</span><span class="crayon-o">+</span><span class="crayon-cn">1</span>，<span class="crayon-v">r</span><span class="crayon-o">-</span><span class="crayon-i">x</span>，同组用户具有读取、执行权限；第三位<span class="crayon-cn">5</span>，代表公共用户有读取、执行的权限。</div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418a9833709811-1"><span class="crayon-v">chown</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">R</span><span class="crayon-h"> </span><span class="crayon-v">apache</span><span class="crayon-o">:</span><span class="crayon-v">apache</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-i">webdav</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>目录更改为<span class="crayon-i">apache</span>用户拥有<span class="crayon-sy">.</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a3452418a9833709811-2"><span class="crayon-v">chmod</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">R</span><span class="crayon-h"> </span><span class="crayon-cn">755</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-e ">webdav&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span><span class="crayon-h"> </span><span class="crayon-cn">755</span>的权限就是：<span class="crayon-v">rwxr</span><span class="crayon-o">-</span><span class="crayon-v">xr</span><span class="crayon-o">-</span><span class="crayon-i">x</span>。第一位<span class="crayon-cn">7</span>等于<span class="crayon-cn">4</span><span class="crayon-o">+</span><span class="crayon-cn">2</span><span class="crayon-o">+</span><span class="crayon-cn">1</span>，所以就是<span class="crayon-i">rwx</span>，所有者有读取、写入、执行的权限；第二位<span class="crayon-cn">5</span>也是<span class="crayon-cn">4</span><span class="crayon-o">+</span><span class="crayon-cn">0</span><span class="crayon-o">+</span><span class="crayon-cn">1</span>，<span class="crayon-v">r</span><span class="crayon-o">-</span><span class="crayon-i">x</span>，同组用户具有读取、执行权限；第三位<span class="crayon-cn">5</span>，代表公共用户有读取、执行的权限。</div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0003 seconds] -->
+<!-- [Format Time: 0.0004 seconds] -->
 </p>
 <div></div>
 </div>
@@ -383,7 +383,7 @@ chmod -R 755 /var/www/html/webdav        * 755的权限就是：rwxr-xr-x。第�
 <div id="wiz_cm_1520069832922_5967" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c4018f279581611" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418ab799650985" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 htpasswd -c /etc/httpd/.htpasswd dev</textarea></div>
@@ -391,14 +391,14 @@ htpasswd -c /etc/httpd/.htpasswd dev</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c4018f279581611-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418ab799650985-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c4018f279581611-1"><span class="crayon-v">htpasswd</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">c</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-sy">.</span><span class="crayon-e">htpasswd </span><span class="crayon-v">dev</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418ab799650985-1"><span class="crayon-v">htpasswd</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">c</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-sy">.</span><span class="crayon-e">htpasswd </span><span class="crayon-v">dev</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0001 seconds] -->
+<!-- [Format Time: 0.0840 seconds] -->
 </p>
 <div></div>
 </div>
@@ -408,7 +408,7 @@ htpasswd -c /etc/httpd/.htpasswd dev</textarea></div>
 <div id="wiz_cm_1520070033625_9085" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40190093751428" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418ad987555588" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 chown root:apache /etc/httpd/.htpasswd
@@ -417,14 +417,14 @@ chmod 640 /etc/httpd/.htpasswd        *644的权限就是：rw-r–r–。第一
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40190093751428-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a2a2c40190093751428-2">2</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418ad987555588-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a3452418ad987555588-2">2</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40190093751428-1"><span class="crayon-e">chown </span><span class="crayon-v">root</span><span class="crayon-o">:</span><span class="crayon-v">apache</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-sy">.</span><span class="crayon-e">htpasswd</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a2a2c40190093751428-2"><span class="crayon-i">chmod</span><span class="crayon-h"> </span><span class="crayon-cn">640</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-sy">.</span><span class="crayon-e ">htpasswd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span><span class="crayon-cn">644</span>的权限就是：<span class="crayon-v">rw</span><span class="crayon-o">-</span><span class="crayon-i">r</span>–<span class="crayon-i">r</span>–。第一位<span class="crayon-cn">6</span>等于<span class="crayon-cn">4</span><span class="crayon-o">+</span><span class="crayon-cn">2</span><span class="crayon-o">+</span><span class="crayon-cn">0</span>，所以就是<span class="crayon-v">rw</span><span class="crayon-o">-</span>，所有者有读取、写入的权限；第二位<span class="crayon-cn">4</span>也是<span class="crayon-cn">4</span><span class="crayon-o">+</span><span class="crayon-cn">0</span><span class="crayon-o">+</span><span class="crayon-cn">0</span>，<span class="crayon-i">r</span>–，同组用户具有读取的权限；第三位<span class="crayon-cn">4</span>，代表公共用户有读取的权限。<span class="crayon-h"> </span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418ad987555588-1"><span class="crayon-e">chown </span><span class="crayon-v">root</span><span class="crayon-o">:</span><span class="crayon-v">apache</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-sy">.</span><span class="crayon-e">htpasswd</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a3452418ad987555588-2"><span class="crayon-i">chmod</span><span class="crayon-h"> </span><span class="crayon-cn">640</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-sy">.</span><span class="crayon-e ">htpasswd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span><span class="crayon-cn">644</span>的权限就是：<span class="crayon-v">rw</span><span class="crayon-o">-</span><span class="crayon-i">r</span>–<span class="crayon-i">r</span>–。第一位<span class="crayon-cn">6</span>等于<span class="crayon-cn">4</span><span class="crayon-o">+</span><span class="crayon-cn">2</span><span class="crayon-o">+</span><span class="crayon-cn">0</span>，所以就是<span class="crayon-v">rw</span><span class="crayon-o">-</span>，所有者有读取、写入的权限；第二位<span class="crayon-cn">4</span>也是<span class="crayon-cn">4</span><span class="crayon-o">+</span><span class="crayon-cn">0</span><span class="crayon-o">+</span><span class="crayon-cn">0</span>，<span class="crayon-i">r</span>–，同组用户具有读取的权限；第三位<span class="crayon-cn">4</span>，代表公共用户有读取的权限。<span class="crayon-h"> </span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0006 seconds] -->
+<!-- [Format Time: 0.0003 seconds] -->
 </p>
 <div></div>
 </div>
@@ -434,7 +434,7 @@ chmod 640 /etc/httpd/.htpasswd        *644的权限就是：rw-r–r–。第一
 <div id="wiz_cm_1520070748761_972" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40193219354779" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418b0189909789" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 nano /etc/httpd/conf.d/webdav.conf</textarea></div>
@@ -442,14 +442,14 @@ nano /etc/httpd/conf.d/webdav.conf</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40193219354779-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b0189909789-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40193219354779-1"><span class="crayon-v">nano</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-v">conf</span><span class="crayon-sy">.</span><span class="crayon-v">d</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-sy">.</span><span class="crayon-v">conf</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b0189909789-1"><span class="crayon-v">nano</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-v">conf</span><span class="crayon-sy">.</span><span class="crayon-v">d</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-sy">.</span><span class="crayon-v">conf</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0001 seconds] -->
+<!-- [Format Time: 0.0002 seconds] -->
 </p>
 <div></div>
 </div>
@@ -457,7 +457,7 @@ nano /etc/httpd/conf.d/webdav.conf</textarea></div>
 <div id="wiz_cm_1520070787182_232" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40194037023146" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418b2213480866" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 DavLockDB /var/www/html/DavLock
@@ -479,14 +479,14 @@ DavLockDB /var/www/html/DavLock
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-11">11</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-12">12</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-13">13</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-14">14</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40194037023146-15">15</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-11">11</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-12">12</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-13">13</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-14">14</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b2213480866-15">15</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-1"><span class="crayon-v">DavLockDB</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">DavLock</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-2"><span class="crayon-o">&lt;</span><span class="crayon-e ">VirtualHost *</span><span class="crayon-o">:</span><span class="crayon-cn">80</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-3"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">ServerAdmin </span><span class="crayon-v">webmaster</span><span class="crayon-sy">@</span><span class="crayon-e">localhost</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-4"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">DocumentRoot</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-o">/</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">ErrorLog</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">log</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-v">error</span><span class="crayon-sy">.</span><span class="crayon-e">log</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-6"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">CustomLog</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">log</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-v">access</span><span class="crayon-sy">.</span><span class="crayon-e">log </span><span class="crayon-e">combined</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-7"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">Alias</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-8"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-v">Directory</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">DAV </span><span class="crayon-e">On</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-10"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">AuthType </span><span class="crayon-e">Basic</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-11"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">AuthName</span><span class="crayon-h"> </span><span class="crayon-s">"webdav"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-12"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">AuthUserFile</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-sy">.</span><span class="crayon-e">htpasswd</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-13"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">Require </span><span class="crayon-v">valid</span><span class="crayon-o">-</span><span class="crayon-v">user</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-14"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">Directory</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40194037023146-15"><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">VirtualHost</span><span class="crayon-o">&gt;</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-1"><span class="crayon-v">DavLockDB</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">DavLock</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-2"><span class="crayon-o">&lt;</span><span class="crayon-e ">VirtualHost *</span><span class="crayon-o">:</span><span class="crayon-cn">80</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-3"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">ServerAdmin </span><span class="crayon-v">webmaster</span><span class="crayon-sy">@</span><span class="crayon-e">localhost</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-4"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">DocumentRoot</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-o">/</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">ErrorLog</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">log</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-v">error</span><span class="crayon-sy">.</span><span class="crayon-e">log</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-6"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">CustomLog</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">log</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-v">access</span><span class="crayon-sy">.</span><span class="crayon-e">log </span><span class="crayon-e">combined</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-7"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">Alias</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-8"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-v">Directory</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">DAV </span><span class="crayon-e">On</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-10"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">AuthType </span><span class="crayon-e">Basic</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-11"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">AuthName</span><span class="crayon-h"> </span><span class="crayon-s">"webdav"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-12"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">AuthUserFile</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">httpd</span><span class="crayon-o">/</span><span class="crayon-sy">.</span><span class="crayon-e">htpasswd</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-13"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">Require </span><span class="crayon-v">valid</span><span class="crayon-o">-</span><span class="crayon-v">user</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-14"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">Directory</span><span class="crayon-o">&gt;</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b2213480866-15"><span class="crayon-o">&lt;</span><span class="crayon-o">/</span><span class="crayon-v">VirtualHost</span><span class="crayon-o">&gt;</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0008 seconds] -->
+<!-- [Format Time: 0.0041 seconds] -->
 </p>
 <div></div>
 </div>
@@ -494,7 +494,7 @@ DavLockDB /var/www/html/DavLock
 <div id="wiz_cm_1520070829008_3707" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40196000846687" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418b3704879149" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 apachectl restart</textarea></div>
@@ -502,9 +502,9 @@ apachectl restart</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40196000846687-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b3704879149-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40196000846687-1"><span class="crayon-e">apachectl </span><span class="crayon-v">restart</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b3704879149-1"><span class="crayon-e">apachectl </span><span class="crayon-v">restart</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -525,7 +525,7 @@ apachectl restart</textarea></div>
 <div id="wiz_cm_1520074806271_6445" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c40197294583020" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418b6458644031" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 curl https://rclone.org/install.sh | sudo bash</textarea></div>
@@ -533,9 +533,9 @@ curl https://rclone.org/install.sh | sudo bash</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c40197294583020-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b6458644031-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c40197294583020-1"><span class="crayon-e">curl </span><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//rclone.org/install.sh | sudo bash</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b6458644031-1"><span class="crayon-e">curl </span><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//rclone.org/install.sh | sudo bash</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -550,7 +550,7 @@ curl https://rclone.org/install.sh | sudo bash</textarea></div>
 <div id="wiz_cm_1520074369465_7091" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c401b9655111596" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418b7291369113" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 mkdir /var/www/html/webdav/rcmount</textarea></div>
@@ -558,9 +558,9 @@ mkdir /var/www/html/webdav/rcmount</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c401b9655111596-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b7291369113-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c401b9655111596-1"><span class="crayon-v">mkdir</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-o">/</span><span class="crayon-v">rcmount</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b7291369113-1"><span class="crayon-v">mkdir</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-o">/</span><span class="crayon-v">rcmount</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -573,7 +573,7 @@ mkdir /var/www/html/webdav/rcmount</textarea></div>
 <div id="wiz_cm_1520074164650_7786" class="wiz-code-container" data-mode="C++" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-692a2a2c401ba751807847" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-692a3452418b9479512636" class="urvanov-syntax-highlighter-syntax crayon-theme-classic urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 rclone mount 你的rc配置名 /var/www/html/webdav/rcmount vfs-cache-mode minimal --allow-other</textarea></div>
@@ -581,9 +581,9 @@ rclone mount 你的rc配置名 /var/www/html/webdav/rcmount vfs-cache-mode minim
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a2a2c401ba751807847-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-692a3452418b9479512636-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a2a2c401ba751807847-1"><span class="crayon-e">rclone </span><span class="crayon-i">mount</span><span class="crayon-h"> </span>你的<span class="crayon-i">rc</span>配置名<span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-o">/</span><span class="crayon-e">rcmount </span><span class="crayon-v">vfs</span><span class="crayon-o">-</span><span class="crayon-v">cache</span><span class="crayon-o">-</span><span class="crayon-e">mode </span><span class="crayon-v">minimal</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-v">allow</span><span class="crayon-o">-</span><span class="crayon-v">other</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-692a3452418b9479512636-1"><span class="crayon-e">rclone </span><span class="crayon-i">mount</span><span class="crayon-h"> </span>你的<span class="crayon-i">rc</span>配置名<span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-t">var</span><span class="crayon-o">/</span><span class="crayon-v">www</span><span class="crayon-o">/</span><span class="crayon-v">html</span><span class="crayon-o">/</span><span class="crayon-v">webdav</span><span class="crayon-o">/</span><span class="crayon-e">rcmount </span><span class="crayon-v">vfs</span><span class="crayon-o">-</span><span class="crayon-v">cache</span><span class="crayon-o">-</span><span class="crayon-e">mode </span><span class="crayon-v">minimal</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-v">allow</span><span class="crayon-o">-</span><span class="crayon-v">other</span></div></div></td>
 					</tr>
 				</table>
 			</div>
