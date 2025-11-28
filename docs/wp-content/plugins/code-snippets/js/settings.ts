@@ -1,5 +1,5 @@
-import { handleSettingsTabs } from './settings/tabs'
-import { handleEditorPreviewUpdates } from './settings/editor-preview'
+import { handleEditorPreviewUpdates, handleSettingsTabs, initVersionSwitch } from './services/settings'
 
 handleSettingsTabs()
 handleEditorPreviewUpdates()
+initVersionSwitch()

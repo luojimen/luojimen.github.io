@@ -6,13 +6,22 @@ class ShortPixelScreenBase
 	isMedia = true;
 	processor;
 	strings = [];
+	settings;
+
+	// ImageModel Constants
+	imageConstants = {
+		 COMPRESSION_LOSSLESS: 0,
+		 COMPRESSION_LOSSY: 1,
+		 COMPRESSION_GLOSSY: 2,
+		 ACTION_SMARTCROP: 100,
+		 ACTION_SMARTCROPLESS: 101,
+	};
 
 
 	constructor(MainScreen, processor)
 	{
 		 this.processor = processor;
 		 this.strings = spio_screenStrings;
-
 	}
 
 	// Function for subclasses to add more init. Seperated because of screens that need to call Process functions when starting.
@@ -24,8 +33,8 @@ class ShortPixelScreenBase
 //	var message = {status: false, http_status: response.status, http_text: text, status_text: response.statusText };
 	HandleError(data)
 	{
-		//if (this.processor.debugIsActive == 'false')
-		//	return; // stay silent when debug is not active.
+		if (this.processor.debugIsActive == 'false')
+			return; // stay silent when debug is not active.
 
 		var text = String(data.http_text);
 		var title = this.strings.fatalError;
@@ -38,11 +47,48 @@ class ShortPixelScreenBase
 				return;
 		}
 		el.prepend(notice);
+	}
 
+	// No actions at the base.
+	HandleItemError(result)
+	{
+
+	}
+
+	// Add notices that are coming for ajax responses to the place required.
+	AppendNotices(notices,element)
+	{
+			if (null === element)
+			{
+						console.error('Element is null, cannot display notices');
+						return;
+			}
+
+			for (let i = 0; i < notices.length; i++)
+			{
+				let notice = notices[i];
+
+				// Parse Dom
+				const parser = new DOMParser();
+				var dom = parser.parseFromString(notice, 'text/html');
+				var noticeDom = dom.body.firstChild;
+				if (noticeDom.classList.contains('is-dismissible'))
+				{
+					 //  Add close Event
+					let button = noticeDom.querySelector('button.notice-dismiss'); 
+					button.addEventListener('click', this.EventCloseErrorNotice.bind(this)); // Might be renamed
+
+				}
+			//	element.insertAdjacentHTML('afterend', notices[i]);
+			element.after(noticeDom); // Add to top
+			}
 	}
 
 	HandleErrorStop()
 	{
+		if (this.processor.debugIsActive == 'false')
+			return; // stay silent when debug is not active.
+
 		  var title = this.strings.fatalErrorStop;
 			var text = this.strings.fatalErrorStopText;
 
@@ -74,7 +120,6 @@ class ShortPixelScreenBase
 			notice.append(button);
 
 			return notice;
-
 	}
 
 	EventCloseErrorNotice(event)
@@ -104,10 +149,6 @@ class ShortPixelScreenBase
 		return null;
 	}
 
-	Init()
-	{
-
-	}
 	HandleImage(result, type)
 	{
 			return true;
@@ -131,4 +172,31 @@ class ShortPixelScreenBase
 		 return parseInt(str);
 	}
 
-}
+
+	// ** FADE OUT FUNCTION **
+  FadeOut(el) {
+			el.style.opacity = 0;
+			el.style.display = 'none';
+
+	};
+
+	// ** FADE IN FUNCTION **
+	 FadeIn(el, display) {
+			el.style.opacity = 1;
+			el.style.display = "block";
+
+	};
+
+	Show(el)
+	{
+		 el.style.display = 'block';
+	}
+
+	Hide(el)
+	{
+		el.style.display = 'none';
+	}
+
+
+
+} // class

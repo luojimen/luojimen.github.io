@@ -4,7 +4,7 @@
  *
  * @author Dmitry (dio) Levashov, dio@std42.ru
  **/
- elFinder.prototype.commands.edit = function() {
+elFinder.prototype.commands.edit = function() {
 	"use strict";
 	var self  = this,
 		fm    = this.fm,

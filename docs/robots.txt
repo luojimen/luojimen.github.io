@@ -1,3 +1,3 @@
-Sitemap: https://luojimen.github.io/sitemap.xml
+Sitemap: https://luoji.men/sitemap.xml
 User-agent: *
 

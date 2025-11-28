@@ -1,7 +1,8 @@
-import tinymce from 'tinymce'
-import { Snippet } from './Snippet'
-import { CodeEditorInstance, EditorOption, WordPressCodeEditor } from './WordPressCodeEditor'
-import { WordPressEditor } from './WordPressEditor'
+import type Prism from 'prismjs'
+import type tinymce from 'tinymce'
+import type { Snippet } from './Snippet'
+import type { CodeEditorInstance, EditorOption, WordPressCodeEditor } from './WordPressCodeEditor'
+import type { WordPressEditor } from './WordPressEditor'
 
 declare global {
 	interface Window {
@@ -13,28 +14,37 @@ declare global {
 		readonly ajaxurl: string
 		readonly tinymce?: tinymce.EditorManager
 		readonly wpActiveEditor?: string
-		readonly code_snippets_editor_preview?: CodeEditorInstance
+		code_snippets_editor_preview?: CodeEditorInstance
 		readonly code_snippets_editor_settings: EditorOption[]
+		CODE_SNIPPETS_PRISM?: typeof Prism
 		readonly CODE_SNIPPETS?: {
-			pluginUrl: string
 			isLicensed: boolean
 			restAPI: {
 				base: string
-				nonce: string
 				snippets: string
+				conditions: string
+				cloud: string
+				nonce: string
+				localToken: string
+			}
+			urls: {
+				plugin: string
+				manage: string
+				addNew: string
+				edit: string
+				connectCloud: string
 			}
 		}
 		readonly CODE_SNIPPETS_EDIT?: {
 			snippet: Snippet
-			addNewUrl: string
+			pageTitleActions: Record<string, string>
 			isPreview: boolean
-			enableTags: boolean
+			isLicensed: boolean
 			enableDownloads: boolean
-			extraSaveButtons: boolean
 			activateByDefault: boolean
 			enableDescription: boolean
+			hideUpsell: boolean
 			editorTheme: string
-			pageTitleActions: Record<string, string>
 			tagOptions: {
 				enabled: boolean
 				allowSpaces: boolean

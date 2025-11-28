@@ -59,24 +59,35 @@
 	border-radius: 100px;
 }
 .image_sizes-slider::after {
-	content: "NO";
+	content: "";
 	color: #fff;
 	position: absolute;
-	top: 5px;
+	top: 3px;
 	right: 7px;
 	font-size: 8px;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 	font-weight: bold;
 }
+.image-sizes-pro .image_sizes-slider::after {
+    position: absolute;
+    content: "\f160";
+    font-family: dashicons;
+    color: #ffffff;
+    font-size: 15px;
+    right: 5px;
+    top: 2px;
+}
+.image-sizes-pro-active .image_sizes-slider::after {
+    content: "NO";
+}
+
 
 .image_sizes-switch-checkbox:checked + .image_sizes-slider {
 	background-color: #00b492;
 }
-
 .image_sizes-switch-checkbox:checked + .image_sizes-slider::after {
-	content: "YES";
-	left: 6px;
+	content: "";
 }
 
 .image_sizes-switch-checkbox:focus + .image_sizes-slider {
@@ -110,6 +121,10 @@
 }
 #image_sizes-form-table td {
 	padding: 12px 0px;
+    width: 40%;
+}
+#image_sizes-form-table td:last-child {
+    width: 20%;
 }
 #image_sizes-form-table th {
 	font-weight: 600;
@@ -148,3 +163,62 @@
 	display: none;
 	background: lightgrey url("../img/loader.gif") center center no-repeat;
 }
+.cx-claim {
+    color: #002cff;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.cx-wizard-heading a{
+	color: #000;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.cx-wizard-icon{
+	height: 30px;
+	width: 30px;
+}
+
+/* Pro popup start */
+#thumb-pro-popup {
+    width: 500px;
+    background: white;
+    position: fixed;
+    top: 200px;
+    left: calc(50% - 250px);
+    z-index: 9999;
+    padding: 15px;
+    box-shadow: 0 0 60px #c2d7ff;
+    border-radius: 7px;
+    text-align: center;
+}
+#thumb-pro-popup #thumb-pro-popup-hide {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #c8daff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.thumb-pro-popup-img {
+    height: 200px;
+}
+.thumb-pro-popup-txt {
+    font-size: 15px;
+}
+#thumb-pro-popup-btn {
+    background: #075BFE;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    animation: glowing 0.8s infinite;
+    font-weight: bold;
+    display: inline-flex;
+    margin-top: 10px;
+}
+/* Pro popup End */

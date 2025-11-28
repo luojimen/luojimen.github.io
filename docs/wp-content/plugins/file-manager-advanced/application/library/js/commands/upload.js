@@ -198,11 +198,15 @@ elFinder.prototype.commands.upload = function() {
 				idx, errors;
 			
 			if (trf) {
-				if (trf.types && trf.types.length && (idx = $.inArray('Files', trf.types)) !== -1) {
-				    kind = 'file';
+				if (trf.types && trf.types.length) {
+					if ((idx = $.inArray('application/x-moz-file', trf.types)) !== -1) {
+						kind = 'file';
+					} else if ((idx = $.inArray('Files', trf.types)) !== -1) {
+						kind = 'file';
+					}
 				}
 				else if (trf.items && trf.items.length && trf.items[0].kind) {
-				    kind = trf.items[0].kind;
+					kind = trf.items[0].kind;
 				}
 
 				try {
@@ -216,11 +220,6 @@ elFinder.prototype.commands.upload = function() {
 					}
 				} catch(e) {}
 				
-                // fix for firefox
-				if(navigator.userAgent.search("Firefox") != '-1' && idx == '1') {
-					idx = 0;
-				}
-
 				if (kind === 'file' && (trf.items[idx].getAsEntry || trf.items[idx].webkitGetAsEntry || trf.items[idx].getAsFile)) {
 					file = trf;
 					type = 'data';
