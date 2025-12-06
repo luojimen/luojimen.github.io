@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ubuntu下使用 root 远程登录 ssh - 逻辑 | LuoJi.eu.org</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="format-detection" content="telphone=no, date=no, address=no, email=no"><meta name="theme-color" content="#282a2c"><meta name="keywords" itemprop="keywords" content="linux"><meta name="description" itemprop="description" content="ubuntu默认未启用root用户的SSH远程连接 启用方法依下: 1/ 给root用户设定密码: [crayon-69339d5644727141870159/] 2/ 修改openssh serv [&hellip;]"><meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:site_name" content="逻辑 | LuoJi.eu.org"><meta property="og:url" content="https://luojimen.github.io/2017/12/ubuntu%e4%b8%8b%e4%bd%bf%e7%94%a8-root-%e8%bf%9c%e7%a8%8b%e7%99%bb%e5%bd%95-ssh/"><meta property="og:title" content="ubuntu下使用 root 远程登录 ssh"><meta property="og:image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:image:type" content="image/webp"><meta property="og:locale" content="zh-CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ubuntu下使用 root 远程登录 ssh"><meta name="twitter:creator" content="书三拾"><meta name='robots' content='max-image-preview:large' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="format-detection" content="telphone=no, date=no, address=no, email=no"><meta name="theme-color" content="#282a2c"><meta name="keywords" itemprop="keywords" content="linux"><meta name="description" itemprop="description" content="ubuntu默认未启用root用户的SSH远程连接 启用方法依下: 1/ 给root用户设定密码: [crayon-69339fae7126e319698091/] 2/ 修改openssh serv [&hellip;]"><meta itemprop="image" content="https://luoji.eu.org/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:site_name" content="逻辑 | LuoJi.eu.org"><meta property="og:url" content="https://luojimen.github.io/2017/12/ubuntu%e4%b8%8b%e4%bd%bf%e7%94%a8-root-%e8%bf%9c%e7%a8%8b%e7%99%bb%e5%bd%95-ssh/"><meta property="og:title" content="ubuntu下使用 root 远程登录 ssh"><meta property="og:image" content="https://luoji.eu.org/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:image:type" content="image/webp"><meta property="og:locale" content="zh-CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ubuntu下使用 root 远程登录 ssh"><meta name="twitter:creator" content="书三拾"><meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
 <link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
@@ -35,8 +35,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 height: 100%;
             }
 </style>
-<link rel="alternate" type="application/json+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.eu.org%2F2017%2F12%2Fubuntu%25e4%25b8%258b%25e4%25bd%25bf%25e7%2594%25a8-root-%25e8%25bf%259c%25e7%25a8%258b%25e7%2599%25bb%25e5%25bd%2595-ssh%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.eu.org%2F2017%2F12%2Fubuntu%25e4%25b8%258b%25e4%25bd%25bf%25e7%2594%25a8-root-%25e8%25bf%259c%25e7%25a8%258b%25e7%2599%25bb%25e5%25bd%2595-ssh%2F&#038;format=xml" />
+<link rel="alternate" type="application/json+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.men%2F2017%2F12%2Fubuntu%25e4%25b8%258b%25e4%25bd%25bf%25e7%2594%25a8-root-%25e8%25bf%259c%25e7%25a8%258b%25e7%2599%25bb%25e5%25bd%2595-ssh%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.men%2F2017%2F12%2Fubuntu%25e4%25b8%258b%25e4%25bd%25bf%25e7%2594%25a8-root-%25e8%25bf%259c%25e7%25a8%258b%25e7%2599%25bb%25e5%25bd%2595-ssh%2F&#038;format=xml" />
 <style type="text/css">.broken_link, a.broken_link {
 	text-decoration: line-through;
 }</style><!-- Google tag (gtag.js) -->
@@ -101,7 +101,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                         <span class="line third-line"></span>
                     </button>
                 <div id="navbarResponsive" class="collapse navbar-collapse"><ul id="menu-menu-1" class="navbar-nav ml-auto"><li class="nav-item" ><a title="我的" href="https://luojimen.github.io/my/" class="nav-link">我的</a></li>
-<li class="nav-item" ><a title="主站" href="https://luojimen.github.io/" class="nav-link">主站</a></li>
+<li class="nav-item" ><a title="主站" href="https://luoji.eu.org/" class="nav-link">主站</a></li>
 <li class="nav-item" ><a title="在线工具站" href="https://luojimen.github.io/online-tool-station/" class="nav-link">在线工具站</a></li>
 <li class="nav-item" ><a title="运维" href="https://luojimen.github.io/operation-and-maintenance/" class="nav-link">运维</a></li>
 <li class="nav-item" ><a title="目录" href="https://luojimen.github.io/catalogue/" class="nav-link">目录</a></li>
@@ -124,7 +124,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">ubuntu下使用 root 远程登录 ssh</h1>
                             <div class="meta">
                                 <span>2017年12月3日</span>
-                                                                    <span>2384点热度</span>
+                                                                    <span>2385点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -136,7 +136,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <div id="wiz_cm_1512215666064_9919" class="wiz-code-container" data-mode="HTML" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-69339d5644727141870159" class="urvanov-syntax-highlighter-syntax crayon-theme-1c-zapros urvanov-syntax-highlighter-font-verdana urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-69339fae7126e319698091" class="urvanov-syntax-highlighter-syntax crayon-theme-1c-zapros urvanov-syntax-highlighter-font-verdana urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 sudo passwd root</textarea></div>
@@ -144,9 +144,9 @@ sudo passwd root</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-69339d5644727141870159-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-69339fae7126e319698091-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-69339d5644727141870159-1"><span class="crayon-e">sudo </span><span class="crayon-e">passwd </span><span class="crayon-v">root</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-69339fae7126e319698091-1"><span class="crayon-e">sudo </span><span class="crayon-e">passwd </span><span class="crayon-v">root</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -161,7 +161,7 @@ sudo passwd root</textarea></div>
 <div id="wiz_cm_1512215732628_8756" class="wiz-code-container" data-mode="HTML" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-69339d5644730114702318" class="urvanov-syntax-highlighter-syntax crayon-theme-1c-zapros urvanov-syntax-highlighter-font-verdana urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-69339fae71276104376916" class="urvanov-syntax-highlighter-syntax crayon-theme-1c-zapros urvanov-syntax-highlighter-font-verdana urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 sudo vi /etc/ssh/sshd_config</textarea></div>
@@ -169,9 +169,9 @@ sudo vi /etc/ssh/sshd_config</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-69339d5644730114702318-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-69339fae71276104376916-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-69339d5644730114702318-1"><span class="crayon-e">sudo </span><span class="crayon-v">vi</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">ssh</span><span class="crayon-o">/</span><span class="crayon-v">sshd_config</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-69339fae71276104376916-1"><span class="crayon-e">sudo </span><span class="crayon-v">vi</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">etc</span><span class="crayon-o">/</span><span class="crayon-v">ssh</span><span class="crayon-o">/</span><span class="crayon-v">sshd_config</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -184,7 +184,7 @@ sudo vi /etc/ssh/sshd_config</textarea></div>
 <div id="wiz_cm_1512215810484_4335" class="wiz-code-container" data-mode="HTML" data-theme="default">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-69339d5644732968818256" class="urvanov-syntax-highlighter-syntax crayon-theme-1c-zapros urvanov-syntax-highlighter-font-verdana urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-69339fae71278742022814" class="urvanov-syntax-highlighter-syntax crayon-theme-1c-zapros urvanov-syntax-highlighter-font-verdana urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 sudo service ssh restart</textarea></div>
@@ -192,9 +192,9 @@ sudo service ssh restart</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-69339d5644732968818256-1">1</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-69339fae71278742022814-1">1</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-69339d5644732968818256-1"><span class="crayon-e">sudo </span><span class="crayon-e">service </span><span class="crayon-e">ssh </span><span class="crayon-v">restart</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-69339fae71278742022814-1"><span class="crayon-e">sudo </span><span class="crayon-e">service </span><span class="crayon-e">ssh </span><span class="crayon-v">restart</span></div></div></td>
 					</tr>
 				</table>
 			</div>
@@ -272,7 +272,7 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/seatonjiang/kratos@v4.2.1/assets/js/DPlayer.min.js?ver=4.2.1' id='dplayer-js'></script>
 <script type='text/javascript' id='kratos-js-extra'>
 /* <![CDATA[ */
-var kratos = {"site":"https:\/\/luojimen.github.io","directory":"https:\/\/cdn.jsdelivr.net\/gh\/seatonjiang\/kratos@v4.2.1","alipay":"https:\/\/luojimen.github.io\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","wechat":"https:\/\/luojimen.github.io\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","lightgallery":"1","repeat":"\u60a8\u5df2\u7ecf\u8d5e\u8fc7\u4e86","thanks":"\u611f\u8c22\u60a8\u7684\u652f\u6301","donate":"\u6253\u8d4f\u4f5c\u8005","scan":"\u626b\u7801\u652f\u4ed8"};
+var kratos = {"site":"https:\/\/luojimen.github.io","directory":"https:\/\/cdn.jsdelivr.net\/gh\/seatonjiang\/kratos@v4.2.1","alipay":"https:\/\/luoji.eu.org\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","wechat":"https:\/\/luoji.eu.org\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","lightgallery":"1","repeat":"\u60a8\u5df2\u7ecf\u8d5e\u8fc7\u4e86","thanks":"\u611f\u8c22\u60a8\u7684\u652f\u6301","donate":"\u6253\u8d4f\u4f5c\u8005","scan":"\u626b\u7801\u652f\u4ed8"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/seatonjiang/kratos@v4.2.1/assets/js/kratos.js?ver=4.2.1' id='kratos-js'></script>
