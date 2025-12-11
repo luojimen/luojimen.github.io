@@ -52,6 +52,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 <!-- 谷歌收录的验证方式 -->
 <meta name="google-site-verification" content="XxPfUFFG0MmfvRUNs2AFXHfRXRx_xVLXdD_6Si95rJ0" />
+<!-- 谷歌收录的验证方式sok-luoji.eu.org -->
+<meta name="google-site-verification" content="IWGkGkcNk1N0IaVhCin-Seeitqc7sGT_dRWL1M15DjI" />
 <!-- bing收录验证luojimen.github.io -->
 <meta name="msvalidate.01" content="508C6C00EA05098C32CD4DB253B3CB66" />
 <!-- baidu收录验证luojimen.github.io -->
@@ -124,7 +126,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">条条大路通罗马：网站的301转跳优化</h1>
                             <div class="meta">
                                 <span>2017年5月26日</span>
-                                                                    <span>2501点热度</span>
+                                                                    <span>2530点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -137,7 +139,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <ul>
 <li>西部数码的URL转发是使用301，使用这种方式，以后修改ip，只需要维护一个www.luoji.eu.org的解析即可。<br />
 <img loading="lazy" class="alignnone size-full wp-image-2377" src="https://luojimen.github.io/wp-content/uploads/2017/05/754163bc5e345e36f46ef97022e469a3_792db18f-54b9-4c73-b990-a9096ac02233.png" width="708" height="383" alt="754163bc5e345e36f46ef97022e469a3_792db18f-54b9-4c73-b990-a9096ac02233" title="754163bc5e345e36f46ef97022e469a3_792db18f-54b9-4c73-b990-a9096ac02233" /></li>
-<li>页面提示说支持https，但我没有使用这种，而是<a href="" target="_blank"  rel="nofollow" >http://luoji.eu.org</a> 301 到<a href="http://www.luoji.eu.org" target="_blank" rel="nofollow" class="broken_link">http://www.luoji.eu.org</a>，<a href="http://www.luoji.eu.org" target="_blank" rel="nofollow" class="broken_link">http://www.luoji.eu.org</a> 再301到<a href="https://www.luoji.eu.org" target="_blank" rel="nofollow" class="broken_link">https://www.luoji.eu.org</a>，将来换ip，或者https取消，只要维护<a href="http://www.luoji.eu.org" target="_blank" rel="nofollow" class="broken_link">http://www.luoji.eu.org</a>这个站点即可。<br />
+<li>页面提示说支持https，但我没有使用这种，而是<a href="" target="_blank"  rel="nofollow" >http://luoji.eu.org</a> 301 到<a href="http://www.luoji.eu.org" target="_blank" rel="nofollow" class="broken_link">http://www.luoji.eu.org</a>，<a href="http://www.luoji.eu.org" target="_blank" rel="nofollow" class="broken_link">http://www.luoji.eu.org</a> 再301到<a href="https://www.luoji.eu.org" target="_blank"  rel="nofollow" >https://www.luoji.eu.org</a>，将来换ip，或者https取消，只要维护<a href="http://www.luoji.eu.org" target="_blank" rel="nofollow" class="broken_link">http://www.luoji.eu.org</a>这个站点即可。<br />
 检测生效：<img loading="lazy" class="alignnone size-full wp-image-2376" src="https://luojimen.github.io/wp-content/uploads/2017/05/754163bc5e345e36f46ef97022e469a3_84da1cb7-b53f-4cef-8a95-b9a9bf20e985.png" width="487" height="444" alt="754163bc5e345e36f46ef97022e469a3_84da1cb7-b53f-4cef-8a95-b9a9bf20e985" title="754163bc5e345e36f46ef97022e469a3_84da1cb7-b53f-4cef-8a95-b9a9bf20e985" /></li>
 </ul>
 <h2  id="apache下http 301方式转跳到https的代码"><a name="toc-2"></a>apache下http 301方式转跳到https的代码</h2>
@@ -147,7 +149,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <div class="wiz-code-container">
 <!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-69339f925f0ad288967052" class="urvanov-syntax-highlighter-syntax crayon-theme-1c-zapros urvanov-syntax-highlighter-font-verdana urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-693b10e23eeb8132094786" class="urvanov-syntax-highlighter-syntax crayon-theme-1c-zapros urvanov-syntax-highlighter-font-verdana urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 RewriteEngine On 
@@ -157,14 +159,14 @@ RewriteRule ^(.*)$ https://luoji.eu.org/$1 [R=301,L]</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-69339f925f0ad288967052-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-69339f925f0ad288967052-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-69339f925f0ad288967052-3">3</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-693b10e23eeb8132094786-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-693b10e23eeb8132094786-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-693b10e23eeb8132094786-3">3</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-69339f925f0ad288967052-1"><span class="crayon-e">RewriteEngine</span><span class="crayon-h"> </span><span class="crayon-e">On</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-69339f925f0ad288967052-2"><span class="crayon-e">RewriteCond</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-sy">{</span><span class="crayon-v">SERVER_PORT</span><span class="crayon-sy">}</span><span class="crayon-h"> </span><span class="crayon-cn">80</span><span class="crayon-h"> </span></div><div class="crayon-line" id="urvanov-syntax-highlighter-69339f925f0ad288967052-3"><span class="crayon-v">RewriteRule</span><span class="crayon-h"> </span><span class="crayon-o">^</span><span class="crayon-sy">(</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-sy">)</span><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//luoji.eu.org/$1 [R=301,L]</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-693b10e23eeb8132094786-1"><span class="crayon-e">RewriteEngine</span><span class="crayon-h"> </span><span class="crayon-e">On</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-693b10e23eeb8132094786-2"><span class="crayon-e">RewriteCond</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-sy">{</span><span class="crayon-v">SERVER_PORT</span><span class="crayon-sy">}</span><span class="crayon-h"> </span><span class="crayon-cn">80</span><span class="crayon-h"> </span></div><div class="crayon-line" id="urvanov-syntax-highlighter-693b10e23eeb8132094786-3"><span class="crayon-v">RewriteRule</span><span class="crayon-h"> </span><span class="crayon-o">^</span><span class="crayon-sy">(</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-sy">)</span><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//luoji.eu.org/$1 [R=301,L]</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0056 seconds] -->
+<!-- [Format Time: 0.0011 seconds] -->
 
 </div>
 <p>检测生效：<img loading="lazy" class="alignnone size-full wp-image-2379" src="https://luojimen.github.io/wp-content/uploads/2017/05/754163bc5e345e36f46ef97022e469a3_5b683601-fb0e-409d-954f-ad067d1fbd76.png" width="543" height="424" alt="754163bc5e345e36f46ef97022e469a3_5b683601-fb0e-409d-954f-ad067d1fbd76" title="754163bc5e345e36f46ef97022e469a3_5b683601-fb0e-409d-954f-ad067d1fbd76" /></p>
