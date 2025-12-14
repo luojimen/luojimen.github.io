@@ -1,4 +1,4 @@
-Sitemap: https://luoji.eu.org/sitemap.xml
+Sitemap: https://luojimen.github.io/sitemap.xml
 User-agent: *
 
 
