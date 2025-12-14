@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>padavan的ipv6内网穿透 - 逻辑 | LuoJi.eu.org</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="format-detection" content="telphone=no, date=no, address=no, email=no"><meta name="theme-color" content="#282a2c"><meta name="keywords" itemprop="keywords" content="路由器"><meta name="description" itemprop="description" content="目的 让路由器下面的设备获取公网ipv6地址. 效果 移动4G手机使用mstsc远程桌面成功访问联通4G热点下二级路由器padavan(wan无线桥接到上级热点)下的windows桌面. 不影响内网设 [&hellip;]"><meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:site_name" content="逻辑 | LuoJi.eu.org"><meta property="og:url" content="https://luojimen.github.io/2020/03/padavan%e7%9a%84ipv6%e5%86%85%e7%bd%91%e7%a9%bf%e9%80%8f/"><meta property="og:title" content="padavan的ipv6内网穿透"><meta property="og:image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:image:type" content="image/webp"><meta property="og:locale" content="zh-CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="padavan的ipv6内网穿透"><meta name="twitter:creator" content="书三拾"><meta name='robots' content='max-image-preview:large' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="format-detection" content="telphone=no, date=no, address=no, email=no"><meta name="theme-color" content="#282a2c"><meta name="keywords" itemprop="keywords" content="路由器"><meta name="description" itemprop="description" content="目的 让路由器下面的设备获取公网ipv6地址. 效果 移动4G手机使用mstsc远程桌面成功访问联通4G热点下二级路由器padavan(wan无线桥接到上级热点)下的windows桌面. 不影响内网设 [&hellip;]"><meta itemprop="image" content="https://luoji.eu.org/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:site_name" content="逻辑 | LuoJi.eu.org"><meta property="og:url" content="https://luojimen.github.io/2020/03/padavan%e7%9a%84ipv6%e5%86%85%e7%bd%91%e7%a9%bf%e9%80%8f/"><meta property="og:title" content="padavan的ipv6内网穿透"><meta property="og:image" content="https://luoji.eu.org/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:image:type" content="image/webp"><meta property="og:locale" content="zh-CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="padavan的ipv6内网穿透"><meta name="twitter:creator" content="书三拾"><meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
-<link rel='dns-prefetch' href='//zz.bdstatic.com' />
+<link rel='dns-prefetch' href='//push.zhanzhang.baidu.com' />
 <link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-theme-1c-zapros-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/themes/1c-zapros/1c-zapros.css?ver=2.8.27' type='text/css' media='all' />
 <link rel='stylesheet' id='crayon-font-verdana-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/fonts/verdana.css?ver=2.8.27' type='text/css' media='all' />
@@ -35,8 +35,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 height: 100%;
             }
 </style>
-<link rel="alternate" type="application/json+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.eu.org%2F2020%2F03%2Fpadavan%25e7%259a%2584ipv6%25e5%2586%2585%25e7%25bd%2591%25e7%25a9%25bf%25e9%2580%258f%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.eu.org%2F2020%2F03%2Fpadavan%25e7%259a%2584ipv6%25e5%2586%2585%25e7%25bd%2591%25e7%25a9%25bf%25e9%2580%258f%2F&#038;format=xml" />
+<link rel="alternate" type="application/json+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2F150.230.205.188%3A20080%2F2020%2F03%2Fpadavan%25e7%259a%2584ipv6%25e5%2586%2585%25e7%25bd%2591%25e7%25a9%25bf%25e9%2580%258f%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=http%3A%2F%2F150.230.205.188%3A20080%2F2020%2F03%2Fpadavan%25e7%259a%2584ipv6%25e5%2586%2585%25e7%25bd%2591%25e7%25a9%25bf%25e9%2580%258f%2F&#038;format=xml" />
 <style type="text/css">.broken_link, a.broken_link {
 	text-decoration: line-through;
 }</style><!-- Google tag (gtag.js) -->
@@ -95,7 +95,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     <div class="k-header">
         <nav class="k-nav navbar navbar-expand-lg navbar-light fixed-top" style="background:#1e73be">
             <div class="container">
-                <a class="navbar-brand" href="http://luojimen.github.io">
+                <a class="navbar-brand" href="https://luojimen.github.io">
                     <h1>逻辑 | LuoJi.eu.org</h1>                </a>
                                     <button class="navbar-toggler navbar-toggler-right" id="navbutton" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="line first-line"></span>
@@ -103,7 +103,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                         <span class="line third-line"></span>
                     </button>
                 <div id="navbarResponsive" class="collapse navbar-collapse"><ul id="menu-menu-1" class="navbar-nav ml-auto"><li class="nav-item" ><a title="我的" href="https://luojimen.github.io/my/" class="nav-link">我的</a></li>
-<li class="nav-item" ><a title="主站" href="https://luojimen.github.io/" class="nav-link">主站</a></li>
+<li class="nav-item" ><a title="主站" href="https://luoji.eu.org/" class="nav-link">主站</a></li>
 <li class="nav-item" ><a title="在线工具站" href="https://luojimen.github.io/online-tool-station/" class="nav-link">在线工具站</a></li>
 <li class="nav-item" ><a title="运维" href="https://luojimen.github.io/operation-and-maintenance/" class="nav-link">运维</a></li>
 <li class="nav-item" ><a title="目录" href="https://luojimen.github.io/catalogue/" class="nav-link">目录</a></li>
@@ -126,7 +126,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h1 class="title">padavan的ipv6内网穿透</h1>
                             <div class="meta">
                                 <span>2020年3月1日</span>
-                                                                    <span>3015点热度</span>
+                                                                    <span>3016点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
@@ -152,7 +152,7 @@ Tips3:路由器获得ipv6(不使用本方案),内网机器也无法ping通路由
 </ul>
 <div><!-- Urvanov Syntax Highlighter v2.8.27 -->
 
-		<div id="urvanov-syntax-highlighter-693e6b6446f46957019532" class="urvanov-syntax-highlighter-syntax crayon-theme-1c-zapros urvanov-syntax-highlighter-font-verdana urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		<div id="urvanov-syntax-highlighter-693e705354cd9532239434" class="urvanov-syntax-highlighter-syntax crayon-theme-1c-zapros urvanov-syntax-highlighter-font-verdana urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
 		
 			<div class="urvanov-syntax-highlighter-plain-wrap"><textarea  class="urvanov-syntax-highlighter-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
 ### 内网设备获取ipv6地址
@@ -163,14 +163,14 @@ brctl addif br0 apclii0</textarea></div>
 				<table class="crayon-table">
 					<tr class="urvanov-syntax-highlighter-row">
 				<td class="crayon-nums " data-settings="show">
-					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-693e6b6446f46957019532-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-693e6b6446f46957019532-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-693e6b6446f46957019532-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-693e6b6446f46957019532-4">4</div></div>
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-693e705354cd9532239434-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-693e705354cd9532239434-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-693e705354cd9532239434-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-693e705354cd9532239434-4">4</div></div>
 				</td>
-						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-693e6b6446f46957019532-1"><span class="crayon-p">### 内网设备获取ipv6地址</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-693e6b6446f46957019532-2"><span class="crayon-e">modprobe </span><span class="crayon-e">ip6table_mangle</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-693e6b6446f46957019532-3"><span class="crayon-v">ebtables</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">t</span><span class="crayon-h"> </span><span class="crayon-v">broute</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">A</span><span class="crayon-h"> </span><span class="crayon-v">BROUTING</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">p</span><span class="crayon-h"> </span><span class="crayon-o">!</span><span class="crayon-h"> </span><span class="crayon-v">ipv6</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">j</span><span class="crayon-h"> </span><span class="crayon-v">DROP</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">i</span><span class="crayon-h"> </span><span class="crayon-e">apclii0</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-693e6b6446f46957019532-4"><span class="crayon-e">brctl </span><span class="crayon-e">addif </span><span class="crayon-e">br0 </span><span class="crayon-v">apclii0</span></div></div></td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-693e705354cd9532239434-1"><span class="crayon-p">### 内网设备获取ipv6地址</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-693e705354cd9532239434-2"><span class="crayon-e">modprobe </span><span class="crayon-e">ip6table_mangle</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-693e705354cd9532239434-3"><span class="crayon-v">ebtables</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">t</span><span class="crayon-h"> </span><span class="crayon-v">broute</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">A</span><span class="crayon-h"> </span><span class="crayon-v">BROUTING</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">p</span><span class="crayon-h"> </span><span class="crayon-o">!</span><span class="crayon-h"> </span><span class="crayon-v">ipv6</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">j</span><span class="crayon-h"> </span><span class="crayon-v">DROP</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">i</span><span class="crayon-h"> </span><span class="crayon-e">apclii0</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-693e705354cd9532239434-4"><span class="crayon-e">brctl </span><span class="crayon-e">addif </span><span class="crayon-e">br0 </span><span class="crayon-v">apclii0</span></div></div></td>
 					</tr>
 				</table>
 			</div>
 		</div>
-<!-- [Format Time: 0.0004 seconds] -->
+<!-- [Format Time: 0.0002 seconds] -->
 </div>
 <ul>
 <li>3.断开wan后重连(or重启路由器),使用其他设备连接路由器测试,可以获得ipv6便算成功
@@ -255,7 +255,7 @@ brctl addif br0 apclii0</textarea></div>
 </div>
 <script type='text/javascript' id='urvanov_syntax_highlighter_js-js-extra'>
 /* <![CDATA[ */
-var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.27","is_admin":"0","ajaxurl":"https:\/\/luojimen.github.io\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.27","is_admin":"0","ajaxurl":"http:\/\/luojimen.github.io\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
 var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"\u70b9\u51fb\u5c55\u5f00\u4ee3\u7801"};
 /* ]]> */
 </script>
@@ -266,17 +266,17 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/seatonjiang/kratos@v4.2.1/assets/js/DPlayer.min.js?ver=4.2.1' id='dplayer-js'></script>
 <script type='text/javascript' id='kratos-js-extra'>
 /* <![CDATA[ */
-var kratos = {"site":"https:\/\/luojimen.github.io","directory":"https:\/\/cdn.jsdelivr.net\/gh\/seatonjiang\/kratos@v4.2.1","alipay":"https:\/\/luojimen.github.io\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","wechat":"https:\/\/luojimen.github.io\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","lightgallery":"1","repeat":"\u60a8\u5df2\u7ecf\u8d5e\u8fc7\u4e86","thanks":"\u611f\u8c22\u60a8\u7684\u652f\u6301","donate":"\u6253\u8d4f\u4f5c\u8005","scan":"\u626b\u7801\u652f\u4ed8"};
+var kratos = {"site":"http:\/\/luojimen.github.io","directory":"https:\/\/cdn.jsdelivr.net\/gh\/seatonjiang\/kratos@v4.2.1","alipay":"https:\/\/luoji.eu.org\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","wechat":"https:\/\/luoji.eu.org\/wp-content\/themes\/kratos-4.1.2\/assets\/img\/200.png","lightgallery":"1","repeat":"\u60a8\u5df2\u7ecf\u8d5e\u8fc7\u4e86","thanks":"\u611f\u8c22\u60a8\u7684\u652f\u6301","donate":"\u6253\u8d4f\u4f5c\u8005","scan":"\u626b\u7801\u652f\u4ed8"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/seatonjiang/kratos@v4.2.1/assets/js/kratos.js?ver=4.2.1' id='kratos-js'></script>
 <script type='text/javascript' id='comment-js-extra'>
 /* <![CDATA[ */
-var ajaxcomment = {"ajax_url":"https:\/\/luojimen.github.io\/wp-admin\/admin-ajax.php","order":"asc","compost":"\u8bc4\u8bba\u6b63\u5728\u63d0\u4ea4\u4e2d","comsucc":"\u8bc4\u8bba\u63d0\u4ea4\u6210\u529f"};
+var ajaxcomment = {"ajax_url":"http:\/\/luojimen.github.io\/wp-admin\/admin-ajax.php","order":"asc","compost":"\u8bc4\u8bba\u6b63\u5728\u63d0\u4ea4\u4e2d","comsucc":"\u8bc4\u8bba\u63d0\u4ea4\u6210\u529f"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/seatonjiang/kratos@v4.2.1/assets/js/comments.min.js?ver=4.2.1' id='comment-js'></script>
-<script type='text/javascript' src='https://zz.bdstatic.com/linksubmit/push.js?ver=6.0.11' id='baidu_zz_push-js'></script>
+<script type='text/javascript' src='http://push.zhanzhang.baidu.com/push.js?ver=6.0.11' id='baidu_zz_push-js'></script>
 </body>
 
 </html>
