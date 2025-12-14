@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>IIS的Webdav报错404无法播放mkv视频和调用字幕文件 - 逻辑 | LuoJi.eu.org</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="format-detection" content="telphone=no, date=no, address=no, email=no"><meta name="theme-color" content="#282a2c"><meta name="keywords" itemprop="keywords" content=""><meta name="description" itemprop="description" content="故障现象：nplayer访问IIS的webdav服务，点播mkv视频出现报错信息：“此文件不可播放：404”—— 这是因为IIS的对MIME类型实施白名单策略，没有添加到MIME类中的文件类型（即后缀 [&hellip;]"><meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:site_name" content="逻辑 | LuoJi.eu.org"><meta property="og:url" content="https://luojimen.github.io/2023/02/webdav-error-404-in-iis-cannot-play-mkv-video-and-call-subtitle-file/"><meta property="og:title" content="IIS的Webdav报错404无法播放mkv视频和调用字幕文件"><meta property="og:image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:image:type" content="image/webp"><meta property="og:locale" content="zh-CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="IIS的Webdav报错404无法播放mkv视频和调用字幕文件"><meta name="twitter:creator" content="书三拾"><meta name='robots' content='max-image-preview:large' />
+    <title>提取mosquitto_sub和依赖库（从Opkg在Padavan）（搁置:域名解析报错） - 逻辑 | LuoJi.eu.org</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="format-detection" content="telphone=no, date=no, address=no, email=no"><meta name="theme-color" content="#282a2c"><meta name="keywords" itemprop="keywords" content=""><meta name="description" itemprop="description" content="缘由： &nbsp; &nbsp;&nbsp;opt环境在晚高峰几乎无法部署成功，下载https://opt.cn2qq.com/opt-file/opttmpg12.tgz总是失败，如果在这个时间段 [&hellip;]"><meta itemprop="image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:site_name" content="逻辑 | LuoJi.eu.org"><meta property="og:url" content="https://luojimen.github.io/2025/12/extract-mosquitto_stub-and-dependency-libraries-from-opkg-in-padavan-put-on-hold-domain-resolution-error/"><meta property="og:title" content="提取mosquitto_sub和依赖库（从Opkg在Padavan）（搁置:域名解析报错）"><meta property="og:image" content="https://luojimen.github.io/wp-content/themes/kratos-4.1.2/assets/img/default.jpg"><meta property="og:image:type" content="image/webp"><meta property="og:locale" content="zh-CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="提取mosquitto_sub和依赖库（从Opkg在Padavan）（搁置:域名解析报错）"><meta name="twitter:creator" content="书三拾"><meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
 <link rel='dns-prefetch' href='//zz.bdstatic.com' />
 <link rel='stylesheet' id='urvanov_syntax_highlighter-css'  href='https://luojimen.github.io/wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.27' type='text/css' media='all' />
@@ -33,8 +33,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 height: 100%;
             }
 </style>
-<link rel="alternate" type="application/json+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.eu.org%2F2023%2F02%2Fwebdav-error-404-in-iis-cannot-play-mkv-video-and-call-subtitle-file%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.eu.org%2F2023%2F02%2Fwebdav-error-404-in-iis-cannot-play-mkv-video-and-call-subtitle-file%2F&#038;format=xml" />
+<link rel="alternate" type="application/json+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.eu.org%2F2025%2F12%2Fextract-mosquitto_stub-and-dependency-libraries-from-opkg-in-padavan-put-on-hold-domain-resolution-error%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://luojimen.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fluoji.eu.org%2F2025%2F12%2Fextract-mosquitto_stub-and-dependency-libraries-from-opkg-in-padavan-put-on-hold-domain-resolution-error%2F&#038;format=xml" />
 <style type="text/css">.broken_link, a.broken_link {
 	text-decoration: line-through;
 }</style><!-- Google tag (gtag.js) -->
@@ -117,57 +117,154 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                                     <li class="breadcrumb-item">
                                         <a class="text-dark" href="https://luojimen.github.io"> 首页</a>
                                     </li>
-                                    <li class="breadcrumb-item"> <a class="text-dark" href="https://luojimen.github.io/category/pc/">电脑相关</a></li>                                    <li class="breadcrumb-item active" aria-current="page"> 正文</li>
+                                    <li class="breadcrumb-item"> <a class="text-dark" href="https://luojimen.github.io/category/linux/">Linux</a></li>                                    <li class="breadcrumb-item active" aria-current="page"> 正文</li>
                                 </ol>
                             </div>
                                                 <div class="header">
-                            <h1 class="title">IIS的Webdav报错404无法播放mkv视频和调用字幕文件</h1>
+                            <h1 class="title">提取mosquitto_sub和依赖库（从Opkg在Padavan）（搁置:域名解析报错）</h1>
                             <div class="meta">
-                                <span>2023年2月28日</span>
-                                                                    <span>1813点热度</span>
+                                <span>2025年12月14日</span>
+                                                                    <span>12点热度</span>
                                                                                             </div>
                         </div>
                         <div class="content" id="lightgallery">
-                            <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><div>故障现象：<span style="">nplayer访问IIS的webdav服务，点播mkv视频出现报错信息：“此文件不可播放：404</span><span style="">”——</span></div>
-<div>这是因为IIS的对MIME类型实施白名单策略，没有添加到MIME类中的文件类型（即后缀）是无法传输的。</div>
+                            <div style="margin-bottom:5px"><a href="" target="_blank" rel="noreferrer"><img src=""></a></div><h3 ><a name="toc-1"></a><span style="">缘由：</span><br /></h3>
+<div>
+<div>&nbsp; &nbsp;&nbsp;opt环境在晚高峰几乎无法部署成功，下载https://opt.cn2qq.com/opt-file/opttmpg12.tgz总是失败，如果在这个时间段重启路由，那么需要Opkg安装的mosquitto_sub自然也无法使用。</div>
+</div>
+<div>&nbsp; &nbsp; 遂想把mosquitto_sub客户端和依赖库都提取出来保存<span style="">本地直接使用。</span></div>
+<h3  style="font-size: 1.25rem;"><a name="toc-2"></a>结论前置：</h3>
+<div style="">&nbsp; &nbsp; 未完成：最终只能IP连接服务端成功；使用域名会报错。<span>因并非唯一选择，此方案不值得继续花时间探索，遂放弃 [25-12-14]</span><span>。</span></div>
+<div style="">&nbsp; &nbsp; 体积：mosquitto_sub加上所有声明的依赖库，总体积=3.34M，虽然比Go编译的5.87M小2.5M，但在空间还剩55M余量较宽裕的情况下没必要为扣这2.5M体积继续耗费时间，直接用Go写个MQTT程序交叉编译成MIPSEL的<span style="">静态</span>可执行文件，一小时搞定。</div>
 <div></div>
-<div>解决办法：到【IIS】-【网站】-【“具体网站<span style="">”</span>】-【MIME类型】添加新后缀类型即可。</div>
-<div><span style=""><br /></span></div>
-<div><span style="">添加扩展名支持有两种办法：</span></div>
-<div><span style=""><br /></span></div>
-<div>1、指定类型：</div>
+<h3 ><a name="toc-3"></a>Opkg程序提取mosquitto_sub的依赖库：</h3>
 <div>
 <ul>
-<li>文件扩展名：“&nbsp;<span style="">mkv </span><span style="">”</span><span style="">，MIME类型：“ application/octet-stream ”</span></li>
-<li><span style="">保存，nplayer即可播放mkv视频</span></li>
-<li><span style="">字幕也必须添加，否则无法调用（经实际验证不添加MIME</span><span style="">确实</span><span style="">无法调用）：</span></li>
-<li>文件扩展名：“ srt&nbsp;<span style="">”</span>、MIME类型：“&nbsp;<span style="">application/octet-stream&nbsp;</span><span style="">”</span></li>
+<li>注意事项：</li>
+<ul>
+<li>安装opkg后部署的/opt/lib/依赖库，直接拉取整个目录时不会下载软链接，无法直接使用。</li>
+<li><span style="">也不能直接下载软链接文件，需用cp命令拷贝出来再下载到本地。</span></li>
 </ul>
+<li>先用 Opkg 部署 mosquitto-client ：
+<div>
+<div data-mode="JavaScript" data-theme="default">
+<pre><code>/opt/bin/opkg update #更新软件包索引 
+/opt/bin/opkg install mosquitto-client #安装mosquitto客户端</code></pre>
 </div>
-<div><span style=""><br /></span></div>
-<div><span style="">2、所有类型：</span></div>
+</div>
+</li>
+<li>ldd 查询 mosquitto_sub 声明的依赖关系 ：
+<div>
+<div data-mode="JavaScript" data-theme="default">
+<pre><code>[RM2100]# ldd /opt/bin/mosquitto_sub
+        libcjson.so.1 =&gt; /opt/lib/libcjson.so.1 (0x77134000)
+        libmosquitto.so.1 =&gt; /opt/lib/libmosquitto.so.1 (0x7710f000)
+        libpthread.so.0 =&gt; /opt/lib/libpthread.so.0 (0x770e1000)
+        librt.so.1 =&gt; /opt/lib/librt.so.1 (0x770c9000)
+        libcares.so.2 =&gt; /opt/lib/libcares.so.2 (0x77098000)
+        libgcc_s.so.1 =&gt; /opt/lib/libgcc_s.so.1 (0x77074000)
+        libc.so.6 =&gt; /opt/lib/libc.so.6 (0x76ee1000)
+        libm.so.6 =&gt; /opt/lib/libm.so.6 (0x76dd9000)
+        libssp.so.0 =&gt; /opt/lib/libssp.so.0 (0x76dc7000)
+        /opt/lib/ld.so.1 (0x7714b000) #动态链接器</code></pre>
+</div>
+</div>
+</li>
+<li>批量导出这 9个依赖库 和 1个动态链接器 ：
+<div>
+<div data-mode="JavaScript" data-theme="default">
+<pre><code># 自建存放目录：
+	mkdir -p "/opt/mylib/"
+# 提取所有依赖路径，并通过 xargs 复制：
+	ldd /opt/bin/mosquitto_sub | grep "=&gt;" | awk '{print $3}' | xargs -I {} cp -v {} "/opt/mylib/"
+# 重要：/opt/lib/ld.so.1 是动态链接器，需要单独复制：
+	cp -v /opt/lib/ld.so.1 "/opt/mylib/"</code></pre>
+</div>
+</div>
+</li>
+<li>完成。下载 /opt/mylib/ 到本地。</li>
+</ul>
+<div></div>
+<div>
+<h3 ><a name="toc-4"></a><span>本地</span>上传mosquitto_sub和依赖库测试：</h3>
 <div>
 <ul>
-<li>也可以配置IIS支持任何扩展名类型的文件，在MIME中添加一个新类型：</li>
-<li>文件夹扩展名为通配符： “ * ”，MIME 类型填写： “ application/octet-stream ”&nbsp;</li>
-<li>现在，Webdav支持所有后缀的文件传输！</li>
-</ul>
-</div>
-<div></div>
-<div></div>
-<div>参考信息：</div>
-<div>
+<li><span style="">注意事项：</span></li>
 <ul>
-<li><a href="https://www.jianshu.com/p/bf150bd3305d" target="_blank" rel="nofollow" class="broken_link">使用IIS创建webdav服务器 - 简书 (jianshu.com)</a></li>
+<li><span style="">路径：动态链接器ld.so.1必须存放在/opt/lib/目录，否则报错：-sh: ./mosquitto_sub: not found</span></li>
+<li><span style="">权限：除了mosquitto_sub客户端，动态链接器ld.so.1也必须授予执行权限，否则报错：-sh: ./mosquitto_sub: Permission denied</span></li>
+</ul>
+<li>先将路由器恢复成无opkg状态：【配置扩展环境】-【opt 强制安装】禁用，重启路由器。</li>
+</ul>
+<ul>
+<li><span>上传：mosquitto_sub客户端、ld.so.1动态链接器，和其他9个依赖库到 /opt/lib/ 目录，并授予执行权限：</span>
+<div>
+<div data-mode="JavaScript" data-theme="default">
+<pre><code>[RM2100 /opt/lib]# ls -l | awk '{print $1, $9}'
+-rwxrwxrwx ld.so.1
+-rw-rw-rw- libc.so.6
+-rw-rw-rw- libcares.so.2
+-rw-rw-rw- libcjson.so.1
+-rw-rw-rw- libgcc_s.so.1
+-rw-rw-rw- libm.so.6
+-rw-rw-rw- libmosquitto.so.1
+-rw-rw-rw- libpthread.so.0
+-rw-rw-rw- librt.so.1
+-rw-rw-rw- libssp.so.0
+-rwxrwxrwx mosquitto_sub</code></pre>
+</div>
+</div>
+</li>
+<li>ldd 查询 mosquitto_sub 声明的依赖关系：
+<div>
+<div data-mode="JavaScript" data-theme="default">
+<pre><code>当前无opkg环境，ldd能查询到所有依赖，除了/etc/ld.so.cache这个文件报错：
+[RM2100]# ldd /opt/lib/mosquitto_sub
+ldd: can't open cache '/etc/ld.so.cache'
+        libcjson.so.1 =&gt; /opt/lib/libcjson.so.1 (0x7750c000)
+        libmosquitto.so.1 =&gt; /opt/lib/libmosquitto.so.1 (0x774e7000)
+        libpthread.so.0 =&gt; /opt/lib/libpthread.so.0 (0x774b9000)
+        librt.so.1 =&gt; /opt/lib/librt.so.1 (0x774a1000)
+        libcares.so.2 =&gt; /opt/lib/libcares.so.2 (0x77470000)
+        libgcc_s.so.1 =&gt; /opt/lib/libgcc_s.so.1 (0x7744c000)
+        libc.so.6 =&gt; /opt/lib/libc.so.6 (0x772b9000)
+        libm.so.6 =&gt; /opt/lib/libm.so.6 (0x771b1000)
+        libssp.so.0 =&gt; /opt/lib/libssp.so.0 (0x7719f000)
+        /opt/lib/ld.so.1 (0x77523000)
+</code></pre>
+</div>
+</div>
+</li>
+<li><span style="">运行：使用域名连接报错Unable to connect (Lookup error.)：</span>
+<div>
+<div data-mode="JavaScript" data-theme="default">
+<pre><code>./mosquitto_sub --host bemfa.com --port 9501 -t test009 -i xxxxxxxxxx --qos 1
+	报错：Unable to connect (Lookup error.).
+	错误分析：Lookup error 几乎总是与 DNS (Domain Name System) 解析或网络配置有关。它发生在程序尝试将您提供的服务器名称或域名转换为实际的 IP 地址时。</code></pre>
+</div>
+</div>
+</li>
+<li><span style="">运行：使用IP连接成功：</span>
+<div>
+<div data-mode="JavaScript" data-theme="default">
+<pre><code>./mosquitto_sub --host 119.91.109.180 --port 9501 -t test009 -i xxxxxxxxxx --qos 1
+	改用IP连接成功√</code></pre>
+</div>
+</div>
+</li>
+<li>结束。</li>
 </ul>
 </div>
+</div>
+</div>
+<div><a title="来自为知笔记(Wiz)" href="http://www.wiz.cn/i/c83ee362" target="_blank"  rel="nofollow" >来自为知笔记(Wiz)</a></div>
                         </div>
                                                 <div class="footer clearfix">
                             <div class="tags float-left">
                                 <span>标签：</span>
                                 <a>暂无</a>                            </div>
                             <div class="tool float-right d-none d-lg-block">
-                                <span>最后更新：2023年2月28日</span>
+                                <span>最后更新：2025年12月14日</span>
                             </div>
                         </div>
                     </div>
@@ -178,10 +275,10 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		<p class="motto mb-0">不积跬步无以至千里</p>
 	</div>
 	<div class="share float-md-right text-center">
-				<a href="javascript:;" id="thumbs" data-action="love" data-id="2819" role="button" class="btn btn-thumbs "><i class="kicon i-like"></i><span class="ml-1">点赞</span></a>
+				<a href="javascript:;" id="thumbs" data-action="love" data-id="2844" role="button" class="btn btn-thumbs "><i class="kicon i-like"></i><span class="ml-1">点赞</span></a>
 	</div>
 </div>                <nav class="navigation post-navigation clearfix" role="navigation">
-                    <div class="nav-previous clearfix"><a title="Padavan自动更新LAN的IPv6前缀地址" href="https://luojimen.github.io/2023/02/padavan-automatically-updates-the-ipv6-prefix-address-of-the-lan/">< 上一篇</a></div><div class="nav-next"><a title="最佳树形目录索引生成工具：Snap2HTML（Windows）" href="https://luojimen.github.io/2023/03/best-tree-index-generation-tool-snap2html-windows/">下一篇 ></a></div>                </nav>
+                    <div class="nav-previous clearfix"><a title="Padavan密钥登录Windows的配置（Dropbear免密登录OpenSSH）" href="https://luojimen.github.io/2025/12/configuration-of-padavan-key-login-to-windows-dropbear-password-free-login-to-openssh/">< 上一篇</a></div>                </nav>
                             </div>
                     </div>
     </div>
